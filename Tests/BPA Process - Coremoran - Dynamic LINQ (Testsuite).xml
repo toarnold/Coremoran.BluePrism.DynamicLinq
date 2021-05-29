@@ -1,0 +1,843 @@
+﻿<process name="Coremoran - Dynamic LINQ (Testsuite)" version="1.0" bpversion="6.10.1.35171" narrative="" byrefcollection="true" preferredid="176ff886-76ef-42aa-aa6c-b7d1dfded80a" published="true">
+  <view>
+    <camerax>15</camerax>
+    <cameray>8</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="01312027-d1b9-4331-bf78-fc9edeeb6188" type="Normal" published="False">
+    <name>Append Partial Result</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>-21</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="775fb17c-f7d7-4885-bf83-80f4c59cd8f1" name="Start" type="Start">
+    <display x="15" y="-105" />
+    <onsuccess>26bcd2f8-40bd-4a13-bb77-dd49748044f1</onsuccess>
+  </stage>
+  <stage stageid="614e284d-34ba-4f7a-b45c-07e7887d3c0d" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="c5740628-08f1-44d1-ad72-e4817bb228fe" name="TestResult" type="Collection">
+    <display x="-195" y="0" w="150" h="60" />
+    <datatype>collection</datatype>
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Method" type="text" />
+      <field name="Test" type="text" />
+      <field name="Success?" type="flag" />
+      <field name="Error Message" type="text" />
+    </collectioninfo>
+  </stage>
+  <stage stageid="aae39e36-2198-497c-b78d-637a968b43d5" name="TempResult" type="Collection">
+    <display x="-195" y="60" w="90" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="26bcd2f8-40bd-4a13-bb77-dd49748044f1" name="All" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>279565af-8038-4736-9291-cadb0f380b00</onsuccess>
+    <processid>853e276d-7915-4acd-8d00-1b8b707e70d3</processid>
+  </stage>
+  <stage stageid="412b1edc-efa9-4564-ab54-4765a9ec42b9" name="Append Partial Result" type="SubSheetInfo">
+    <subsheetid>01312027-d1b9-4331-bf78-fc9edeeb6188</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="30f20a49-cacf-4d28-b2af-8ea95aef9174" name="Start" type="Start">
+    <subsheetid>01312027-d1b9-4331-bf78-fc9edeeb6188</subsheetid>
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="text" name="Method" stage="Method" />
+      <input type="collection" name="TempResult" stage="TempResult" />
+    </inputs>
+    <onsuccess>72305d97-1d5b-43bd-a43e-35da8aabfcc4</onsuccess>
+  </stage>
+  <stage stageid="a8f5d1c9-3d30-4dbb-8cd0-162e371a9739" name="End" type="End">
+    <subsheetid>01312027-d1b9-4331-bf78-fc9edeeb6188</subsheetid>
+    <display x="15" y="30" />
+  </stage>
+  <stage stageid="79e3776b-37d3-480c-bcb4-adf289509a29" name="Method" type="Data">
+    <subsheetid>01312027-d1b9-4331-bf78-fc9edeeb6188</subsheetid>
+    <display x="90" y="-105" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="cb41d862-be60-4e08-892d-e8f8b187716a" name="TempResult" type="Collection">
+    <subsheetid>01312027-d1b9-4331-bf78-fc9edeeb6188</subsheetid>
+    <display x="165" y="-105" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="279565af-8038-4736-9291-cadb0f380b00" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="-60" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;All&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>d49130f9-0a51-4fa2-8455-c9c7e8ded43e</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="72305d97-1d5b-43bd-a43e-35da8aabfcc4" name="Utility - Collection Manipulation::Append Field (Text)" type="Action">
+    <subsheetid>01312027-d1b9-4331-bf78-fc9edeeb6188</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <inputs>
+      <input type="collection" name="Collection" friendlyname="Collection" narrative="The collection to append a field to." expr="[TempResult]" />
+      <input type="text" name="Field Name" friendlyname="Field Name" narrative="The name of the new field." expr="&quot;Method&quot;" />
+      <input type="text" name="Value" friendlyname="Value" narrative="The value to be put in the new field." expr="[Method]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Appended Collection" friendlyname="Appended Collection" narrative="The collection with field appended." stage="TempResult" />
+    </outputs>
+    <onsuccess>ff662d9a-82c0-49b0-9857-e4c505d179e9</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Append Field (Text)" />
+  </stage>
+  <stage stageid="ff662d9a-82c0-49b0-9857-e4c505d179e9" name="Utility - Collection Manipulation::Append Rows to Collection" type="Action">
+    <subsheetid>01312027-d1b9-4331-bf78-fc9edeeb6188</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="collection" name="Main Collection" friendlyname="Main Collection" narrative="The collection to append to." expr="[TestResult]" />
+      <input type="collection" name="Collection to Append" friendlyname="Collection to Append" narrative="The collection to append." expr="[TempResult]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Combined Collection" friendlyname="Combined Collection" narrative="The combined collection." stage="TestResult" />
+    </outputs>
+    <onsuccess>a8f5d1c9-3d30-4dbb-8cd0-162e371a9739</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Append Rows to Collection" />
+  </stage>
+  <stage stageid="ba9c4f70-d10d-4826-a878-fa502a5cde36" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-30" w="10" h="10" />
+    <onsuccess>0e5b2bd2-98e9-48cc-84ae-e6e5e6334a81</onsuccess>
+  </stage>
+  <stage stageid="d49130f9-0a51-4fa2-8455-c9c7e8ded43e" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="-30" w="10" h="10" />
+    <onsuccess>ba9c4f70-d10d-4826-a878-fa502a5cde36</onsuccess>
+  </stage>
+  <stage stageid="0e5b2bd2-98e9-48cc-84ae-e6e5e6334a81" name="Any" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="0" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>f19027ea-7793-459f-b27b-c19ee4a34997</onsuccess>
+    <processid>e9c6e257-33f2-44a9-af3e-5507c5f7b217</processid>
+  </stage>
+  <stage stageid="f19027ea-7793-459f-b27b-c19ee4a34997" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="0" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Any&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>a7c3d19e-0eb3-4f92-a5d3-f09f6f36c166</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="7e269ddc-c058-41a0-b264-bdf6651ecd7d" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="30" w="10" h="10" />
+    <onsuccess>e229d6f2-ab88-4f7c-b1f6-3c9588ce5d95</onsuccess>
+  </stage>
+  <stage stageid="a7c3d19e-0eb3-4f92-a5d3-f09f6f36c166" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="30" w="10" h="10" />
+    <onsuccess>7e269ddc-c058-41a0-b264-bdf6651ecd7d</onsuccess>
+  </stage>
+  <stage stageid="e229d6f2-ab88-4f7c-b1f6-3c9588ce5d95" name="Average" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="60" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>34bb30de-8d8b-4151-b901-0ec060a6770a</onsuccess>
+    <processid>32638b5d-1a7b-4f5f-a3c0-6423c3169bbf</processid>
+  </stage>
+  <stage stageid="34bb30de-8d8b-4151-b901-0ec060a6770a" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="60" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Average&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>695ec02b-c4b9-4fb7-899f-fe71a289fb94</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="e7b7608f-ee3e-4494-be6c-e77f1cb57d60" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="90" w="10" h="10" />
+    <onsuccess>37d02312-1f1b-4fc0-ad87-c0e0a58398d9</onsuccess>
+  </stage>
+  <stage stageid="695ec02b-c4b9-4fb7-899f-fe71a289fb94" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="90" w="10" h="10" />
+    <onsuccess>e7b7608f-ee3e-4494-be6c-e77f1cb57d60</onsuccess>
+  </stage>
+  <stage stageid="37d02312-1f1b-4fc0-ad87-c0e0a58398d9" name="Count" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="120" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>5cb759f5-169d-470e-8641-6b196b5ecac0</onsuccess>
+    <processid>c5298a95-c366-48b2-8431-84652050526f</processid>
+  </stage>
+  <stage stageid="5cb759f5-169d-470e-8641-6b196b5ecac0" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="120" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Count&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>0f0a088c-1a92-4924-b713-ef9cb5442310</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="1262ad71-db54-4c70-9a76-dfd95d0d6ade" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="150" w="10" h="10" />
+    <onsuccess>3c81940d-69ba-4cec-844b-9395983ffffd</onsuccess>
+  </stage>
+  <stage stageid="0f0a088c-1a92-4924-b713-ef9cb5442310" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="150" w="10" h="10" />
+    <onsuccess>1262ad71-db54-4c70-9a76-dfd95d0d6ade</onsuccess>
+  </stage>
+  <stage stageid="3c81940d-69ba-4cec-844b-9395983ffffd" name="FirstOrDefault" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="180" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>e6b7ce49-b65e-4f56-ba53-248d630d79c5</onsuccess>
+    <processid>e87f7c76-0cb4-4825-b197-c502259d2783</processid>
+  </stage>
+  <stage stageid="e6b7ce49-b65e-4f56-ba53-248d630d79c5" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="180" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;FirstOrDefault&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>cc2d0744-4c02-4109-93f7-5f1e60043fdc</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="e182bce7-de3f-4421-8eb5-9bddff9e3e93" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="210" w="10" h="10" />
+    <onsuccess>5de20009-8894-4183-9ff3-4f2d3ad89694</onsuccess>
+  </stage>
+  <stage stageid="cc2d0744-4c02-4109-93f7-5f1e60043fdc" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="210" w="10" h="10" />
+    <onsuccess>e182bce7-de3f-4421-8eb5-9bddff9e3e93</onsuccess>
+  </stage>
+  <stage stageid="5de20009-8894-4183-9ff3-4f2d3ad89694" name="LastOrDefault" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="240" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>ad79172f-fa8b-4eeb-b759-36b66b22647b</onsuccess>
+    <processid>3e9a61b4-7026-49f7-9045-b36ca018a25a</processid>
+  </stage>
+  <stage stageid="ad79172f-fa8b-4eeb-b759-36b66b22647b" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="240" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;LastOrDefault&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>ddf540b2-2522-4c0e-86fc-0e7013bdb365</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="7e8af284-926a-4915-a567-6fe86bfd1059" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="270" w="10" h="10" />
+    <onsuccess>a6f0f3b1-0197-4d4c-9652-862685406522</onsuccess>
+  </stage>
+  <stage stageid="ddf540b2-2522-4c0e-86fc-0e7013bdb365" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="270" w="10" h="10" />
+    <onsuccess>7e8af284-926a-4915-a567-6fe86bfd1059</onsuccess>
+  </stage>
+  <stage stageid="a6f0f3b1-0197-4d4c-9652-862685406522" name="Max" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="300" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>f3c91bae-57d2-4558-a82d-ff869c07fc28</onsuccess>
+    <processid>7ce0a7f2-6060-4b7f-921a-dd35f999aa0a</processid>
+  </stage>
+  <stage stageid="f3c91bae-57d2-4558-a82d-ff869c07fc28" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="300" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Max&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>e72b1fba-2b3a-418b-b0ac-26dbed1e6f5e</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="3faaff6c-6c66-4e92-8346-496f63ef4ab7" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="330" w="10" h="10" />
+    <onsuccess>d3fcb9c2-1a25-4ada-a5ed-7c3bd3eabd24</onsuccess>
+  </stage>
+  <stage stageid="e72b1fba-2b3a-418b-b0ac-26dbed1e6f5e" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="330" w="10" h="10" />
+    <onsuccess>3faaff6c-6c66-4e92-8346-496f63ef4ab7</onsuccess>
+  </stage>
+  <stage stageid="d3fcb9c2-1a25-4ada-a5ed-7c3bd3eabd24" name="Min" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="360" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>7202ab46-1ca7-477f-89dc-ff894def6e35</onsuccess>
+    <processid>64f332d6-0036-46a9-9f77-d1d611299191</processid>
+  </stage>
+  <stage stageid="7202ab46-1ca7-477f-89dc-ff894def6e35" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="360" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Min&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>5f102b72-1ad3-45be-808d-6a1b0a897962</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="8cb6265a-79a0-4f75-8738-d4b5997be262" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="390" w="10" h="10" />
+    <onsuccess>59f5df2e-81c4-47ac-9e24-1587db1033a7</onsuccess>
+  </stage>
+  <stage stageid="5f102b72-1ad3-45be-808d-6a1b0a897962" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="390" w="10" h="10" />
+    <onsuccess>8cb6265a-79a0-4f75-8738-d4b5997be262</onsuccess>
+  </stage>
+  <stage stageid="59f5df2e-81c4-47ac-9e24-1587db1033a7" name="Reverse" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="420" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>4803d00f-f386-4a3b-b115-371a09ca7e36</onsuccess>
+    <processid>dfe530a4-ba05-45da-a77a-021b3c2ad134</processid>
+  </stage>
+  <stage stageid="4803d00f-f386-4a3b-b115-371a09ca7e36" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="420" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Reverse&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>7b52e47d-e168-40c6-aa71-8065a58437b4</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="8a418c4d-f5ab-4fd7-9f20-7184801927a1" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="450" w="10" h="10" />
+    <onsuccess>188844e5-ece0-463b-8cf8-a53cf17250d1</onsuccess>
+  </stage>
+  <stage stageid="7b52e47d-e168-40c6-aa71-8065a58437b4" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="450" w="10" h="10" />
+    <onsuccess>8a418c4d-f5ab-4fd7-9f20-7184801927a1</onsuccess>
+  </stage>
+  <stage stageid="188844e5-ece0-463b-8cf8-a53cf17250d1" name="Select" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="480" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>9621d816-2761-4088-b528-9315a5f93cf2</onsuccess>
+    <processid>5edb7540-171d-4d7d-a0a8-e1a9f03f18d2</processid>
+  </stage>
+  <stage stageid="9621d816-2761-4088-b528-9315a5f93cf2" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="480" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Select&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>84c6449e-bb6d-4683-8e10-dec713b06417</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="1fe79cf3-8f89-496c-b213-f0bd0c49a96b" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="510" w="10" h="10" />
+    <onsuccess>83e20320-a4d4-4c84-8707-b2ed3b2f63c8</onsuccess>
+  </stage>
+  <stage stageid="84c6449e-bb6d-4683-8e10-dec713b06417" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="510" w="10" h="10" />
+    <onsuccess>1fe79cf3-8f89-496c-b213-f0bd0c49a96b</onsuccess>
+  </stage>
+  <stage stageid="83e20320-a4d4-4c84-8707-b2ed3b2f63c8" name="SingleOrDefault" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="540" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>52981793-6589-406f-8e2c-9d3dabbd0a2f</onsuccess>
+    <processid>b872d938-dae9-4d3e-b903-29014f2484b7</processid>
+  </stage>
+  <stage stageid="52981793-6589-406f-8e2c-9d3dabbd0a2f" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="540" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;SingleOrDefault&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>19a315a6-6b8a-4a21-b1af-c024049b6f10</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="205cfb81-2196-47c9-8d26-f9a2831e37cb" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="570" w="10" h="10" />
+    <onsuccess>3213bfd8-81e8-442f-ba0e-f19682815a82</onsuccess>
+  </stage>
+  <stage stageid="19a315a6-6b8a-4a21-b1af-c024049b6f10" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="570" w="10" h="10" />
+    <onsuccess>205cfb81-2196-47c9-8d26-f9a2831e37cb</onsuccess>
+  </stage>
+  <stage stageid="3213bfd8-81e8-442f-ba0e-f19682815a82" name="Skip" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="600" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>dd07b88a-e87e-4410-b1ea-5b7d442a562e</onsuccess>
+    <processid>b7aae299-97e1-42ce-846f-733f67d29955</processid>
+  </stage>
+  <stage stageid="dd07b88a-e87e-4410-b1ea-5b7d442a562e" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="600" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Skip&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>f3bf1430-eb52-48b5-84cf-08df70ee6f09</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="510f9308-b049-4a1a-9e8b-a8167e4b40ad" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="630" w="10" h="10" />
+    <onsuccess>319a7973-844c-4ceb-ab6f-6bc06b005653</onsuccess>
+  </stage>
+  <stage stageid="f3bf1430-eb52-48b5-84cf-08df70ee6f09" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="630" w="10" h="10" />
+    <onsuccess>510f9308-b049-4a1a-9e8b-a8167e4b40ad</onsuccess>
+  </stage>
+  <stage stageid="319a7973-844c-4ceb-ab6f-6bc06b005653" name="SkipWhile" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="660" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>2c5394df-c538-44a3-b710-30afc0fd6616</onsuccess>
+    <processid>058a09ea-9980-4004-a3ff-0329b583d8e4</processid>
+  </stage>
+  <stage stageid="2c5394df-c538-44a3-b710-30afc0fd6616" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="660" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;SkipWhile&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>a5f5893d-b109-42d1-81b9-17fba5b9773e</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="f22fc665-1b02-4b14-b85f-32c36825b34b" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="690" w="10" h="10" />
+    <onsuccess>9bc1a33b-b11d-4549-8248-d91fa9c02ee0</onsuccess>
+  </stage>
+  <stage stageid="a5f5893d-b109-42d1-81b9-17fba5b9773e" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="690" w="10" h="10" />
+    <onsuccess>f22fc665-1b02-4b14-b85f-32c36825b34b</onsuccess>
+  </stage>
+  <stage stageid="9bc1a33b-b11d-4549-8248-d91fa9c02ee0" name="Sum" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="720" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>8e7953bc-3090-4e5d-b647-37662b6e7aa4</onsuccess>
+    <processid>86c3bf9a-ab92-4f98-ada6-1f23fa6d9fbc</processid>
+  </stage>
+  <stage stageid="8e7953bc-3090-4e5d-b647-37662b6e7aa4" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="720" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Sum&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>8c183470-f980-4dbd-a2a0-e6997eb2484d</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="cf8e47e0-a4f4-4c1d-94ab-aa5a6ddb3cd8" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="750" w="10" h="10" />
+    <onsuccess>4d66a1dd-0af1-428c-8968-08f86af702be</onsuccess>
+  </stage>
+  <stage stageid="8c183470-f980-4dbd-a2a0-e6997eb2484d" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="750" w="10" h="10" />
+    <onsuccess>cf8e47e0-a4f4-4c1d-94ab-aa5a6ddb3cd8</onsuccess>
+  </stage>
+  <stage stageid="4d66a1dd-0af1-428c-8968-08f86af702be" name="Take" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="780" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>2a5d26e9-06d0-4f80-a28e-a1900c40a70e</onsuccess>
+    <processid>2494222b-5517-49f9-9916-413a75f667d2</processid>
+  </stage>
+  <stage stageid="2a5d26e9-06d0-4f80-a28e-a1900c40a70e" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="780" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Take&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>65a64767-87a1-41d0-a8f5-0bc59e7d9464</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="7ea95843-8931-4e52-b933-d4145bc5352d" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="810" w="10" h="10" />
+    <onsuccess>b8175e7b-c41e-4f8a-84f9-228d3d337e4c</onsuccess>
+  </stage>
+  <stage stageid="65a64767-87a1-41d0-a8f5-0bc59e7d9464" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="810" w="10" h="10" />
+    <onsuccess>7ea95843-8931-4e52-b933-d4145bc5352d</onsuccess>
+  </stage>
+  <stage stageid="b8175e7b-c41e-4f8a-84f9-228d3d337e4c" name="TakeWhile" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="840" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>ccca3115-e458-4dde-8eb3-c3a2de7d7e6b</onsuccess>
+    <processid>44fc57f1-c0b3-4757-aa8d-2d14812dffd2</processid>
+  </stage>
+  <stage stageid="ccca3115-e458-4dde-8eb3-c3a2de7d7e6b" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="840" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;TakeWhile&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>baa12f72-5e83-4c07-8f5c-345c495fbfaa</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="e6973ecb-2658-45a0-85f3-a9dbc5b07b43" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="870" w="10" h="10" />
+    <onsuccess>d6223889-b18d-4ba6-83c8-295489b9292c</onsuccess>
+  </stage>
+  <stage stageid="baa12f72-5e83-4c07-8f5c-345c495fbfaa" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="870" w="10" h="10" />
+    <onsuccess>e6973ecb-2658-45a0-85f3-a9dbc5b07b43</onsuccess>
+  </stage>
+  <stage stageid="d6223889-b18d-4ba6-83c8-295489b9292c" name="Where" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="900" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>57932455-f3ba-490b-8976-30a537311dfc</onsuccess>
+    <processid>b512e319-4e4d-485e-b443-3a6c8f1438c2</processid>
+  </stage>
+  <stage stageid="57932455-f3ba-490b-8976-30a537311dfc" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="900" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Where&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>3906c3a6-8f6b-4de7-a877-e7900818acc3</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="8b2bbab7-e7da-478a-b2c0-3770cbf27627" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="930" w="10" h="10" />
+    <onsuccess>08b54b6b-05b7-4498-b89e-14b1198b7374</onsuccess>
+  </stage>
+  <stage stageid="3906c3a6-8f6b-4de7-a877-e7900818acc3" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="930" w="10" h="10" />
+    <onsuccess>8b2bbab7-e7da-478a-b2c0-3770cbf27627</onsuccess>
+  </stage>
+  <stage stageid="94a68511-58d6-48a0-afb9-335bf2e5ba6c" name="End" type="End">
+    <display x="15" y="1470" />
+  </stage>
+  <stage stageid="237994fc-b9f9-43cd-8a0e-581dc24d8082" name="Filter Errors For Log" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1380" />
+    <inputs>
+      <input type="collection" name="Source" friendlyname="Source" expr="[TestResult]" />
+      <input type="text" name="Predicate" friendlyname="Predicate" expr="&quot;!#{Success?}&quot;" />
+      <input type="collection" name="Parameter" friendlyname="Parameter" expr="" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Result" friendlyname="Result" stage="Errors" />
+      <output type="number" name="Count" friendlyname="Count" stage="Count" />
+    </outputs>
+    <onsuccess>46e6320b-47da-4816-b88c-296bbb6ced2c</onsuccess>
+    <resource object="Coremoran - Dynamic LINQ" action="Where" />
+  </stage>
+  <stage stageid="2b5de6a6-14f8-4608-a9d9-f379ad9b0181" name="Count" type="Data">
+    <display x="90" y="1380" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="704e414f-8d05-45bf-a658-903a0a7b6c9c" name="Errors" type="Collection">
+    <display x="-60" y="1380" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="46e6320b-47da-4816-b88c-296bbb6ced2c" name="No Errors?" type="Decision">
+    <display x="15" y="1425" />
+    <breakpoint type="0">
+      <condition>
+      </condition>
+    </breakpoint>
+    <decision expression="[Count]=0" />
+    <ontrue>94a68511-58d6-48a0-afb9-335bf2e5ba6c</ontrue>
+    <onfalse>1a339601-5834-4fea-9848-226b428a72a9</onfalse>
+  </stage>
+  <stage stageid="1a339601-5834-4fea-9848-226b428a72a9" name="Unit Exception" type="Exception">
+    <display x="135" y="1425" />
+    <exception localized="yes" type="UnitException" detail="&quot;Errors found. Please check Log.&quot;" />
+  </stage>
+  <stage stageid="08b54b6b-05b7-4498-b89e-14b1198b7374" name="SelectMany" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="960" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>76131164-327a-4228-b9a2-fc65ade8d8db</onsuccess>
+    <processid>5cdbbb85-8b31-4440-a11f-7055ee7fc0f1</processid>
+  </stage>
+  <stage stageid="76131164-327a-4228-b9a2-fc65ade8d8db" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="960" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;SelectMany&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>3d52c433-2e74-44fe-91aa-207e4b432068</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="321ab564-f6de-48de-b82c-4071ecca9006" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="990" w="10" h="10" />
+    <onsuccess>474c26a2-cf2f-40b9-b2fd-642cb06f7cd0</onsuccess>
+  </stage>
+  <stage stageid="3d52c433-2e74-44fe-91aa-207e4b432068" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="990" w="10" h="10" />
+    <onsuccess>321ab564-f6de-48de-b82c-4071ecca9006</onsuccess>
+  </stage>
+  <stage stageid="474c26a2-cf2f-40b9-b2fd-642cb06f7cd0" name="SelectMany2" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1020" />
+    <outputs>
+      <output type="unknown" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>e573bd89-761f-4d1b-a61a-767495828286</onsuccess>
+    <processid>216acf57-220e-4de0-8d90-c7a71bd30613</processid>
+  </stage>
+  <stage stageid="e573bd89-761f-4d1b-a61a-767495828286" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1020" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;SelectMany2&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>f7269b3e-3bb6-4123-9076-87ea017a465e</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="2cab9471-a378-4e69-9723-410a6bbad948" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1050" w="10" h="10" />
+    <onsuccess>401033e7-8d21-49de-9f4b-5370fb1842d8</onsuccess>
+  </stage>
+  <stage stageid="f7269b3e-3bb6-4123-9076-87ea017a465e" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1050" w="10" h="10" />
+    <onsuccess>2cab9471-a378-4e69-9723-410a6bbad948</onsuccess>
+  </stage>
+  <stage stageid="401033e7-8d21-49de-9f4b-5370fb1842d8" name="GroupBy" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1080" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>c8c3a039-1f69-41fa-ad2b-dc3e23ab6e40</onsuccess>
+    <processid>2ba35f94-6212-4145-9e3f-aae16eb84e53</processid>
+  </stage>
+  <stage stageid="c8c3a039-1f69-41fa-ad2b-dc3e23ab6e40" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1080" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;GroupBy&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>cf7a1643-ea96-4818-b06f-1f7e937bc555</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="27c38fc5-8f0b-4f49-9d2e-d76fd040e8e4" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1110" w="10" h="10" />
+    <onsuccess>52442594-3d6c-4049-8c8b-bebe254ba901</onsuccess>
+  </stage>
+  <stage stageid="cf7a1643-ea96-4818-b06f-1f7e937bc555" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1110" w="10" h="10" />
+    <onsuccess>27c38fc5-8f0b-4f49-9d2e-d76fd040e8e4</onsuccess>
+  </stage>
+  <stage stageid="52442594-3d6c-4049-8c8b-bebe254ba901" name="OrderBy" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1140" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>98dcc45b-71f2-40d8-ba8c-050a0f5a70f0</onsuccess>
+    <processid>9ac7e047-1262-4c9f-94c8-105aae689b35</processid>
+  </stage>
+  <stage stageid="98dcc45b-71f2-40d8-ba8c-050a0f5a70f0" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1140" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;OrderBy&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>6de67188-289d-46a9-bcc6-afbfe74b14cd</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="186ed0a9-8ed5-4ea4-a435-b789a77b66c3" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1170" w="10" h="10" />
+    <onsuccess>7d8e70f6-3a90-41cd-8599-313e107ad46f</onsuccess>
+  </stage>
+  <stage stageid="6de67188-289d-46a9-bcc6-afbfe74b14cd" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1170" w="10" h="10" />
+    <onsuccess>186ed0a9-8ed5-4ea4-a435-b789a77b66c3</onsuccess>
+  </stage>
+  <stage stageid="7d8e70f6-3a90-41cd-8599-313e107ad46f" name="Page" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1200" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>1d05ebcb-cbef-49a3-a4f9-76e63fe90f8a</onsuccess>
+    <processid>c0a877b7-2da2-475b-b8e4-1dda975a3c58</processid>
+  </stage>
+  <stage stageid="1d05ebcb-cbef-49a3-a4f9-76e63fe90f8a" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1200" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Page&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>35b9db67-22d8-48be-8bba-7d481111ee8b</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="1c50fd9c-fea3-435d-99fd-a4566bfaaa9b" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1230" w="10" h="10" />
+    <onsuccess>0ee88ad0-8cab-4c99-819d-e9d013f07c57</onsuccess>
+  </stage>
+  <stage stageid="35b9db67-22d8-48be-8bba-7d481111ee8b" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1230" w="10" h="10" />
+    <onsuccess>1c50fd9c-fea3-435d-99fd-a4566bfaaa9b</onsuccess>
+  </stage>
+  <stage stageid="0ee88ad0-8cab-4c99-819d-e9d013f07c57" name="Join" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1260" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>3a7aca19-c414-4468-99d2-5f9c73e09ff2</onsuccess>
+    <processid>17c3bbc4-b624-4f0a-b333-f7e8511e522e</processid>
+  </stage>
+  <stage stageid="3a7aca19-c414-4468-99d2-5f9c73e09ff2" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1260" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Join&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>7904120d-7558-4c2a-9295-764b3d195c17</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="6c4192ab-24e3-4961-8558-eac9569cff60" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1290" w="10" h="10" />
+    <onsuccess>66d959fa-d49a-4574-b78e-1b78e09736a2</onsuccess>
+  </stage>
+  <stage stageid="7904120d-7558-4c2a-9295-764b3d195c17" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1290" w="10" h="10" />
+    <onsuccess>6c4192ab-24e3-4961-8558-eac9569cff60</onsuccess>
+  </stage>
+  <stage stageid="66d959fa-d49a-4574-b78e-1b78e09736a2" name="GroupJoin" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1320" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>199c163e-d981-4057-82f0-25f97967c1a1</onsuccess>
+    <processid>73e8d554-1594-4841-a855-4367cec333b1</processid>
+  </stage>
+  <stage stageid="199c163e-d981-4057-82f0-25f97967c1a1" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1320" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;GroupJoin&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>e9b039b2-2bce-4cd8-bebd-b69e06b334d2</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="23125b48-6d65-4915-bb24-6591d341786b" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1350" w="10" h="10" />
+    <onsuccess>237994fc-b9f9-43cd-8a0e-581dc24d8082</onsuccess>
+  </stage>
+  <stage stageid="e9b039b2-2bce-4cd8-bebd-b69e06b334d2" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1350" w="10" h="10" />
+    <onsuccess>23125b48-6d65-4915-bb24-6591d341786b</onsuccess>
+  </stage>
+</process>

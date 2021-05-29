@@ -1,0 +1,3796 @@
+﻿<process name="Coremoran - Dynamic LINQ" version="1.0" bpversion="6.10.1.35171" narrative="Wrapper for Dynamic LINQ: https://dynamic-linq.net/&#xD;&#xA;Project site: https://github.com/zzzprojects/System.Linq.Dynamic.Core" byrefcollection="true" type="object" runmode="Exclusive" preferredid="8229e34a-e436-4ff3-8f51-beb0f6fbcc6e">
+  <appdef>
+    <element name="Application Root">
+      <id>2b9748a3-2ee9-47ca-9118-bf0f407c0497</id>
+      <type>Application</type>
+      <basetype>Application</basetype>
+      <datatype>unknown</datatype>
+      <diagnose>False</diagnose>
+    </element>
+  </appdef>
+  <view>
+    <camerax>0</camerax>
+    <cameray>29</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="1d53ca84-b648-49cb-a15a-e72c7b78d279" type="CleanUp" published="True">
+    <name>Clean Up</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="7a2da761-4a0f-4af6-a185-c2acf5a8dfbd" type="Normal" published="False">
+    <name>Load From Nuget</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>-21</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="abad44af-1e40-40d0-a823-0c2450d622bc" type="Normal" published="True">
+    <name>Average</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c" type="Normal" published="True">
+    <name>Count</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="c126a62f-027a-4fbf-b07c-e3c02b37eba6" type="Normal" published="True">
+    <name>All</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="2847e726-43cb-4ea0-aebd-1f3a2ced34d7" type="Normal" published="True">
+    <name>Any</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="4530efd2-9c18-4410-8ce1-64973122291f" type="Normal" published="True">
+    <name>Max</name>
+    <view>
+      <camerax>-112</camerax>
+      <cameray>63</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="8062576c-db0d-4b2a-a5b1-43bfdd38b8d5" type="Normal" published="True">
+    <name>Min</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>84</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="79cd03b7-85bb-4f26-bae9-30f99701b2be" type="Normal" published="True">
+    <name>Sum</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="e04f4ddc-9c94-49bf-92c1-d0379e521442" type="Normal" published="True">
+    <name>Where</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="7c919a26-e556-4eba-965f-c5ea89abade6" type="Normal" published="True">
+    <name>Select</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="1cc00179-5d61-4022-a2f6-0756731d095a" type="Normal" published="True">
+    <name>SelectMany</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="155169bc-9507-4a10-b79c-91f6012fa1a3" type="Normal" published="True">
+    <name>SelectMany2</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>-63</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="f3276ec6-bec2-4d98-b143-02ff510845ef" type="Normal" published="True">
+    <name>OrderBy</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="bdde55ea-423f-4958-96f7-add9f306b34e" type="Normal" published="True">
+    <name>FirstOrDefault</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="c0054b9a-64ad-49ca-84d3-158c1d4510dd" type="Normal" published="True">
+    <name>LastOrDefault</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="9f4ae203-e962-4ef3-8d90-e24bf8a614df" type="Normal" published="True">
+    <name>SingleOrDefault</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="eea70225-b9b4-4d69-a2a5-639c5ab85c4a" type="Normal" published="True">
+    <name>TakeWhile</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="61c08dc8-f079-4ff0-b867-b501d77d7b88" type="Normal" published="True">
+    <name>Take</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="0bdc2cc5-3989-4d47-b421-3fae468089d3" type="Normal" published="True">
+    <name>SkipWhile</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="839f49b5-2113-45c9-8ae2-d95cc2e62fbe" type="Normal" published="True">
+    <name>Skip</name>
+    <view>
+      <camerax>-68</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="b4274f01-68ee-475b-83b6-132a7028695e" type="Normal" published="True">
+    <name>Reverse</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="70cac9b3-6cb6-456b-88e0-cebd065a7292" type="Normal" published="True">
+    <name>Page</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>-21</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="9476a690-ae15-4667-b94f-b301c55e3a36" type="Normal" published="True">
+    <name>GroupBy</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>21</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="57898a3c-175a-4b8a-b38a-2de5cb7b1fe0" type="Normal" published="True">
+    <name>GroupJoin</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>63</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="cb74c955-f870-467f-9404-37f58d2b2b28" type="Normal" published="True">
+    <name>Join</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>63</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="f3f7771d-cf2f-4dce-bf0f-98eba6596b12" name="Start" type="Start">
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>3dea8917-eb5c-4438-b6e4-2e01b6aec034</onsuccess>
+  </stage>
+  <stage stageid="610cc155-f48c-4962-9b6d-bafcff2f89e1" name="End" type="End">
+    <loginhibit />
+    <display x="15" y="75" />
+  </stage>
+  <stage stageid="0a17ab13-3266-4631-b3b2-d35fe231885c" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="240" h="90" />
+    <references>
+      <reference>System.dll</reference>
+      <reference>System.Core.dll</reference>
+      <reference>System.Data.DataSetExtensions.dll</reference>
+      <reference>Microsoft.CSharp.dll</reference>
+      <reference>System.Data.dll</reference>
+      <reference>System.Xml.dll</reference>
+      <reference>Newtonsoft.Json.dll</reference>
+      <reference>System.Diagnostics.Process.dll</reference>
+    </references>
+    <imports>
+      <import>System</import>
+      <import>System.Collections.Generic</import>
+      <import>System.Data</import>
+      <import>System.IO</import>
+      <import>System.Linq</import>
+      <import>System.Reflection</import>
+      <import>System.Text.RegularExpressions</import>
+      <import>Newtonsoft.Json</import>
+      <import>System.Collections</import>
+      <import>Newtonsoft.Json.Linq</import>
+      <import>System.Diagnostics</import>
+    </imports>
+    <language>csharp</language>
+    <globalcode><![CDATA[]]></globalcode>
+    <code><![CDATA[Type[] StdCallingTypes = { typeof(IQueryable), typeof(string), typeof(object[]) };
+
+IQueryable Table2Queryable(DataTable table)
+{
+	return Queryable.AsQueryable(InvokeStaticMethod<dynamic>(assemblies["json"], "Coremoran.BluePrism.Json.BluePrismConverter", "CollectionToJArray", table));
+}
+
+object[] BuildParameterArray(DataTable parameter)
+{
+	if (parameter == null || parameter.Rows.Count == 0)
+		return null;
+	return parameter.Rows[0].ItemArray.Select(item => item.GetType() == typeof(DataTable)?Table2Queryable((DataTable)item): item).ToArray();
+}
+
+string ExpandMacros(string predicate, DataTable source, DataTable parameter)
+{
+	if  (parameter != null && parameter.Rows.Count > 0)
+	{
+		predicate = Regex.Replace(predicate, @"\${(.+?)}", match => { 
+			if (!parameter.Columns.Contains(match.Groups[1].Value))
+				throw new Exception(string.Format("Column '{0}' does not exist.", match.Groups[1].Value));
+			return "@" + parameter.Columns.IndexOf(match.Groups[1].Value);
+		});
+	}
+	return Regex.Replace(predicate, @"\#([a-zA-Z_$][a-zA-Z_$0-9]*?)?{(.+?)}", match => {
+		var it = match.Groups[1].Success ? match.Groups[1].Value : "it";
+		return (source != null && source.Columns.Contains(match.Groups[2].Value)) ?
+			string.Format("{0}({2}[\"{1}\"])", source.Columns[match.Groups[2].Value].DataType.Name, match.Groups[2].Value, it)
+			: string.Format("{0}[\"{1}\"]", it, match.Groups[2].Value);
+	});
+}
+
+T InvokeStaticMethod<T>(Assembly assembly, string fullQualifiedClassName, string methodName, params object[] parameters)
+{
+	var type = assembly.GetType(fullQualifiedClassName);
+	return (T)type.GetMethod(methodName, BindingFlags.Static|BindingFlags.Public).Invoke(null, parameters);
+}
+
+MethodInfo FindStaticMethod(Assembly assembly, string fullQualifiedClassName, string methodName, params Type[] types)
+{
+	var type = assembly.GetType(fullQualifiedClassName);
+	return type.GetMethods(BindingFlags.Static | BindingFlags.Public)
+		.Where(m => m.Name == methodName && !m.IsGenericMethod)
+		.First(m => types.SequenceEqual(m.GetParameters().Select(s => s.ParameterType).ToArray()));
+}
+
+DataTable InvokeLinqMethod(string methodName, Type[] parameterTypes, object[] callParameter)
+{
+	var method = FindStaticMethod(assemblies["linq"], "System.Linq.Dynamic.Core.DynamicQueryableExtensions", methodName, parameterTypes);
+	try
+	{
+		var methodResult = method.Invoke(null, callParameter);
+		return InvokeStaticMethod<DataTable>(assemblies["json"], "Coremoran.BluePrism.Json.BluePrismConverter", "ObjectToCollection", methodResult);
+	}
+	catch (TargetInvocationException e)
+	{
+		throw e.InnerException;
+	}
+}
+
+DataTable InvokeLinqMethod(string methodName, DataTable source)
+{
+	return InvokeLinqMethod(methodName, new []{ typeof(IQueryable)}, new object[]{ Table2Queryable(source) });
+}
+
+DataTable InvokeLinqMethod(string methodName, string predicate, DataTable source, DataTable parameter)
+{
+	return InvokeLinqMethod(methodName, StdCallingTypes, new object[]{ Table2Queryable(source), ExpandMacros(predicate, source, parameter), BuildParameterArray(parameter)});
+}
+
+IDictionary<string, Assembly> assemblies = new Dictionary<string, Assembly>();]]></code>
+  </stage>
+  <stage stageid="71a218b4-b7eb-4437-b006-dca52d235c02" name="Clean Up" type="SubSheetInfo">
+    <subsheetid>1d53ca84-b648-49cb-a15a-e72c7b78d279</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="4a4976a2-bd96-4dee-86e2-5b1fc046862c" name="Start" type="Start">
+    <subsheetid>1d53ca84-b648-49cb-a15a-e72c7b78d279</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>e292eda2-b083-41be-95a5-45c7135fb26c</onsuccess>
+  </stage>
+  <stage stageid="e292eda2-b083-41be-95a5-45c7135fb26c" name="End" type="End">
+    <subsheetid>1d53ca84-b648-49cb-a15a-e72c7b78d279</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+  </stage>
+  <stage stageid="2ece4661-4695-4bd4-9059-13a76a7a280a" name="Average" type="SubSheetInfo">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <narrative>Computes the average of a sequence of numeric values.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="a4bf9ffb-8547-4623-afbb-5149b4f9d5ec" name="Start" type="Start">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A collections with numeric values to calculate the average of." stage="Source" />
+      <input type="text" name="Predicate" narrative="A function to test each element for a condition." stage="Predicate" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>0315e286-1cd4-4ed3-8111-41fc66939b60</onsuccess>
+  </stage>
+  <stage stageid="eba4701c-e9d0-412d-a1c4-78a86802d5b8" name="End" type="End">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <outputs>
+      <output type="number" name="Avg" stage="Avg" />
+    </outputs>
+  </stage>
+  <stage stageid="2f3a8cf5-41ee-4ed3-bc16-c4242bd41b94" name="Source" type="Collection">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="0192b63f-4a7a-4169-8e65-243827f71dca" name="Predicate" type="Data">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="47e6871b-a39e-4167-b1ee-b55dffb1fbed" name="Parameter" type="Collection">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="cd19a0ac-111b-417d-93ae-5701fecf0274" name="Average" type="Code">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="predicate" expr="[Predicate]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="number" name="avg" stage="Avg" />
+    </outputs>
+    <onsuccess>eba4701c-e9d0-412d-a1c4-78a86802d5b8</onsuccess>
+    <code><![CDATA[var result = InvokeLinqMethod("Average", predicate, source, parameter);
+avg = (decimal)result.Rows[0][0];]]></code>
+  </stage>
+  <stage stageid="8418819f-7133-406a-9e43-42bc919be7a9" name="Avg" type="Data">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <display x="-195" y="195" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="93e241c4-021e-4c44-b3c5-3560fc91bed0" name="Count&gt;0?" type="Decision">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>d5400c5d-d9e6-441e-997d-b27aea52cb1d</ontrue>
+    <onfalse>2d4cd777-da22-4428-8a3f-a9d70bf1a677</onfalse>
+  </stage>
+  <stage stageid="0315e286-1cd4-4ed3-8111-41fc66939b60" name="Count Rows" type="Action">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>93e241c4-021e-4c44-b3c5-3560fc91bed0</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="fbf11b06-411f-4174-854f-58c289a56713" name="Count" type="Data">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d5400c5d-d9e6-441e-997d-b27aea52cb1d" name="Convert To Double" type="Calculation">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <onsuccess>cd19a0ac-111b-417d-93ae-5701fecf0274</onsuccess>
+    <calculation expression="&quot;Double(&quot;&amp;[Predicate]&amp;&quot;)&quot;" stage="Predicate" />
+  </stage>
+  <stage stageid="dd030da5-4910-485e-bcf0-0d1c250059fa" name="Where" type="SubSheetInfo">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <narrative>Filters a sequence of values based on a predicate.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="c07c4cf8-4b69-4453-acd1-f6eb13bcebeb" name="Start" type="Start">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A collection to filter." stage="Source" />
+      <input type="text" name="Predicate" narrative="An expression string to test each element for a condition." stage="Predicate" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>a4c76a5d-f74e-489e-a685-bbeb7529026e</onsuccess>
+  </stage>
+  <stage stageid="05e7e838-7e8b-42e9-b8e8-4d16f57c8b74" name="End" type="End">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="17ebc04c-0043-42d9-b0ee-21ec01964177" name="Where" type="Code">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="predicate" expr="[Predicate]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>05e7e838-7e8b-42e9-b8e8-4d16f57c8b74</onsuccess>
+    <code><![CDATA[result = InvokeLinqMethod("Where", predicate, source, parameter);
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="6f068223-e0be-4275-b629-666edc1866cb" name="Count&gt;0?" type="Decision">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>17ebc04c-0043-42d9-b0ee-21ec01964177</ontrue>
+    <onfalse>cec1a4e1-d6ef-4490-8d9d-07030be58096</onfalse>
+  </stage>
+  <stage stageid="e0e99679-2bf1-4d50-aba5-42ec7de03ae6" name="Count Rows" type="Action">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>6f068223-e0be-4275-b629-666edc1866cb</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="cec1a4e1-d6ef-4490-8d9d-07030be58096" name="Anchor1" type="Anchor">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <loginhibit />
+    <display x="75" y="30" w="10" h="10" />
+    <onsuccess>5c003dbb-88df-4506-8c4b-3daabe198640</onsuccess>
+  </stage>
+  <stage stageid="5c003dbb-88df-4506-8c4b-3daabe198640" name="Anchor2" type="Anchor">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <loginhibit />
+    <display x="75" y="120" w="10" h="10" />
+    <onsuccess>05e7e838-7e8b-42e9-b8e8-4d16f57c8b74</onsuccess>
+  </stage>
+  <stage stageid="97dd12ff-50f8-4d13-beef-95d8c56e23fd" name="Select" type="SubSheetInfo">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <narrative>Projects each element of a sequence into a new form.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="063ec125-8439-4d55-a842-0f47af2a89b1" name="Start" type="Start">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A collection of values to project" stage="Source" />
+      <input type="text" name="Selector" narrative="A projection string expression to apply to each element." stage="Selector" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>ccbf0e26-387f-4adb-ba5d-068f7b668e0e</onsuccess>
+  </stage>
+  <stage stageid="c8b142f8-711a-43b0-a4ab-eb4aaa0f8229" name="End" type="End">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="c1f3efe7-c2a1-48bf-96e6-96920ccb68ab" name="Select" type="Code">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="selector" expr="[Selector]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>c8b142f8-711a-43b0-a4ab-eb4aaa0f8229</onsuccess>
+    <code><![CDATA[result = InvokeLinqMethod("Select", selector , source, parameter);
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="357b1c78-6c8c-4d8d-95c1-f74652de3540" name="Count&gt;0?" type="Decision">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>c1f3efe7-c2a1-48bf-96e6-96920ccb68ab</ontrue>
+    <onfalse>781d589b-8d57-46e5-b90b-5a3b6a4dfb44</onfalse>
+  </stage>
+  <stage stageid="4e891248-5176-48c8-bc9d-54b1272ecc05" name="Count Rows" type="Action">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>357b1c78-6c8c-4d8d-95c1-f74652de3540</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="781d589b-8d57-46e5-b90b-5a3b6a4dfb44" name="Anchor1" type="Anchor">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <loginhibit />
+    <display x="75" y="30" w="10" h="10" />
+    <onsuccess>0097ad9b-ae94-4576-9e23-e71c5e128de3</onsuccess>
+  </stage>
+  <stage stageid="0097ad9b-ae94-4576-9e23-e71c5e128de3" name="Anchor2" type="Anchor">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <loginhibit />
+    <display x="75" y="120" w="10" h="10" />
+    <onsuccess>c8b142f8-711a-43b0-a4ab-eb4aaa0f8229</onsuccess>
+  </stage>
+  <stage stageid="021ce235-0aa1-4dcd-9247-78b4e2586666" name="Selector" type="Data">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="7e67ae7d-853d-4f25-b2d4-1bafbc82abce" name="Count" type="SubSheetInfo">
+    <subsheetid>d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c</subsheetid>
+    <narrative>Returns the number of elements in a sequence.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="c492f0ad-9c1f-4f31-a863-648a9eb4b629" name="Start" type="Start">
+    <subsheetid>d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="The collection that contains the elements to be counted." stage="Source" />
+      <input type="text" name="Predicate" narrative="A function to test each element for a condition." stage="Predicate" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>d5cd339a-439b-4328-8bd3-0edb7de0fabc</onsuccess>
+  </stage>
+  <stage stageid="8bb86626-08af-4e02-b9c4-2ff8df16ee64" name="End" type="End">
+    <subsheetid>d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <outputs>
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="381ccd67-b206-4533-a55c-ec48b851b670" name="Source" type="Collection">
+    <subsheetid>d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="053b3bbe-e789-4bfe-91f9-856bf53ac519" name="Predicate" type="Data">
+    <subsheetid>d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c6f1da65-719c-409a-8bde-ba02e03f0cb8" name="Parameter" type="Collection">
+    <subsheetid>d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="4bbad818-f9e7-4bc7-9dd2-8d8301f11751" name="Count" type="Code">
+    <subsheetid>d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="predicate" expr="[Predicate]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>8bb86626-08af-4e02-b9c4-2ff8df16ee64</onsuccess>
+    <code><![CDATA[DataTable result;
+if (string.IsNullOrEmpty(predicate))
+{
+	result = InvokeLinqMethod("Count", source);
+}
+else
+{
+	result = InvokeLinqMethod("Count", predicate, source, parameter);
+}
+count = (decimal)result.Rows[0][0];]]></code>
+  </stage>
+  <stage stageid="fe30ff23-7e23-4675-8be8-880762b33905" name="Count&gt;0?" type="Decision">
+    <subsheetid>d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>4bbad818-f9e7-4bc7-9dd2-8d8301f11751</ontrue>
+    <onfalse>71fbae70-eae4-44ee-9409-07e167907eb4</onfalse>
+  </stage>
+  <stage stageid="d5cd339a-439b-4328-8bd3-0edb7de0fabc" name="Count Rows" type="Action">
+    <subsheetid>d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>fe30ff23-7e23-4675-8be8-880762b33905</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="7cff767b-66a7-4fea-8462-77634ed2f048" name="Count" type="Data">
+    <subsheetid>d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="71fbae70-eae4-44ee-9409-07e167907eb4" name="Anchor1" type="Anchor">
+    <subsheetid>d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c</subsheetid>
+    <loginhibit />
+    <display x="75" y="-15" w="10" h="10" />
+    <onsuccess>02b4ab76-cfaf-4635-bc1d-5867bca42497</onsuccess>
+  </stage>
+  <stage stageid="02b4ab76-cfaf-4635-bc1d-5867bca42497" name="Anchor2" type="Anchor">
+    <subsheetid>d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c</subsheetid>
+    <loginhibit />
+    <display x="75" y="75" w="10" h="10" />
+    <onsuccess>8bb86626-08af-4e02-b9c4-2ff8df16ee64</onsuccess>
+  </stage>
+  <stage stageid="e444c069-b50c-45d1-8ab7-81db87bbca66" name="Max" type="SubSheetInfo">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <narrative>Computes the max element of a sequence.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="97c3b0ce-b371-4760-aa7b-9d96e63e0329" name="Start" type="Start">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A collection of values to calculate find the max for." stage="Source" />
+      <input type="text" name="Predicate" narrative="A function to test each element for a condition." stage="Predicate" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>a79268c0-20eb-4dbe-aa75-541accb81298</onsuccess>
+  </stage>
+  <stage stageid="7eed38ee-699a-4469-92a7-d6609fa5ba9e" name="End" type="End">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+    </outputs>
+  </stage>
+  <stage stageid="9ee4d9de-6346-4a1a-95aa-2a8db1d48296" name="Source" type="Collection">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="31d38a46-6eba-4f0f-83b4-13e2e495734d" name="Predicate" type="Data">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">Text</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="4ce7b412-e7dc-4f04-8cc6-75213db757e9" name="Parameter" type="Collection">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a0244fff-3e17-417e-bd96-dd4cbf965b41" name="Max" type="Code">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="predicate" expr="[Predicate]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+    </outputs>
+    <onsuccess>7eed38ee-699a-4469-92a7-d6609fa5ba9e</onsuccess>
+    <code><![CDATA[result = InvokeLinqMethod("Max", predicate, source, parameter);
+result.Columns[0].ColumnName = "Max";]]></code>
+  </stage>
+  <stage stageid="e176f76c-1118-4328-b1da-b26235dedf61" name="Count&gt;0?" type="Decision">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>a0244fff-3e17-417e-bd96-dd4cbf965b41</ontrue>
+    <onfalse>ed55235c-69d5-413a-8fc6-9c7a9ce57615</onfalse>
+  </stage>
+  <stage stageid="07500b80-ca42-4b01-be74-8ab970d7c483" name="Count Rows" type="Action">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>e176f76c-1118-4328-b1da-b26235dedf61</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="ee680529-9521-49ce-b9a8-8cd4cfc1c7ba" name="Min" type="SubSheetInfo">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <narrative>Computes the min element of a sequence.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="f5b32871-903c-4fa4-b02f-9d52569c68f1" name="Start" type="Start">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A collection of values to calculate find the min for." stage="Source" />
+      <input type="text" name="Predicate" narrative="A function to test each element for a condition." stage="Predicate" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>303f1b79-1d3f-458a-b0b5-fd804252080f</onsuccess>
+  </stage>
+  <stage stageid="b02c59d7-c29f-4e51-9b83-f8e195951d73" name="End" type="End">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+    </outputs>
+  </stage>
+  <stage stageid="be78f6f8-41bd-438d-970e-10e8db1346c3" name="Min" type="Code">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="predicate" expr="[Predicate]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+    </outputs>
+    <onsuccess>b02c59d7-c29f-4e51-9b83-f8e195951d73</onsuccess>
+    <code><![CDATA[result = InvokeLinqMethod("Min", predicate, source, parameter);
+result.Columns[0].ColumnName = "Min";]]></code>
+  </stage>
+  <stage stageid="5f49fc23-2031-45a1-b913-3c071fd533ef" name="Count&gt;0?" type="Decision">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>be78f6f8-41bd-438d-970e-10e8db1346c3</ontrue>
+    <onfalse>4cfcf16c-4cbb-44cd-8b27-d82ed6f7ec52</onfalse>
+  </stage>
+  <stage stageid="06a8fe49-a57a-4002-a9e6-08fe9a445049" name="Count Rows" type="Action">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>5f49fc23-2031-45a1-b913-3c071fd533ef</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="1a08021e-94cd-4066-810d-74c6a3371e8c" name="FirstOrDefault" type="SubSheetInfo">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <narrative>Returns the first element of a sequence, or empty if the sequence contains no elements.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="c6a116d5-35ee-4ca9-896b-b6ace2634e4e" name="Start" type="Start">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="The collection to return the first element of." stage="Source" />
+      <input type="text" name="Predicate" narrative="A function to test each element for a condition." stage="Predicate" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>c504c525-db98-4e5a-a220-deffe802e241</onsuccess>
+  </stage>
+  <stage stageid="fd3d2acc-0080-49b4-b602-db46539df9b8" name="End" type="End">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="flag" name="Success" stage="Success" />
+    </outputs>
+  </stage>
+  <stage stageid="bdce960d-0cf9-4407-b3fc-5b3378dc7f0a" name="Source" type="Collection">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e3a0c6a8-6f76-44c8-930d-d60b524937a0" name="Predicate" type="Data">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6690b447-c488-412f-9897-f0fe512d0cb3" name="Parameter" type="Collection">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b6fd3467-10de-4570-bfc2-7e574b64df4c" name="FirstOrDefault" type="Code">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="predicate" expr="[Predicate]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="flag" name="success" stage="Success" />
+    </outputs>
+    <onsuccess>fd3d2acc-0080-49b4-b602-db46539df9b8</onsuccess>
+    <code><![CDATA[if (string.IsNullOrEmpty(predicate))
+{
+	result = InvokeLinqMethod("FirstOrDefault", source);
+}
+else
+{
+	result = InvokeLinqMethod("FirstOrDefault", predicate, source, parameter);
+}
+success = result.Rows.Count > 0;]]></code>
+  </stage>
+  <stage stageid="32dc4c6f-f8ca-4df9-a6bf-b3ab583cd343" name="Count&gt;0?" type="Decision">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>b6fd3467-10de-4570-bfc2-7e574b64df4c</ontrue>
+    <onfalse>34d649a9-3e88-49dd-ad3d-4a21d7582e40</onfalse>
+  </stage>
+  <stage stageid="c504c525-db98-4e5a-a220-deffe802e241" name="Count Rows" type="Action">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>32dc4c6f-f8ca-4df9-a6bf-b3ab583cd343</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="aaf14401-9f9c-4933-bfb9-874273b812e9" name="Count" type="Data">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="34d649a9-3e88-49dd-ad3d-4a21d7582e40" name="Anchor1" type="Anchor">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <loginhibit />
+    <display x="75" y="-15" w="10" h="10" />
+    <onsuccess>2c496b0e-3b7d-4cca-a61c-e395d07f68de</onsuccess>
+  </stage>
+  <stage stageid="2c496b0e-3b7d-4cca-a61c-e395d07f68de" name="Anchor2" type="Anchor">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <loginhibit />
+    <display x="75" y="75" w="10" h="10" />
+    <onsuccess>fd3d2acc-0080-49b4-b602-db46539df9b8</onsuccess>
+  </stage>
+  <stage stageid="9c7cefe6-c182-42ca-af15-5e4b9b23ae68" name="Result" type="Collection">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <display x="-195" y="195" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="af35ed73-8031-4c4b-9bb6-0fbf7df45e7c" name="Success" type="Data">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <display x="-195" y="225" w="120" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue>False</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="bfa35565-2daa-4f83-b32a-fedb1d0771c8" name="LastOrDefault" type="SubSheetInfo">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <narrative>Returns the last element of a sequence, or empty if the sequence contains no elements.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="1c30ed67-8919-43b2-b8c1-88c7eb329a0f" name="Start" type="Start">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="The collection to return the last element of." stage="Source" />
+      <input type="text" name="Predicate" narrative="A function to test each element for a condition." stage="Predicate" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>5cf465b6-ce3f-4f9f-8c13-b78e85325c88</onsuccess>
+  </stage>
+  <stage stageid="a6a47c5d-47ce-4cc1-8521-48d6fc15607b" name="End" type="End">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="flag" name="Success" stage="Success" />
+    </outputs>
+  </stage>
+  <stage stageid="fc1b2de9-5f7d-4259-8118-4800ae19c7ee" name="LastOrDefault" type="Code">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="predicate" expr="[Predicate]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="flag" name="success" stage="Success" />
+    </outputs>
+    <onsuccess>a6a47c5d-47ce-4cc1-8521-48d6fc15607b</onsuccess>
+    <code><![CDATA[if (string.IsNullOrEmpty(predicate))
+{
+	result = InvokeLinqMethod("LastOrDefault", source);
+}
+else
+{
+	result = InvokeLinqMethod("LastOrDefault", predicate, source, parameter);
+}
+success = result.Rows.Count > 0;]]></code>
+  </stage>
+  <stage stageid="ea4815dd-a2c1-4caa-892c-13f55d36f2c5" name="Count&gt;0?" type="Decision">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>fc1b2de9-5f7d-4259-8118-4800ae19c7ee</ontrue>
+    <onfalse>5cd06b67-7622-460f-b273-60daa8bf5f4a</onfalse>
+  </stage>
+  <stage stageid="5cf465b6-ce3f-4f9f-8c13-b78e85325c88" name="Count Rows" type="Action">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>ea4815dd-a2c1-4caa-892c-13f55d36f2c5</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="5cd06b67-7622-460f-b273-60daa8bf5f4a" name="Anchor1" type="Anchor">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <loginhibit />
+    <display x="75" y="-15" w="10" h="10" />
+    <onsuccess>3571bb9c-8672-485b-b9c7-f1642751fd7c</onsuccess>
+  </stage>
+  <stage stageid="3571bb9c-8672-485b-b9c7-f1642751fd7c" name="Anchor2" type="Anchor">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <loginhibit />
+    <display x="75" y="75" w="10" h="10" />
+    <onsuccess>a6a47c5d-47ce-4cc1-8521-48d6fc15607b</onsuccess>
+  </stage>
+  <stage stageid="f65e54f5-7014-43e7-b9fb-7399114b3c3c" name="SingleOrDefault" type="SubSheetInfo">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <narrative>Returns the only element of a sequence, and throws an exception if there
+ is not exactly one element in the sequence.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="d5421020-dc67-43e2-b910-75ca3ef56d2a" name="Start" type="Start">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A collection to return the single element of." stage="Source" />
+      <input type="text" name="Predicate" narrative="A function to test each element for a condition." stage="Predicate" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>8fb897d2-2369-43b6-88cc-af343f5b5022</onsuccess>
+  </stage>
+  <stage stageid="af606b5e-8b12-42dd-a8e8-40b27a551146" name="End" type="End">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="flag" name="Success" stage="Success" />
+    </outputs>
+  </stage>
+  <stage stageid="fc11aa93-91ac-4bd3-837d-1ea7adf7df66" name="SingleOrDefault" type="Code">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="predicate" expr="[Predicate]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="flag" name="success" stage="Success" />
+    </outputs>
+    <onsuccess>af606b5e-8b12-42dd-a8e8-40b27a551146</onsuccess>
+    <code><![CDATA[try
+{
+	if (string.IsNullOrEmpty(predicate))
+	{
+		result = InvokeLinqMethod("SingleOrDefault", source);
+	}
+	else
+	{
+		result = InvokeLinqMethod("SingleOrDefault", predicate, source, parameter);
+	}
+}
+catch (InvalidOperationException)
+{
+	throw new Exception("Sequence contains more than one matching element");
+}
+success = result.Rows.Count > 0;]]></code>
+  </stage>
+  <stage stageid="594cbcbc-58df-4640-98a3-2a14528df0fe" name="Count&gt;0?" type="Decision">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>fc11aa93-91ac-4bd3-837d-1ea7adf7df66</ontrue>
+    <onfalse>791ef22d-0742-4e1e-aa40-c69a39e2c841</onfalse>
+  </stage>
+  <stage stageid="8fb897d2-2369-43b6-88cc-af343f5b5022" name="Count Rows" type="Action">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>594cbcbc-58df-4640-98a3-2a14528df0fe</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="791ef22d-0742-4e1e-aa40-c69a39e2c841" name="Anchor1" type="Anchor">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <loginhibit />
+    <display x="75" y="-15" w="10" h="10" />
+    <onsuccess>af896814-41f0-4920-a382-4c4ee826b120</onsuccess>
+  </stage>
+  <stage stageid="af896814-41f0-4920-a382-4c4ee826b120" name="Anchor2" type="Anchor">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <loginhibit />
+    <display x="75" y="75" w="10" h="10" />
+    <onsuccess>af606b5e-8b12-42dd-a8e8-40b27a551146</onsuccess>
+  </stage>
+  <stage stageid="9085f366-3f6e-449e-baac-0f8f7608d3d2" name="TakeWhile" type="SubSheetInfo">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <narrative>Returns elements from a sequence as long as a specified condition is true.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="13d6f979-9fd5-42d7-940c-72d45b0fbe45" name="Start" type="Start">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <loginhibit />
+    <narrative>Returns elements from a collection as long as a specified condition is true.</narrative>
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="The collection to return elements from." stage="Source" />
+      <input type="text" name="Predicate" narrative="A function to test each element for a condition." stage="Predicate" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>2e19cf76-ebf2-4731-860b-596cf5c0025c</onsuccess>
+  </stage>
+  <stage stageid="7c5b5f60-fee0-4c67-a7ed-94be8c55c081" name="End" type="End">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="051a870e-3cfc-4066-b120-2029c12d8f41" name="Source" type="Collection">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1cadefff-0fa3-4f78-8b98-18d184748c05" name="Predicate" type="Data">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a5768292-f657-44ad-b4c6-262f60942ecc" name="Parameter" type="Collection">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3c207b07-6a31-4637-8a2a-69d6a7c30de5" name="TakeWhile" type="Code">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="predicate" expr="[Predicate]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>7c5b5f60-fee0-4c67-a7ed-94be8c55c081</onsuccess>
+    <code><![CDATA[result = InvokeLinqMethod("TakeWhile", predicate, source, parameter);
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="a62f596b-7b8f-4f03-abbf-a6df1ba4b166" name="Count&gt;0?" type="Decision">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>3c207b07-6a31-4637-8a2a-69d6a7c30de5</ontrue>
+    <onfalse>944ccd75-6130-4e0e-9ea7-a9e571de923d</onfalse>
+  </stage>
+  <stage stageid="a7d9775b-7c7c-4227-a157-3d338d2f819c" name="Count Rows" type="Action">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>a62f596b-7b8f-4f03-abbf-a6df1ba4b166</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="ef1b4263-21c9-445f-9183-783448ca711d" name="Count" type="Data">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <display x="-195" y="150" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="944ccd75-6130-4e0e-9ea7-a9e571de923d" name="Anchor1" type="Anchor">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <loginhibit />
+    <display x="75" y="30" w="10" h="10" />
+    <onsuccess>a9014bbd-1d2b-46a4-85c0-0ebc4934508e</onsuccess>
+  </stage>
+  <stage stageid="a9014bbd-1d2b-46a4-85c0-0ebc4934508e" name="Anchor2" type="Anchor">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <loginhibit />
+    <display x="75" y="120" w="10" h="10" />
+    <onsuccess>7c5b5f60-fee0-4c67-a7ed-94be8c55c081</onsuccess>
+  </stage>
+  <stage stageid="17baf2a0-f486-4792-95f4-c0775155caf6" name="Result" type="Collection">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e7ddcf7c-0ec9-44ac-9c22-8c0a6f072081" name="SkipWhile" type="SubSheetInfo">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <narrative>Returns elements from a collection as long as a specified condition is true.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="058b63d5-d75e-4b2f-b045-daef249647a2" name="Start" type="Start">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A collection to return elements from." stage="Source" />
+      <input type="text" name="Predicate" narrative="A function to test each element for a condition." stage="Predicate" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>13f7681c-00d3-4ff0-a3fc-27748ea3420f</onsuccess>
+  </stage>
+  <stage stageid="1563aec2-7b86-46fa-88b6-edf8472657a4" name="End" type="End">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="6913e542-5c0d-460c-8e9b-493cb4ad86f7" name="Source" type="Collection">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8a2e28ed-8333-4d5f-9314-1f5a1aa17912" name="Predicate" type="Data">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="50d44532-a897-4f53-bb0f-ff8f8344bc64" name="Parameter" type="Collection">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="620fe18b-c91f-40dd-a272-4a8605e99d84" name="SkipWhile" type="Code">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="predicate" expr="[Predicate]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>1563aec2-7b86-46fa-88b6-edf8472657a4</onsuccess>
+    <code><![CDATA[result = InvokeLinqMethod("SkipWhile", predicate, source, parameter);
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="7ab0e31a-04c3-459c-8f48-edba56c79d22" name="Count&gt;0?" type="Decision">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>620fe18b-c91f-40dd-a272-4a8605e99d84</ontrue>
+    <onfalse>c53090dd-df27-4580-ae74-b9201860a185</onfalse>
+  </stage>
+  <stage stageid="9b8acd28-fc68-4f07-8c3a-a604a4c67f48" name="Count Rows" type="Action">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>7ab0e31a-04c3-459c-8f48-edba56c79d22</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="ec1f9729-2a81-4b33-85c2-4e8fb38441fa" name="Count" type="Data">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <display x="-195" y="150" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c53090dd-df27-4580-ae74-b9201860a185" name="Anchor1" type="Anchor">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <loginhibit />
+    <display x="75" y="30" w="10" h="10" />
+    <onsuccess>acaf47a1-8987-47da-9a34-b5f095985ec7</onsuccess>
+  </stage>
+  <stage stageid="acaf47a1-8987-47da-9a34-b5f095985ec7" name="Anchor2" type="Anchor">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <loginhibit />
+    <display x="75" y="120" w="10" h="10" />
+    <onsuccess>1563aec2-7b86-46fa-88b6-edf8472657a4</onsuccess>
+  </stage>
+  <stage stageid="b7cccca5-2748-43a1-8925-f0058a329e58" name="Result" type="Collection">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="86445458-1dc0-4b59-b1e0-56afba723d47" name="Sum" type="SubSheetInfo">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <narrative>Computes the sum of a sequence of numeric values.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="8effd770-e5ca-4404-93ea-0f1c0d7a4493" name="Start" type="Start">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A collection of numeric values to calculate the sum of." stage="Source" />
+      <input type="text" name="Predicate" narrative="A function to test each element for a condition." stage="Predicate" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>10217004-b06d-4f4d-9bf3-45ea9718a996</onsuccess>
+  </stage>
+  <stage stageid="303fa891-92b0-482e-b769-e224711c1033" name="End" type="End">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <outputs>
+      <output type="number" name="Result" stage="Result" />
+    </outputs>
+  </stage>
+  <stage stageid="2fd58be7-9d23-4948-a58b-cef9a71813c3" name="Sum" type="Code">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="predicate" expr="[Predicate]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="number" name="result" stage="Result" />
+    </outputs>
+    <onsuccess>303fa891-92b0-482e-b769-e224711c1033</onsuccess>
+    <code><![CDATA[result = Convert.ToDecimal(InvokeLinqMethod("Sum", predicate, source, parameter).Rows[0][0]);]]></code>
+  </stage>
+  <stage stageid="3cedcf13-cc8a-4d53-84b1-4048f5e54ed2" name="Count&gt;0?" type="Decision">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>2fd58be7-9d23-4948-a58b-cef9a71813c3</ontrue>
+    <onfalse>fba07452-d43c-4c86-baad-d022c1ed025e</onfalse>
+  </stage>
+  <stage stageid="9c4ecabb-27df-45cf-b35b-5d7aa2eeb65e" name="Count Rows" type="Action">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>3cedcf13-cc8a-4d53-84b1-4048f5e54ed2</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="fba07452-d43c-4c86-baad-d022c1ed025e" name="Anchor1" type="Anchor">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <loginhibit />
+    <display x="75" y="30" w="10" h="10" />
+    <onsuccess>a5bcfd20-e2c5-4661-bcca-713f11155fb1</onsuccess>
+  </stage>
+  <stage stageid="a5bcfd20-e2c5-4661-bcca-713f11155fb1" name="Anchor2" type="Anchor">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <loginhibit />
+    <display x="75" y="120" w="10" h="10" />
+    <onsuccess>303fa891-92b0-482e-b769-e224711c1033</onsuccess>
+  </stage>
+  <stage stageid="107a1d79-cf54-4818-b7dc-8b146b827a05" name="Reverse" type="SubSheetInfo">
+    <subsheetid>b4274f01-68ee-475b-83b6-132a7028695e</subsheetid>
+    <narrative>Inverts the order of the elements in a sequence.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="102cb0bd-aa23-43e6-a4dd-76a40ee720a9" name="Start" type="Start">
+    <subsheetid>b4274f01-68ee-475b-83b6-132a7028695e</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A sequence of values to reverse." stage="Source" />
+    </inputs>
+    <onsuccess>55256534-bf0f-4b3b-bb6b-cf731e972057</onsuccess>
+  </stage>
+  <stage stageid="9029dec6-6068-413c-88a4-daeda7ccb049" name="End" type="End">
+    <subsheetid>b4274f01-68ee-475b-83b6-132a7028695e</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="c91f913c-3932-4376-b841-089424a0226b" name="Result" type="Collection">
+    <subsheetid>b4274f01-68ee-475b-83b6-132a7028695e</subsheetid>
+    <display x="-195" y="60" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="31027c5d-2ff0-4570-bfa6-d4813ce58bb3" name="Count" type="Data">
+    <subsheetid>b4274f01-68ee-475b-83b6-132a7028695e</subsheetid>
+    <display x="-195" y="90" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="55256534-bf0f-4b3b-bb6b-cf731e972057" name="Reverse" type="Code">
+    <subsheetid>b4274f01-68ee-475b-83b6-132a7028695e</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>9029dec6-6068-413c-88a4-daeda7ccb049</onsuccess>
+    <code><![CDATA[result = InvokeLinqMethod("Reverse", new [] { typeof(IQueryable)}, new object[] { Table2Queryable(source) });
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="4899d1f3-42a7-4320-b22c-2b9655312671" name="Source" type="Collection">
+    <subsheetid>b4274f01-68ee-475b-83b6-132a7028695e</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c939b208-0739-4585-884c-0b63cd30fcc5" name="Take" type="SubSheetInfo">
+    <subsheetid>61c08dc8-f079-4ff0-b867-b501d77d7b88</subsheetid>
+    <narrative>Returns a specified number of contiguous elements from the start of a sequence.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="c2153d07-0d81-4aab-9a79-07e74af9c480" name="Start" type="Start">
+    <subsheetid>61c08dc8-f079-4ff0-b867-b501d77d7b88</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="The collection to return elements from." stage="Source" />
+      <input type="number" name="Count" narrative="The number of elements to return." stage="Count" />
+    </inputs>
+    <onsuccess>3d5310a6-445d-42fa-a8ef-d6ece7788654</onsuccess>
+  </stage>
+  <stage stageid="2bb37985-28fb-4395-bce5-66726bbd5da0" name="End" type="End">
+    <subsheetid>61c08dc8-f079-4ff0-b867-b501d77d7b88</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="73fa9f9a-f2ba-4d7e-b78d-339562d9c7bd" name="Source" type="Collection">
+    <subsheetid>61c08dc8-f079-4ff0-b867-b501d77d7b88</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3d5310a6-445d-42fa-a8ef-d6ece7788654" name="Take" type="Code">
+    <subsheetid>61c08dc8-f079-4ff0-b867-b501d77d7b88</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="number" name="count" expr="[Count]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="resultcount" stage="Count" />
+    </outputs>
+    <onsuccess>2bb37985-28fb-4395-bce5-66726bbd5da0</onsuccess>
+    <code><![CDATA[result = InvokeLinqMethod("Take", new [] { typeof(IQueryable), typeof(int)}, new object[] { Table2Queryable(source), (int)count });
+resultcount = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="921546e8-a050-4ab0-a0d8-9d46b9aa582d" name="Count" type="Data">
+    <subsheetid>61c08dc8-f079-4ff0-b867-b501d77d7b88</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>1</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="55059606-689b-47e6-9135-6825562dec62" name="Result" type="Collection">
+    <subsheetid>61c08dc8-f079-4ff0-b867-b501d77d7b88</subsheetid>
+    <display x="-195" y="90" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b6117c10-90bb-4846-972f-ba7a81fda6f0" name="Skip" type="SubSheetInfo">
+    <subsheetid>839f49b5-2113-45c9-8ae2-d95cc2e62fbe</subsheetid>
+    <narrative>Bypasses a specified number of elements in a collection and then returns the remaining elements.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="154c168b-2e7e-4fc5-992e-b83bef56c432" name="Start" type="Start">
+    <subsheetid>839f49b5-2113-45c9-8ae2-d95cc2e62fbe</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A collection to return elements from." stage="Source" />
+      <input type="number" name="Count" narrative="The number of elements to skip before returning the remaining elements." stage="Count" />
+    </inputs>
+    <onsuccess>5314922e-d379-4777-b5b4-307802c8fa7e</onsuccess>
+  </stage>
+  <stage stageid="676c6855-924f-42c1-b77d-98e2b9df643c" name="End" type="End">
+    <subsheetid>839f49b5-2113-45c9-8ae2-d95cc2e62fbe</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="e35abbf2-033c-4ea7-838b-69abdee0cc54" name="Source" type="Collection">
+    <subsheetid>839f49b5-2113-45c9-8ae2-d95cc2e62fbe</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5314922e-d379-4777-b5b4-307802c8fa7e" name="Skip" type="Code">
+    <subsheetid>839f49b5-2113-45c9-8ae2-d95cc2e62fbe</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="number" name="count" expr="[Count]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="resultcount" stage="Count" />
+    </outputs>
+    <onsuccess>676c6855-924f-42c1-b77d-98e2b9df643c</onsuccess>
+    <code><![CDATA[result = InvokeLinqMethod("Skip", new [] { typeof(IQueryable), typeof(int)}, new object[] { Table2Queryable(source), (int)count });
+resultcount = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="2d5fb636-df06-4f80-827c-6cad41a9b779" name="Count" type="Data">
+    <subsheetid>839f49b5-2113-45c9-8ae2-d95cc2e62fbe</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>1</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9e5a0bad-eaa5-451b-8a21-1214007710d0" name="Result" type="Collection">
+    <subsheetid>839f49b5-2113-45c9-8ae2-d95cc2e62fbe</subsheetid>
+    <display x="-195" y="90" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="43e09dc7-9fa4-437e-a59b-814644423170" name="Page" type="SubSheetInfo">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <narrative>Returns the elements as paged.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="71ac094d-4b8d-4246-b4ff-a39e97fa9ff0" name="Start" type="Start">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="The collection to return elements from." stage="Source" />
+      <input type="number" name="Page" narrative="The page to return. (1-based)" stage="Page" />
+      <input type="number" name="PageSize" narrative="The number of elements per page." stage="PageSize" />
+    </inputs>
+    <onsuccess>48fe4470-3e0c-4990-a19e-bbeff6f01e46</onsuccess>
+  </stage>
+  <stage stageid="2d6508a8-c1c3-42da-8532-876826e9d2dc" name="End" type="End">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="cf6b9707-2b08-4ccb-9e98-323fb83ac685" name="Result" type="Collection">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8178ee36-519d-435d-aaa1-a715ff486bad" name="Count" type="Data">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <display x="-195" y="150" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="10c317f2-6a80-465c-aeef-89a85dffac0a" name="Page" type="Code">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="number" name="page" expr="[Page]" />
+      <input type="number" name="pageSize" expr="[PageSize]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>2d6508a8-c1c3-42da-8532-876826e9d2dc</onsuccess>
+    <code><![CDATA[result = InvokeLinqMethod("Page", new [] { typeof(IQueryable), typeof(int), typeof(int)}, new object[] {source.AsEnumerable().AsQueryable(), (int)page, (int)pageSize});
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="73ae1ea3-8917-4299-b126-04bd329e17d9" name="Source" type="Collection">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Nr" type="number" />
+      <field name="Text" type="text" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="Nr" type="number" value="1" />
+        <field name="Text" type="text" value="A" />
+      </row>
+      <row>
+        <field name="Nr" type="number" value="2" />
+        <field name="Text" type="text" value="B" />
+      </row>
+      <row>
+        <field name="Nr" type="number" value="3" />
+        <field name="Text" type="text" value="C" />
+      </row>
+      <row>
+        <field name="Nr" type="number" value="4" />
+        <field name="Text" type="text" value="D" />
+      </row>
+      <row>
+        <field name="Nr" type="number" value="5" />
+        <field name="Text" type="text" value="E" />
+      </row>
+      <row>
+        <field name="Nr" type="number" value="6" />
+        <field name="Text" type="text" value="F" />
+      </row>
+      <row>
+        <field name="Nr" type="number" value="7" />
+        <field name="Text" type="text" value="G" />
+      </row>
+      <row>
+        <field name="Nr" type="number" value="8" />
+        <field name="Text" type="text" value="H" />
+      </row>
+      <row>
+        <field name="Nr" type="number" value="9" />
+        <field name="Text" type="text" value="I" />
+      </row>
+      <row>
+        <field name="Nr" type="number" value="10" />
+        <field name="Text" type="text" value="J" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="421b584c-eac2-448b-acc5-0b289229dcd0" name="Page" type="Data">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>1</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2b7c5bc7-6a06-4c87-843e-73417ab117db" name="PageSize" type="Data">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>10</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="59212732-3df9-44a9-9342-d56b30625272" name="OrderBy" type="SubSheetInfo">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <narrative>orts the elements of a sequence in ascending or descending order according to a key.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="40483bb6-97ca-41d6-9572-ff6ea451926e" name="Start" type="Start">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A sequence of values to order." stage="Source" />
+      <input type="text" name="Ordering" narrative="An expression string to indicate values to order by." stage="Ordering" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>db01909d-14b2-42ed-815c-7d394e7c2d06</onsuccess>
+  </stage>
+  <stage stageid="6f56f20c-317a-4a59-ba3d-679e181775b7" name="End" type="End">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="35925079-22bd-40ed-b205-25764194c652" name="Source" type="Collection">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d45607d3-7417-492d-8166-2fda8975720d" name="Parameter" type="Collection">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5d093aa5-05a0-4721-9ff0-fb7b5816a49b" name="OrderBy" type="Code">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="ordering" expr="[Ordering]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>6f56f20c-317a-4a59-ba3d-679e181775b7</onsuccess>
+    <code><![CDATA[result = InvokeLinqMethod("OrderBy", ordering , source, parameter);
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="b4ce9f36-7b2b-44bb-845f-48005025ab08" name="Count&gt;0?" type="Decision">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>5d093aa5-05a0-4721-9ff0-fb7b5816a49b</ontrue>
+    <onfalse>e0a8a069-0c77-41b3-aa20-e735d4af325b</onfalse>
+  </stage>
+  <stage stageid="1d5d7ac3-5042-41ff-916f-4e32699b2ec8" name="Count Rows" type="Action">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>b4ce9f36-7b2b-44bb-845f-48005025ab08</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="7bb7eab2-f18d-4a99-945e-4f55ced072b7" name="Count" type="Data">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <display x="-195" y="150" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e0a8a069-0c77-41b3-aa20-e735d4af325b" name="Anchor1" type="Anchor">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <loginhibit />
+    <display x="75" y="30" w="10" h="10" />
+    <onsuccess>0c5343cd-7e18-4475-972f-7c9a46e9a414</onsuccess>
+  </stage>
+  <stage stageid="0c5343cd-7e18-4475-972f-7c9a46e9a414" name="Anchor2" type="Anchor">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <loginhibit />
+    <display x="75" y="120" w="10" h="10" />
+    <onsuccess>6f56f20c-317a-4a59-ba3d-679e181775b7</onsuccess>
+  </stage>
+  <stage stageid="b31049c1-0882-4e4f-9cf3-095f21eaa9b1" name="Result" type="Collection">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c97fdcc0-1a29-4551-a090-611f2df4c48e" name="Ordering" type="Data">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="db16d9ba-344f-4625-8f84-76fabbcefb34" name="SelectMany" type="SubSheetInfo">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <narrative>Projects each element of a sequence to an collection and combines the resulting sequences into one sequence.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="ea75cfd1-8125-4625-8034-f537a8b4a6af" name="Start" type="Start">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A collection of values to project." stage="Source" />
+      <input type="text" name="Selector" narrative="A projection string expression to apply to each element." stage="Selector" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>da7b7aa0-a664-471e-b139-6cfe416f61af</onsuccess>
+  </stage>
+  <stage stageid="ffad9286-7058-4147-ac3b-0e164eb6b1d7" name="End" type="End">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="40b55c63-54a4-4670-a058-a47271f251b0" name="SelectMany" type="Code">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="selector" expr="[Selector]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>ffad9286-7058-4147-ac3b-0e164eb6b1d7</onsuccess>
+    <code><![CDATA[result = InvokeLinqMethod("SelectMany", selector , source, parameter);
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="43873b16-2640-4070-aa98-f73e09c84ac7" name="Count&gt;0?" type="Decision">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>40b55c63-54a4-4670-a058-a47271f251b0</ontrue>
+    <onfalse>4321d59e-58e3-4f76-adcf-5304e2caee25</onfalse>
+  </stage>
+  <stage stageid="a1c3b625-ab37-4176-b777-dd148d7f9889" name="Count Rows" type="Action">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>43873b16-2640-4070-aa98-f73e09c84ac7</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="4321d59e-58e3-4f76-adcf-5304e2caee25" name="Anchor1" type="Anchor">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <loginhibit />
+    <display x="75" y="30" w="10" h="10" />
+    <onsuccess>f7b5df44-fecc-4697-af8f-72a939dc8106</onsuccess>
+  </stage>
+  <stage stageid="f7b5df44-fecc-4697-af8f-72a939dc8106" name="Anchor2" type="Anchor">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <loginhibit />
+    <display x="75" y="120" w="10" h="10" />
+    <onsuccess>ffad9286-7058-4147-ac3b-0e164eb6b1d7</onsuccess>
+  </stage>
+  <stage stageid="bd845958-07c8-49e2-ac2d-e7b40b7c1ae7" name="Selector" type="Data">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="433c9463-df5b-4c7b-acda-b419f82af465" name="GroupBy" type="SubSheetInfo">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <narrative>Groups the elements of a sequence according to a specified key string function and creates a result value from each group and its key.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="27c30101-c05c-4439-a184-990abfd21396" name="Start" type="Start">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A colection whose elements to group." stage="Source" />
+      <input type="text" name="KeySelector" narrative="A string expression to specify the key for each element." stage="KeySelector" />
+      <input type="text" name="ResultSelector" narrative="A string expression to specify a result value from each group." stage="ResultSelector" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>8eb4ac84-01ec-44d7-9c47-35e470c6070c</onsuccess>
+  </stage>
+  <stage stageid="cb44b599-47cf-48c6-819d-86931b0dcc29" name="End" type="End">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="c4ce6eb3-4995-456f-a10d-1c277e2a2ce3" name="GroupJoin" type="SubSheetInfo">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <narrative>Correlates the elements of two sequences based on equality of keys and groups the results.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="2149b16d-f846-414f-9e57-e128f15d9a3f" name="Start" type="Start">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Outer" narrative="The first sequence to join." stage="Outer" />
+      <input type="collection" name="Inner" narrative="The sequence to join to the first sequence." stage="Inner" />
+      <input type="text" name="OuterKeySelector" narrative="A dynamic function to extract the join key from each element of the first sequence." stage="OuterKeySelector" />
+      <input type="text" name="InnerKeySelector" narrative="A dynamic function to extract the join key from each element of the second sequence." stage="InnerKeySelector" />
+      <input type="text" name="ResultSelector" narrative="A dynamic function to create a result element from an element from the first sequence and a collection of matching elements from the second sequence." stage="ResultSelector" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>76f93ffe-a1d6-4fba-83be-0bbf6c6c2a93</onsuccess>
+  </stage>
+  <stage stageid="1b137be5-8074-4bc0-a8b5-ce3ebc0cc102" name="KeySelector" type="Data">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a428b6bb-38e6-4a60-a587-b6ce7a87fa1a" name="ResultSelector" type="Data">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="bd8dc197-046a-4e7f-8e71-02f3842e5865" name="Parameter" type="Collection">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <display x="-195" y="75" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5dd219bf-7ebc-452b-8faf-637cdce33fbb" name="Source" type="Collection">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2c49961a-9985-452f-a88b-1694201cb63d" name="Count&gt;0?" type="Decision">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>d93dc265-b5db-4768-a289-c3a4b8c6c63c</ontrue>
+    <onfalse>b50c7ed7-2871-4696-b830-c66761327751</onfalse>
+  </stage>
+  <stage stageid="337745cc-4860-4608-8098-806489c5e3c6" name="Count" type="Data">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <display x="-195" y="180" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b50c7ed7-2871-4696-b830-c66761327751" name="Anchor1" type="Anchor">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <loginhibit />
+    <display x="75" y="30" w="10" h="10" />
+    <onsuccess>d95be641-3e29-4ba7-9c56-f3b088937f93</onsuccess>
+  </stage>
+  <stage stageid="d95be641-3e29-4ba7-9c56-f3b088937f93" name="Anchor2" type="Anchor">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <loginhibit />
+    <display x="75" y="120" w="10" h="10" />
+    <onsuccess>cb44b599-47cf-48c6-819d-86931b0dcc29</onsuccess>
+  </stage>
+  <stage stageid="ffa77ac5-614e-478c-9c7d-72a0383e3515" name="Count Rows" type="Action">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>2c49961a-9985-452f-a88b-1694201cb63d</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="d93dc265-b5db-4768-a289-c3a4b8c6c63c" name="GroupBy" type="Code">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="keySelector" expr="[KeySelector]" />
+      <input type="text" name="resultSelector" expr="[ResultSelector]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>cb44b599-47cf-48c6-819d-86931b0dcc29</onsuccess>
+    <code><![CDATA[if (string.IsNullOrEmpty(resultSelector))
+{
+	result = InvokeLinqMethod("GroupBy", keySelector, source, parameter);
+}
+else
+{
+	result= InvokeLinqMethod("GroupBy", new Type[] {typeof(IQueryable), typeof(string), typeof(string), typeof(object[])}, 
+				new object[] { 
+					Table2Queryable(source), 
+					ExpandMacros(keySelector, source, parameter), 
+					ExpandMacros(resultSelector, source, parameter), BuildParameterArray(parameter)}
+					);
+}
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="547db018-26c5-4892-990f-9e02261c958e" name="Result" type="Collection">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <display x="-195" y="150" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c0ebb05b-d283-46d0-bb3f-13281ee38171" name="GroupJoin" type="Code">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <loginhibit />
+    <display x="15" y="165" />
+    <inputs>
+      <input type="collection" name="inner" expr="[Inner]" />
+      <input type="collection" name="outer" expr="[Outer]" />
+      <input type="text" name="outerKeySelector" expr="[OuterKeySelector]" />
+      <input type="text" name="innerKeySelector" expr="[InnerKeySelector]" />
+      <input type="text" name="resultSelector" expr="[ResultSelector]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>36253c4f-7745-4d1c-90ad-e14fc41aa811</onsuccess>
+    <code><![CDATA[result = InvokeLinqMethod("GroupJoin", new Type[] {typeof(IQueryable), typeof(IEnumerable), typeof(string), typeof(string), typeof(string), typeof(object[])}, 
+		 new object[] { 
+			Table2Queryable(outer),
+			Table2Queryable(inner),
+			ExpandMacros(outerKeySelector, outer, parameter),
+			ExpandMacros(innerKeySelector, inner, parameter),
+			ExpandMacros(resultSelector, null, parameter),
+			BuildParameterArray(parameter)
+			});
+
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="e69cfa4a-8347-4fd5-a500-02ce071b3c67" name="Count&gt;0?" type="Decision">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>c0ebb05b-d283-46d0-bb3f-13281ee38171</ontrue>
+    <onfalse>9c732076-8a7e-493d-938d-085d001c50ae</onfalse>
+  </stage>
+  <stage stageid="9c732076-8a7e-493d-938d-085d001c50ae" name="Anchor1" type="Anchor">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <loginhibit />
+    <display x="75" y="120" w="10" h="10" />
+    <onsuccess>a74e0cfe-ac02-4568-b510-71af18390fb5</onsuccess>
+  </stage>
+  <stage stageid="a74e0cfe-ac02-4568-b510-71af18390fb5" name="Anchor2" type="Anchor">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <loginhibit />
+    <display x="75" y="210" w="10" h="10" />
+    <onsuccess>36253c4f-7745-4d1c-90ad-e14fc41aa811</onsuccess>
+  </stage>
+  <stage stageid="335b7df2-8031-46ac-ba72-7a89fc11f9b3" name="Count Rows" type="Action">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Outer&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>e69cfa4a-8347-4fd5-a500-02ce071b3c67</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="1be4f5bc-b506-48e3-82e1-7ef493082297" name="Join" type="SubSheetInfo">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <narrative>Correlates the elements of two sequences based on matching keys.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="a8a3c16c-9dd2-4785-ad21-4a539f16125a" name="Start" type="Start">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Outer" narrative="The first sequence to join." stage="Outer" />
+      <input type="collection" name="Inner" narrative="The sequence to join to the first sequence." stage="Inner" />
+      <input type="text" name="OuterKeySelector" narrative="A dynamic function to extract the join key from each element of the first sequence." stage="OuterKeySelector" />
+      <input type="text" name="InnerKeySelector" narrative="A dynamic function to extract the join key from each element of the second sequence." stage="InnerKeySelector" />
+      <input type="text" name="ResultSelector" narrative="A dynamic function to create a result element from two matching elements." stage="ResultSelector" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>a69c24e3-e498-4955-b716-91d6c603fb7a</onsuccess>
+  </stage>
+  <stage stageid="4ce7a61f-2451-49c3-b1ac-62c121353b82" name="End" type="End">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit />
+    <display x="15" y="210" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="8d95a063-07df-4565-a69a-79686f7816df" name="Join" type="Code">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit />
+    <display x="15" y="165" />
+    <inputs>
+      <input type="collection" name="inner" expr="[Inner]" />
+      <input type="collection" name="outer" expr="[Outer]" />
+      <input type="text" name="outerKeySelector" expr="[OuterKeySelector]" />
+      <input type="text" name="innerKeySelector" expr="[InnerKeySelector]" />
+      <input type="text" name="resultSelector" expr="[ResultSelector]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>4ce7a61f-2451-49c3-b1ac-62c121353b82</onsuccess>
+    <code><![CDATA[result= InvokeLinqMethod("Join", new Type[] {typeof(IQueryable), typeof(IEnumerable), typeof(string), typeof(string), typeof(string), typeof(object[])}, 
+		new object[] {
+			Table2Queryable(outer),
+			Table2Queryable(inner),
+			ExpandMacros(outerKeySelector, outer, parameter),
+			ExpandMacros(innerKeySelector, inner, parameter),
+			ExpandMacros(resultSelector, null, parameter),
+			BuildParameterArray(parameter)
+			});
+
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="9b2f1063-d2e0-4df0-bfb7-4cdbfd7fdeba" name="Inner" type="Collection">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="52943fc2-8482-4109-91f5-9d32baecc1ab" name="Outer" type="Collection">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9acdc3d2-3e80-46f4-946c-c78eba64ef3f" name="OuterKeySelector" type="Data">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="36ad00b0-3b14-4b92-8489-7e6867725138" name="InnerKeySelector" type="Data">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <display x="-195" y="75" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="656cf415-e383-45a9-9d00-96e33349d1d1" name="ResultSelector" type="Data">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <display x="-195" y="105" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8311956f-7f96-4b04-b06b-c936c017c899" name="Parameter" type="Collection">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <display x="-195" y="135" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6760a8de-207a-4fe0-837c-6218f86799d2" name="Result" type="Collection">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <display x="-195" y="210" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d2a38019-9442-4e42-a992-ea844304427d" name="Count" type="Data">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <display x="-195" y="240" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="92828da5-4bda-424f-be60-006a9827b1d6" name="Count&gt;0?" type="Decision">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>8d95a063-07df-4565-a69a-79686f7816df</ontrue>
+    <onfalse>ad2581fe-42f6-4a2c-9aba-79f38b40316a</onfalse>
+  </stage>
+  <stage stageid="ad2581fe-42f6-4a2c-9aba-79f38b40316a" name="Anchor1" type="Anchor">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit />
+    <display x="75" y="120" w="10" h="10" />
+    <onsuccess>0d28947b-ce1a-4c04-9477-3c6864761ab9</onsuccess>
+  </stage>
+  <stage stageid="0d28947b-ce1a-4c04-9477-3c6864761ab9" name="Anchor2" type="Anchor">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit />
+    <display x="75" y="210" w="10" h="10" />
+    <onsuccess>4ce7a61f-2451-49c3-b1ac-62c121353b82</onsuccess>
+  </stage>
+  <stage stageid="3a8a6015-25bb-4590-bf01-ac81829c6202" name="Count Rows" type="Action">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Outer&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>92828da5-4bda-424f-be60-006a9827b1d6</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="a636c863-4200-4d88-9fc9-7db6b35a1a4a" name="All" type="SubSheetInfo">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <narrative>Determines whether all the elements of a sequence satisfy a condition.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="8a94d67a-0a38-488b-9b98-3f6445b7cd54" name="Start" type="Start">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A collection to calculate the All of." stage="Source" />
+      <input type="text" name="Predicate" narrative="A projection function to apply to each element." stage="Predicate" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>838fcdee-82b2-43a4-86e5-8ad91ace7aef</onsuccess>
+  </stage>
+  <stage stageid="d40cebb2-a9e9-490f-83a7-eecd99aec188" name="End" type="End">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <outputs>
+      <output type="flag" name="Result" narrative="true if every element of the source sequence passes the test in the specified predicate, or if the sequence is empty; otherwise, false." stage="Result" />
+    </outputs>
+  </stage>
+  <stage stageid="e72f26d2-ec46-4649-95d7-be4ba1c14f88" name="Source" type="Collection">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="62adf5e6-dbab-40a2-a3c4-31cc2f3f6db7" name="Predicate" type="Data">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5f4c6082-d54a-43b4-ba00-986f2b502081" name="Parameter" type="Collection">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8b3504ec-7b33-43bb-bf95-a25a30d2b4b5" name="All" type="Code">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="predicate" expr="[Predicate]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="all" stage="Result" />
+    </outputs>
+    <onsuccess>d40cebb2-a9e9-490f-83a7-eecd99aec188</onsuccess>
+    <code><![CDATA[var result = InvokeLinqMethod("All", predicate, source, parameter);
+all = (bool)result.Rows[0][0];]]></code>
+  </stage>
+  <stage stageid="11dc430a-ed5e-40a6-ba21-d6194d5b4682" name="Count&gt;0?" type="Decision">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>8b3504ec-7b33-43bb-bf95-a25a30d2b4b5</ontrue>
+    <onfalse>083c7396-2f8d-42e6-a477-03019eb48666</onfalse>
+  </stage>
+  <stage stageid="02838d46-9dc2-4371-9c40-3d6bd34daab8" name="Count Rows" type="Action">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>11dc430a-ed5e-40a6-ba21-d6194d5b4682</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="083c7396-2f8d-42e6-a477-03019eb48666" name="Anchor1" type="Anchor">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <loginhibit />
+    <display x="75" y="30" w="10" h="10" />
+    <onsuccess>831d5179-e19d-4fe0-ab75-9d5048583498</onsuccess>
+  </stage>
+  <stage stageid="831d5179-e19d-4fe0-ab75-9d5048583498" name="Anchor2" type="Anchor">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <loginhibit />
+    <display x="75" y="120" w="10" h="10" />
+    <onsuccess>d40cebb2-a9e9-490f-83a7-eecd99aec188</onsuccess>
+  </stage>
+  <stage stageid="6826062c-8dfd-4abe-a63c-7cb44ca10459" name="Count" type="Data">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2f8950d0-912d-4ebe-835b-a36c5d1c83d1" name="Result" type="Data">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <display x="-195" y="195" w="120" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue>True</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="45bb2f33-64df-48cf-aba1-3125b5e34adc" name="in" type="Block">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="b1d94c5c-10f7-4444-9001-cf96176e3ada" name="out" type="Block">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <loginhibit />
+    <display x="-270" y="165" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="838fcdee-82b2-43a4-86e5-8ad91ace7aef" name="Test predicate" type="Decision">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="Len(Trim([Predicate]))&gt;0" />
+    <ontrue>02838d46-9dc2-4371-9c40-3d6bd34daab8</ontrue>
+    <onfalse>135a3d50-6727-43a8-978d-c3d08a006702</onfalse>
+  </stage>
+  <stage stageid="135a3d50-6727-43a8-978d-c3d08a006702" name="No predicate" type="Exception">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;Predicate empty&quot;" />
+  </stage>
+  <stage stageid="0e698c41-2c2a-4088-92d4-d41d0f87ddcb" name="Any" type="SubSheetInfo">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <narrative>Determines whether a sequence contains any elements.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="5517cc95-eb6a-480b-9849-36eb407214ec" name="Start" type="Start">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A collection to check for being empty." stage="Source" />
+      <input type="text" name="Predicate" narrative="A function to test each element for a condition." stage="Predicate" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>30bcb83d-94ad-4cf0-a831-fa472a148550</onsuccess>
+  </stage>
+  <stage stageid="41c9d2c3-e48e-4f3f-a8d6-a0e689e91463" name="End" type="End">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <outputs>
+      <output type="flag" name="Result" stage="Result" />
+    </outputs>
+  </stage>
+  <stage stageid="f3c7f807-c7af-4fab-b1c4-3089f786ccaa" name="Source" type="Collection">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6ada3228-1377-45d8-add2-da74943ac0ab" name="Predicate" type="Data">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b6bcd249-fbc0-4306-8c71-749b988150c9" name="Parameter" type="Collection">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f682a101-fd9c-40ee-9e01-03c285d5a0fd" name="Any" type="Code">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="predicate" expr="[Predicate]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="any" stage="Result" />
+    </outputs>
+    <onsuccess>41c9d2c3-e48e-4f3f-a8d6-a0e689e91463</onsuccess>
+    <code><![CDATA[DataTable result;
+if (string.IsNullOrEmpty(predicate))
+{
+	result = InvokeLinqMethod("Any", source);
+}
+else
+{
+	result = InvokeLinqMethod("Any", predicate, source, parameter);
+}
+any = (bool)result.Rows[0][0];]]></code>
+  </stage>
+  <stage stageid="208744f2-685d-4df5-accb-c53dacdce1a8" name="Count&gt;0?" type="Decision">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>f682a101-fd9c-40ee-9e01-03c285d5a0fd</ontrue>
+    <onfalse>acd1740f-0ad0-4a23-b98d-8357b328702d</onfalse>
+  </stage>
+  <stage stageid="30bcb83d-94ad-4cf0-a831-fa472a148550" name="Count Rows" type="Action">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>208744f2-685d-4df5-accb-c53dacdce1a8</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="acd1740f-0ad0-4a23-b98d-8357b328702d" name="Anchor1" type="Anchor">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <loginhibit />
+    <display x="75" y="-15" w="10" h="10" />
+    <onsuccess>18c2efb2-04c6-45be-92e4-2ea664902e19</onsuccess>
+  </stage>
+  <stage stageid="18c2efb2-04c6-45be-92e4-2ea664902e19" name="Anchor2" type="Anchor">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <loginhibit />
+    <display x="75" y="75" w="10" h="10" />
+    <onsuccess>41c9d2c3-e48e-4f3f-a8d6-a0e689e91463</onsuccess>
+  </stage>
+  <stage stageid="36f2052a-e740-4bbd-aaac-2878b85e36df" name="Result" type="Data">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <display x="-195" y="195" w="120" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue>False</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5f76a592-1e12-4773-ab69-5937d1657f3a" name="in" type="Block">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="ce1b3251-ca25-49a6-83ba-ee3860ebd7c3" name="out" type="Block">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <loginhibit />
+    <display x="-270" y="165" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="2d4cd777-da22-4428-8a3f-a9d70bf1a677" name="No Elements" type="Exception">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <display x="105" y="-15" />
+    <exception localized="yes" type="Business Exception" detail="&quot;Sequence contains no elements&quot;" />
+  </stage>
+  <stage stageid="3331cae3-396d-4ee4-8aab-1308f0538c72" name="in" type="Block">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="ef8f0212-a73c-448b-aa37-10993f47c7e0" name="local" type="Block">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="2e3cc86b-440e-4dce-9855-65b40e01e6a2" name="out" type="Block">
+    <subsheetid>abad44af-1e40-40d0-a823-0c2450d622bc</subsheetid>
+    <loginhibit />
+    <display x="-270" y="165" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="0a670f57-b58e-4c2b-9eb6-66ff6604c7dc" name="in" type="Block">
+    <subsheetid>d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="059697fe-5344-460b-a98d-c252d0289b14" name="out" type="Block">
+    <subsheetid>d4027cf5-123a-4d4d-9e83-0b72bc8a4a0c</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="a56d5615-1fef-4344-80de-6ef0544e6a19" name="in" type="Block">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="2dca1004-d755-4af6-8e64-a39ca71e25ee" name="local" type="Block">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="22428610-34bc-482f-9da1-8d7ef79b8fcb" name="out" type="Block">
+    <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
+    <loginhibit />
+    <display x="-270" y="165" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="53834d52-855c-4e40-b856-f51b5f434913" name="Source" type="Collection">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8116b254-68e8-43a5-bbd4-d958abaffeb2" name="Predicate" type="Data">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6f7394ad-a5a5-46e3-9281-bf9854d5f811" name="Parameter" type="Collection">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9e248f55-9709-4d84-8423-5ab086520e14" name="Count" type="Data">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9f5c38cd-4a5d-49bb-8fc2-68c552de41c2" name="Result" type="Collection">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <display x="-195" y="195" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="85194216-9e36-4645-9f13-844140a35352" name="Success" type="Data">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <display x="-195" y="225" w="120" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue>False</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3e967f75-0494-4565-bcd7-3bdfe02384d0" name="in" type="Block">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="1b4105c0-677a-452d-ac7e-166659f817c6" name="local" type="Block">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="8bed76d0-b13e-4549-b1f5-17d58e5ae994" name="out" type="Block">
+    <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
+    <loginhibit />
+    <display x="-270" y="165" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="763179f6-a04d-4633-8c8a-e49812edb50c" name="Source" type="Collection">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2632c81d-a930-42cf-9774-c672731c4726" name="Predicate" type="Data">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="11bba906-a219-4959-9c10-aca61241385a" name="Parameter" type="Collection">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="4362906c-49eb-4eb2-9be2-3a611699b8b9" name="Count" type="Data">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="ede59124-cb37-46f3-8d0e-32fe11bab820" name="Result" type="Collection">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <display x="-195" y="195" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="0bef3dd3-68f5-4353-b329-aa3ad93c9f74" name="Success" type="Data">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <display x="-195" y="225" w="120" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue>False</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="4f1199fd-a5bd-46c3-9b93-9a816f02bb31" name="in" type="Block">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="9529d101-14ab-4b52-b26c-31d1dfecc9da" name="local" type="Block">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="5c9d9dbb-3ab4-45f2-976a-346afb2ab125" name="out" type="Block">
+    <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
+    <loginhibit />
+    <display x="-270" y="165" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="ed55235c-69d5-413a-8fc6-9c7a9ce57615" name="No Elements" type="Exception">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <display x="120" y="30" />
+    <exception localized="yes" type="Business Exception" detail="&quot;Sequence contains no elements&quot;" />
+  </stage>
+  <stage stageid="4cfcf16c-4cbb-44cd-8b27-d82ed6f7ec52" name="No Elements" type="Exception">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <display x="120" y="30" />
+    <exception localized="yes" type="Business Exception" detail="&quot;Sequence contains no elements&quot;" />
+  </stage>
+  <stage stageid="a79268c0-20eb-4dbe-aa75-541accb81298" name="Test predicate" type="Decision">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="Len(Trim([Predicate]))&gt;0" />
+    <ontrue>07500b80-ca42-4b01-be74-8ab970d7c483</ontrue>
+    <onfalse>d6e4e4cc-f720-4368-abb6-6089bb1d0692</onfalse>
+  </stage>
+  <stage stageid="d6e4e4cc-f720-4368-abb6-6089bb1d0692" name="No predicate" type="Exception">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;Predicate empty&quot;" />
+  </stage>
+  <stage stageid="303f1b79-1d3f-458a-b0b5-fd804252080f" name="Test predicate" type="Decision">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="Len(Trim([Predicate]))&gt;0" />
+    <ontrue>06a8fe49-a57a-4002-a9e6-08fe9a445049</ontrue>
+    <onfalse>94ea759d-ed64-4818-8c98-e105a308e034</onfalse>
+  </stage>
+  <stage stageid="94ea759d-ed64-4818-8c98-e105a308e034" name="No predicate" type="Exception">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;Predicate empty&quot;" />
+  </stage>
+  <stage stageid="10217004-b06d-4f4d-9bf3-45ea9718a996" name="Test predicate" type="Decision">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="Len(Trim([Predicate]))&gt;0" />
+    <ontrue>9c4ecabb-27df-45cf-b35b-5d7aa2eeb65e</ontrue>
+    <onfalse>934f05a7-a5cb-4dd9-8cd1-4207a2490798</onfalse>
+  </stage>
+  <stage stageid="934f05a7-a5cb-4dd9-8cd1-4207a2490798" name="No predicate" type="Exception">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;Predicate empty&quot;" />
+  </stage>
+  <stage stageid="49410146-b977-492a-a355-d30f0c5988e1" name="in" type="Block">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="07900cb7-49f6-4e91-a5d6-7f01e08c5835" name="out" type="Block">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <loginhibit />
+    <display x="-270" y="165" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="24c4dad5-e096-476a-92fe-9b35879865de" name="Source" type="Collection">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5405c75d-e9ff-48ca-b949-52018d04e427" name="Predicate" type="Data">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">Text</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e5f1ac3d-954d-4b57-8296-cabb3319260a" name="Parameter" type="Collection">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8aa24aec-5b3d-4918-84c8-1ef7729e512a" name="in" type="Block">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="e6e94bbe-6c11-415c-bc16-033d27806f87" name="out" type="Block">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <loginhibit />
+    <display x="-270" y="165" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="8dc33e83-2986-493c-8af9-308044a2e8ac" name="Source" type="Collection">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="03e5226d-1065-4f5b-8a5c-4f2595ee983d" name="Predicate" type="Data">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">Text</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="80bd1ed6-c5ed-4ce1-8905-56c393e37a4d" name="Parameter" type="Collection">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="89bb5ca6-10bf-484d-83da-c72c7d628e69" name="Count" type="Data">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="7ad8db52-c882-49d6-bf27-36d30d143010" name="Result" type="Data">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <display x="-195" y="195" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="641efe4a-efa1-4e24-b9a8-8056783e8f73" name="in" type="Block">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="7f4606e3-d836-4eff-b4dc-14d9bce6e514" name="local" type="Block">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="6734a64d-f821-4a2c-98c6-78a0b0ddea6b" name="out" type="Block">
+    <subsheetid>79cd03b7-85bb-4f26-bae9-30f99701b2be</subsheetid>
+    <loginhibit />
+    <display x="-270" y="165" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="7e0d2459-ff5e-4617-be05-67553f07ff2d" name="Result" type="Collection">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <display x="-195" y="195" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a12dd8f9-c175-4742-a761-278e2558f98a" name="local" type="Block">
+    <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="c1fbc496-c3c6-4dda-95f6-54213b995a6a" name="Count" type="Data">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6c9bce45-0b1b-4a95-86c9-3bba9116044d" name="local" type="Block">
+    <subsheetid>2847e726-43cb-4ea0-aebd-1f3a2ced34d7</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="eae81df5-27ba-4108-baa7-8d1192e8848c" name="Result" type="Collection">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <display x="-195" y="195" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6f60f2b2-35b8-476f-8160-43aabf38d4f4" name="Count" type="Data">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="fff15454-db31-47e5-b114-a67aced5d40e" name="local" type="Block">
+    <subsheetid>4530efd2-9c18-4410-8ce1-64973122291f</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="61c570e4-404c-47f3-a141-c7c87a0862d9" name="Count" type="Data">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f912ee89-bf5d-465c-aba8-80323e82d839" name="local" type="Block">
+    <subsheetid>8062576c-db0d-4b2a-a5b1-43bfdd38b8d5</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="c42c1972-7020-4f46-9d88-8e20a74cdec3" name="in" type="Block">
+    <subsheetid>61c08dc8-f079-4ff0-b867-b501d77d7b88</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="e0cf45d3-4528-4a56-a162-2a1f818412f4" name="out" type="Block">
+    <subsheetid>61c08dc8-f079-4ff0-b867-b501d77d7b88</subsheetid>
+    <loginhibit />
+    <display x="-270" y="60" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="50123c5e-0438-4f80-97ca-d675bf61b282" name="in" type="Block">
+    <subsheetid>839f49b5-2113-45c9-8ae2-d95cc2e62fbe</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="58cf6a9e-1808-4c8b-b65d-71325618209c" name="out" type="Block">
+    <subsheetid>839f49b5-2113-45c9-8ae2-d95cc2e62fbe</subsheetid>
+    <loginhibit />
+    <display x="-270" y="60" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="e4f601b0-9e63-483e-b69f-a6c8f06d5281" name="in" type="Block">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="80152ace-ce0b-4d86-b54c-cc7bb62a506d" name="out" type="Block">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="1176b025-988f-49ab-ade2-215a7cb18fab" name="in" type="Block">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="af4632c7-0581-425f-8640-9f6975f17569" name="out" type="Block">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="6573abf1-199f-419d-8cec-cccfefed0a30" name="Source" type="Collection">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2cd88bec-1f72-4ba3-9fe3-d8f65b8c3b6e" name="Predicate" type="Data">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="7f74ffd9-d056-4af4-bfb2-01cda2a7efb7" name="Parameter" type="Collection">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9464b27b-0bb7-4791-ac10-3c2683eef729" name="Count" type="Data">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <display x="-195" y="150" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="016e5e69-5049-4927-a7d7-181431173239" name="Result" type="Collection">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="13a7cb53-4d30-4347-9917-3fabb9a7c097" name="in" type="Block">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="d5d06772-32c6-4257-942e-d4946f0a7411" name="out" type="Block">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="db693f61-1623-4296-8e76-177148c90d78" name="Source" type="Collection">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="fcbe8903-303f-4392-92e0-75d5cfda4b62" name="Parameter" type="Collection">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="692b8c29-7bad-4094-a09a-7a137d2506d5" name="Count" type="Data">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <display x="-195" y="150" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="dc425817-6006-4900-a2c3-7d42f592f833" name="Result" type="Collection">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5797d88b-fa0d-4f50-840f-b466013d4363" name="in" type="Block">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="f355a0c1-a571-4f06-859e-81729bdc31a5" name="out" type="Block">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="5325c222-062b-4d3c-82e5-eb1abdb3012a" name="in" type="Block">
+    <subsheetid>b4274f01-68ee-475b-83b6-132a7028695e</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="acb7a39b-0112-40b3-873d-9b2e446edaf2" name="out" type="Block">
+    <subsheetid>b4274f01-68ee-475b-83b6-132a7028695e</subsheetid>
+    <loginhibit />
+    <display x="-270" y="30" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="9702c221-530b-4eda-a9f0-4e233096aa9b" name="Source" type="Collection">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c7bec0ea-6ffe-4585-918a-7d694805a681" name="Parameter" type="Collection">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="eb615291-4f06-41a3-953c-cea1a67e860f" name="Count" type="Data">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <display x="-195" y="150" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a5af0a8d-62fe-48fb-8ebe-89ee3c26341a" name="Result" type="Collection">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="7a7a166f-25dd-482e-a987-2a12c1357a8f" name="in" type="Block">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="1acbc734-dd5a-4165-b8ed-4b1bec1ba9d2" name="out" type="Block">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="ee90ed2c-7032-4841-b29d-72eaa24ec15c" name="SelectMany2" type="SubSheetInfo">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <narrative>Projects each element of a sequence to an collection and invokes a result selector function on each element therein. The resulting
+ values from each intermediate sequence are combined into a single, one-dimensional
+ sequence and returned.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="192f8006-6a62-42ba-8c80-fb5f91144a9f" name="Start" type="Start">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="A sequence of values to project." stage="Source" />
+      <input type="text" name="CollectionSelector" narrative="A projection function to apply to each element of the input sequence." stage="CollectionSelector" />
+      <input type="text" name="ResultSelector" narrative="A projection function to apply to each element of each intermediate sequence. Should only use x and y as parameter names." stage="ResultSelector" />
+      <input type="collection" name="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." stage="Parameter" />
+    </inputs>
+    <onsuccess>8ec0f81c-8df3-4960-8abe-f18555e354a1</onsuccess>
+  </stage>
+  <stage stageid="5fae49cc-c790-443b-a8ac-5c145064581f" name="End" type="End">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <loginhibit />
+    <display x="15" y="165" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="1ab572a1-21cd-4687-9807-9382bf399293" name="SelectMany2" type="Code">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <loginhibit />
+    <display x="15" y="120" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+      <input type="text" name="collectionSelector" expr="[CollectionSelector]" />
+      <input type="text" name="resultSelector" expr="[ResultSelector]" />
+      <input type="collection" name="parameter" expr="[Parameter]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>5fae49cc-c790-443b-a8ac-5c145064581f</onsuccess>
+    <code><![CDATA[var paramArray = BuildParameterArray(parameter);
+result = InvokeLinqMethod("SelectMany", 
+	new [] { typeof(IQueryable), typeof(string), typeof(string), typeof(object[]) , typeof(object[]) },
+	new object[] { Table2Queryable(source), ExpandMacros(collectionSelector, source, parameter), ExpandMacros(resultSelector, source, parameter), paramArray, paramArray});
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="54376ba9-2091-434c-9ce4-c49eba8ad3ef" name="Count&gt;0?" type="Decision">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <loginhibit />
+    <display x="15" y="75" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>1ab572a1-21cd-4687-9807-9382bf399293</ontrue>
+    <onfalse>10c0c235-383f-46c0-959c-a6ff23545242</onfalse>
+  </stage>
+  <stage stageid="72c1ebf0-2172-489d-b296-5dda058e76d3" name="Count Rows" type="Action">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="30" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Source&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>54376ba9-2091-434c-9ce4-c49eba8ad3ef</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="10c0c235-383f-46c0-959c-a6ff23545242" name="Anchor1" type="Anchor">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <loginhibit />
+    <display x="75" y="75" w="10" h="10" />
+    <onsuccess>40aa4e6e-31ba-4471-873b-265f3af9359d</onsuccess>
+  </stage>
+  <stage stageid="40aa4e6e-31ba-4471-873b-265f3af9359d" name="Anchor2" type="Anchor">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <loginhibit />
+    <display x="75" y="165" w="10" h="10" />
+    <onsuccess>5fae49cc-c790-443b-a8ac-5c145064581f</onsuccess>
+  </stage>
+  <stage stageid="d07dc0b5-067c-40e7-8dd5-419ad18d806a" name="Source" type="Collection">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3c85e618-a70d-49f3-89b4-fd02c8134790" name="Parameter" type="Collection">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <display x="-195" y="75" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="10529219-f67a-46a1-9148-202b100942db" name="Count" type="Data">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <display x="-195" y="180" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="92113a58-1658-435e-8b3b-f0d1b6e7aace" name="Result" type="Collection">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <display x="-195" y="150" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2148c9f0-6079-4122-a17c-c865e9260ad7" name="in" type="Block">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="150" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="3868e2b7-f8e5-43e9-a8ca-bf0d4920cb35" name="out" type="Block">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <loginhibit />
+    <display x="-270" y="120" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="ee17fd06-c9b3-4024-800e-e1b3d0e44c94" name="ResultSelector" type="Data">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2a8e4ea1-fe68-4f4a-825d-40e7c35f32f6" name="CollectionSelector" type="Data">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a4c76a5d-f74e-489e-a685-bbeb7529026e" name="Test predicate" type="Decision">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="Len(Trim([Predicate]))&gt;0" />
+    <ontrue>e0e99679-2bf1-4d50-aba5-42ec7de03ae6</ontrue>
+    <onfalse>e0a1cdd6-d145-4013-874a-7bb0871c5155</onfalse>
+  </stage>
+  <stage stageid="e0a1cdd6-d145-4013-874a-7bb0871c5155" name="No predicate" type="Exception">
+    <subsheetid>e04f4ddc-9c94-49bf-92c1-d0379e521442</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;Predicate empty&quot;" />
+  </stage>
+  <stage stageid="ccbf0e26-387f-4adb-ba5d-068f7b668e0e" name="Test selector" type="Decision">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="Len(Trim([Selector]))&gt;0" />
+    <ontrue>4e891248-5176-48c8-bc9d-54b1272ecc05</ontrue>
+    <onfalse>19f21ffc-163d-430b-b8ce-2d10f42419af</onfalse>
+  </stage>
+  <stage stageid="19f21ffc-163d-430b-b8ce-2d10f42419af" name="No selector" type="Exception">
+    <subsheetid>7c919a26-e556-4eba-965f-c5ea89abade6</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;Selector empty&quot;" />
+  </stage>
+  <stage stageid="da7b7aa0-a664-471e-b139-6cfe416f61af" name="Test selector" type="Decision">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="Len(Trim([Selector]))&gt;0" />
+    <ontrue>a1c3b625-ab37-4176-b777-dd148d7f9889</ontrue>
+    <onfalse>13844169-5d35-4c97-83b5-5f64d74c3bff</onfalse>
+  </stage>
+  <stage stageid="13844169-5d35-4c97-83b5-5f64d74c3bff" name="No selector" type="Exception">
+    <subsheetid>1cc00179-5d61-4022-a2f6-0756731d095a</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;Selector empty&quot;" />
+  </stage>
+  <stage stageid="8ec0f81c-8df3-4960-8abe-f18555e354a1" name="Test collectionSelector" type="Decision">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="Len(Trim([CollectionSelector]))&gt;0" />
+    <ontrue>7518b03f-09bf-4604-8ea4-f2cb61610d9e</ontrue>
+    <onfalse>e2fc4750-a8e2-48c7-9f73-35d1bb2aa1f6</onfalse>
+  </stage>
+  <stage stageid="e2fc4750-a8e2-48c7-9f73-35d1bb2aa1f6" name="No selector" type="Exception">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;CollectionSelector empty&quot;" />
+  </stage>
+  <stage stageid="7518b03f-09bf-4604-8ea4-f2cb61610d9e" name="Test result selector" type="Decision">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" />
+    <decision expression="Len(Trim([ResultSelector]))&gt;0" />
+    <ontrue>72c1ebf0-2172-489d-b296-5dda058e76d3</ontrue>
+    <onfalse>7bc82fd2-957c-4a80-9501-2982083c0969</onfalse>
+  </stage>
+  <stage stageid="7bc82fd2-957c-4a80-9501-2982083c0969" name="No selector" type="Exception">
+    <subsheetid>155169bc-9507-4a10-b79c-91f6012fa1a3</subsheetid>
+    <display x="120" y="-15" />
+    <exception localized="yes" type="Business Exception" detail="&quot;ResultSelector empty&quot;" />
+  </stage>
+  <stage stageid="f5311ba9-7342-475b-97f7-1426ff3a43da" name="in" type="Block">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="150" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="f44c4760-89df-4769-9b15-fbe4ea95f408" name="out" type="Block">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <loginhibit />
+    <display x="-270" y="120" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="8eb4ac84-01ec-44d7-9c47-35e470c6070c" name="Test key selector" type="Decision">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="Len(Trim([KeySelector]))&gt;0" />
+    <ontrue>ffa77ac5-614e-478c-9c7d-72a0383e3515</ontrue>
+    <onfalse>ba82996a-5b4e-4c07-ba57-acbbcbe81f08</onfalse>
+  </stage>
+  <stage stageid="ba82996a-5b4e-4c07-ba57-acbbcbe81f08" name="No selector" type="Exception">
+    <subsheetid>9476a690-ae15-4667-b94f-b301c55e3a36</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;KeySelector empty&quot;" />
+  </stage>
+  <stage stageid="3e87c965-f3eb-454c-9cdc-274d72a66972" name="in" type="Block">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="b2e0c41c-bb27-42ef-88a3-25064bce3a68" name="out" type="Block">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="db01909d-14b2-42ed-815c-7d394e7c2d06" name="Test ordering" type="Decision">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="Len(Trim([Ordering]))&gt;0" />
+    <ontrue>1d5d7ac3-5042-41ff-916f-4e32699b2ec8</ontrue>
+    <onfalse>a851b9fc-8652-4c50-9f95-d7ed92a79dfb</onfalse>
+  </stage>
+  <stage stageid="a851b9fc-8652-4c50-9f95-d7ed92a79dfb" name="No ordering" type="Exception">
+    <subsheetid>f3276ec6-bec2-4d98-b143-02ff510845ef</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;Ordering empty&quot;" />
+  </stage>
+  <stage stageid="af9fab98-8df6-4ae8-a2aa-0b9eb685cb10" name="in" type="Block">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="57c2aec2-acd5-4a20-b64e-31da211a207a" name="out" type="Block">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <loginhibit />
+    <display x="-270" y="90" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="48fe4470-3e0c-4990-a19e-bbeff6f01e46" name="Test PageSize" type="Decision">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="[PageSize]&gt;0" />
+    <ontrue>d13c940f-2e3f-4bd0-ba9e-244a4ba04dc1</ontrue>
+    <onfalse>ed0e1596-270f-4302-bb1a-aa2b859ea9e7</onfalse>
+  </stage>
+  <stage stageid="d13c940f-2e3f-4bd0-ba9e-244a4ba04dc1" name="Test Page" type="Decision">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" />
+    <decision expression="[Page]&gt;0" />
+    <ontrue>10c317f2-6a80-465c-aeef-89a85dffac0a</ontrue>
+    <onfalse>643dfccc-5e71-45c7-a258-1ac6278c60a5</onfalse>
+  </stage>
+  <stage stageid="ed0e1596-270f-4302-bb1a-aa2b859ea9e7" name="PageSize&lt;1" type="Exception">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;PageSize must be larger than 0&quot;" />
+  </stage>
+  <stage stageid="643dfccc-5e71-45c7-a258-1ac6278c60a5" name="Page &lt;1" type="Exception">
+    <subsheetid>70cac9b3-6cb6-456b-88e0-cebd065a7292</subsheetid>
+    <display x="120" y="-15" />
+    <exception localized="yes" type="Business Exception" detail="&quot;Page must be larger than 0&quot;" />
+  </stage>
+  <stage stageid="6a8b3edc-56f1-4f6c-b1c4-d4190a9bb2a6" name="in" type="Block">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="210" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="dcc602c7-eb30-457c-870c-c9ec94a99302" name="out" type="Block">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit />
+    <display x="-270" y="180" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="a69c24e3-e498-4955-b716-91d6c603fb7a" name="Test outer key selector" type="Decision">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="Len(Trim([OuterKeySelector]))&gt;0" />
+    <ontrue>0b22402a-8578-49fb-a50b-83b35347379f</ontrue>
+    <onfalse>e721fc05-f764-459c-b2ac-70ff6692e201</onfalse>
+  </stage>
+  <stage stageid="e721fc05-f764-459c-b2ac-70ff6692e201" name="No selector" type="Exception">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;OuterKeySelector empty&quot;" />
+  </stage>
+  <stage stageid="0b22402a-8578-49fb-a50b-83b35347379f" name="Test inner key selector" type="Decision">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" />
+    <decision expression="Len(Trim([InnerKeySelector]))&gt;0" />
+    <ontrue>7838014c-2c8e-4fda-aa9f-2fab01edb977</ontrue>
+    <onfalse>c8596620-e699-472f-996c-cf510f20cd30</onfalse>
+  </stage>
+  <stage stageid="c8596620-e699-472f-996c-cf510f20cd30" name="No selector" type="Exception">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <display x="120" y="-15" />
+    <exception localized="yes" type="Business Exception" detail="&quot;InnerKeySelector empty&quot;" />
+  </stage>
+  <stage stageid="7838014c-2c8e-4fda-aa9f-2fab01edb977" name="Test result selector" type="Decision">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <decision expression="Len(Trim([ResultSelector]))&gt;0" />
+    <ontrue>3a8a6015-25bb-4590-bf01-ac81829c6202</ontrue>
+    <onfalse>817bac9c-728b-4ce9-b8ed-3908535ab2a8</onfalse>
+  </stage>
+  <stage stageid="817bac9c-728b-4ce9-b8ed-3908535ab2a8" name="No selector" type="Exception">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <display x="120" y="30" />
+    <exception localized="yes" type="Business Exception" detail="&quot;ResultSelector empty&quot;" />
+  </stage>
+  <stage stageid="e4bb0bad-6ba4-40e7-8044-28814865352a" name="Inner" type="Collection">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="aaf96e0c-73b5-461e-84f0-92dba04cd60e" name="Outer" type="Collection">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b927a46a-334d-46e0-baae-fceb2318081a" name="OuterKeySelector" type="Data">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <display x="-195" y="45" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a394de31-29cc-4f78-a61e-2dd8b896767d" name="InnerKeySelector" type="Data">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <display x="-195" y="75" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="44d740c9-7402-4cfd-a21c-cd6409b7b8ef" name="ResultSelector" type="Data">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <display x="-195" y="105" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a12f2411-d9fa-4146-8bed-240b58c149ef" name="Parameter" type="Collection">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <display x="-195" y="135" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e8a6998f-e228-48a8-85be-d8951b131448" name="Result" type="Collection">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <display x="-195" y="210" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="80bdf617-6a96-4c40-bbf9-c08158ab209e" name="Count" type="Data">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <display x="-195" y="240" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="7fc22f7a-797e-4357-ba44-5f09c0b46fe7" name="in" type="Block">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="210" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="f2e82e04-c33c-4649-a713-0d6e692add5b" name="out" type="Block">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <loginhibit />
+    <display x="-270" y="180" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="76f93ffe-a1d6-4fba-83be-0bbf6c6c2a93" name="Test outer key selector" type="Decision">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="Len(Trim([OuterKeySelector]))&gt;0" />
+    <ontrue>9783119d-17b8-4546-a523-8061041693b8</ontrue>
+    <onfalse>83614e69-8554-47c1-aebd-3d5d76370984</onfalse>
+  </stage>
+  <stage stageid="83614e69-8554-47c1-aebd-3d5d76370984" name="No selector" type="Exception">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;OuterKeySelector empty&quot;" />
+  </stage>
+  <stage stageid="9783119d-17b8-4546-a523-8061041693b8" name="Test inner key selector" type="Decision">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" />
+    <decision expression="Len(Trim([InnerKeySelector]))&gt;0" />
+    <ontrue>5c28098f-4acc-4b96-acb1-c5154cff657a</ontrue>
+    <onfalse>10678b30-124c-4758-8602-bd549ae062b5</onfalse>
+  </stage>
+  <stage stageid="10678b30-124c-4758-8602-bd549ae062b5" name="No selector" type="Exception">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <display x="120" y="-15" />
+    <exception localized="yes" type="Business Exception" detail="&quot;InnerKeySelector empty&quot;" />
+  </stage>
+  <stage stageid="5c28098f-4acc-4b96-acb1-c5154cff657a" name="Test result selector" type="Decision">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <loginhibit />
+    <display x="15" y="30" />
+    <decision expression="Len(Trim([ResultSelector]))&gt;0" />
+    <ontrue>335b7df2-8031-46ac-ba72-7a89fc11f9b3</ontrue>
+    <onfalse>cb047680-4b90-451f-aae4-5e7bec1718fc</onfalse>
+  </stage>
+  <stage stageid="cb047680-4b90-451f-aae4-5e7bec1718fc" name="No selector" type="Exception">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <display x="120" y="30" />
+    <exception localized="yes" type="Business Exception" detail="&quot;ResultSelector empty&quot;" />
+  </stage>
+  <stage stageid="36253c4f-7745-4d1c-90ad-e14fc41aa811" name="End" type="End">
+    <subsheetid>57898a3c-175a-4b8a-b38a-2de5cb7b1fe0</subsheetid>
+    <loginhibit />
+    <display x="15" y="210" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="3dea8917-eb5c-4438-b6e4-2e01b6aec034" name="Load Linq" type="SubSheet">
+    <loginhibit />
+    <display x="15" y="-45" />
+    <inputs>
+      <input type="text" name="LocalKey" friendlyname="LocalKey" expr="&quot;linq&quot;" />
+      <input type="text" name="PackageInfoCsv" friendlyname="PackageInfoCsv" expr="[Nuget: SystemLinqDynamicCore]" />
+    </inputs>
+    <onsuccess>3b09afa6-e29c-4af1-9cd0-9b9c2b341543</onsuccess>
+    <processid>7a2da761-4a0f-4af6-a185-c2acf5a8dfbd</processid>
+  </stage>
+  <stage stageid="3b09afa6-e29c-4af1-9cd0-9b9c2b341543" name="Load Json" type="SubSheet">
+    <loginhibit />
+    <display x="15" y="15" />
+    <inputs>
+      <input type="text" name="LocalKey" friendlyname="LocalKey" expr="&quot;json&quot;" />
+      <input type="text" name="PackageInfoCsv" friendlyname="PackageInfoCsv" expr="[Nuget: CoremoranBluePrismJson]" />
+    </inputs>
+    <onsuccess>610cc155-f48c-4962-9b6d-bafcff2f89e1</onsuccess>
+    <processid>7a2da761-4a0f-4af6-a185-c2acf5a8dfbd</processid>
+  </stage>
+  <stage stageid="9c5da9ec-ba0e-4745-aa79-97514d119694" name="Nuget: CoremoranBluePrismJson" type="Data">
+    <loginhibit />
+    <display x="-195" y="15" w="180" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <exposure>Environment</exposure>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2dbde886-c410-4667-be9d-4a166ab3c3a3" name="Nuget: SystemLinqDynamicCore" type="Data">
+    <loginhibit />
+    <display x="-195" y="-15" w="180" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <exposure>Environment</exposure>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1dc0873e-332d-4a89-9483-297f65fd9189" name="Environment" type="Block">
+    <loginhibit />
+    <display x="-315" y="-45" w="240" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="cff571c0-b55f-451c-aa4f-220e685e8b32" name="Load From Nuget" type="SubSheetInfo">
+    <subsheetid>7a2da761-4a0f-4af6-a185-c2acf5a8dfbd</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="74596496-f5a8-479d-aead-aa7d84cd71c0" name="Start" type="Start">
+    <subsheetid>7a2da761-4a0f-4af6-a185-c2acf5a8dfbd</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="text" name="LocalKey" stage="LocalKey" />
+      <input type="text" name="PackageInfoCsv" stage="PackageInfoCsv" />
+    </inputs>
+    <onsuccess>23ceda4e-5fef-4638-9427-1c09349ad243</onsuccess>
+  </stage>
+  <stage stageid="6131a2b0-9a32-496b-995b-838d2eec5312" name="End" type="End">
+    <subsheetid>7a2da761-4a0f-4af6-a185-c2acf5a8dfbd</subsheetid>
+    <loginhibit />
+    <display x="15" y="15" />
+  </stage>
+  <stage stageid="1659a3be-f5bb-4c32-ac3d-ae2fe7667294" name="LocalKey" type="Data">
+    <subsheetid>7a2da761-4a0f-4af6-a185-c2acf5a8dfbd</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="273d4e88-3ef1-4a77-bde0-e80211d77d91" name="in" type="Block">
+    <subsheetid>7a2da761-4a0f-4af6-a185-c2acf5a8dfbd</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="23ceda4e-5fef-4638-9427-1c09349ad243" name="LoadFromNuget" type="Code">
+    <subsheetid>7a2da761-4a0f-4af6-a185-c2acf5a8dfbd</subsheetid>
+    <loginhibit />
+    <display x="15" y="-45" />
+    <inputs>
+      <input type="text" name="localCache" expr="[BluePrismAddOnDirectory]" />
+      <input type="text" name="localKey" expr="[LocalKey]" />
+      <input type="text" name="packageInfo" expr="[PackageInfoCsv]" />
+    </inputs>
+    <onsuccess>6131a2b0-9a32-496b-995b-838d2eec5312</onsuccess>
+    <code><![CDATA[if (!assemblies.ContainsKey(localKey))
+{
+	var parts = packageInfo.Split(',');
+	var assemblyPath =  Path.Combine(localCache, parts[2]);
+	if (!File.Exists(assemblyPath))
+	{
+		var process = Process.Start(new ProcessStartInfo("nuget.exe") {
+			WorkingDirectory = localCache,
+			WindowStyle = ProcessWindowStyle.Hidden,
+			Arguments = string.Format("install {0} -Version {1} -FallbackSource \"{2}\"", parts[0], parts[1], Path.Combine(localCache, "Packages"))
+		});
+		process.WaitForExit();
+		if (process.ExitCode!=0)
+		{
+			throw new Exception("Can not load Nuget package " + parts[0]);
+		}
+	}
+
+	assemblies.Add(localKey, Assembly.UnsafeLoadFrom(assemblyPath));
+}]]></code>
+  </stage>
+  <stage stageid="1ea86452-b053-4ff8-934d-8e9909a85d5c" name="BluePrismAddOnDirectory" type="Data">
+    <subsheetid>7a2da761-4a0f-4af6-a185-c2acf5a8dfbd</subsheetid>
+    <loginhibit />
+    <display x="-195" y="90" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <exposure>Environment</exposure>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="76c53512-51f7-45ea-8c50-1764a051a02e" name="Environment" type="Block">
+    <subsheetid>7a2da761-4a0f-4af6-a185-c2acf5a8dfbd</subsheetid>
+    <loginhibit />
+    <display x="-270" y="60" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="89ce7309-95eb-4b79-9b9a-79cf88c01e3b" name="PackageInfoCsv" type="Data">
+    <subsheetid>7a2da761-4a0f-4af6-a185-c2acf5a8dfbd</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2e19cf76-ebf2-4731-860b-596cf5c0025c" name="Test predicate" type="Decision">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="Len(Trim([Predicate]))&gt;0" />
+    <ontrue>a7d9775b-7c7c-4227-a157-3d338d2f819c</ontrue>
+    <onfalse>b4c28b5d-acbc-44a0-ab61-8e38f74b1f32</onfalse>
+  </stage>
+  <stage stageid="b4c28b5d-acbc-44a0-ab61-8e38f74b1f32" name="No predicate" type="Exception">
+    <subsheetid>eea70225-b9b4-4d69-a2a5-639c5ab85c4a</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;Predicate empty&quot;" />
+  </stage>
+  <stage stageid="13f7681c-00d3-4ff0-a3fc-27748ea3420f" name="Test predicate" type="Decision">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <loginhibit />
+    <display x="15" y="-60" />
+    <decision expression="Len(Trim([Predicate]))&gt;0" />
+    <ontrue>9b8acd28-fc68-4f07-8c3a-a604a4c67f48</ontrue>
+    <onfalse>23e53cd5-00d8-474f-92e1-b407f54243ba</onfalse>
+  </stage>
+  <stage stageid="23e53cd5-00d8-474f-92e1-b407f54243ba" name="No predicate" type="Exception">
+    <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
+    <display x="120" y="-60" />
+    <exception localized="yes" type="Business Exception" detail="&quot;Predicate empty&quot;" />
+  </stage>
+</process>

@@ -1,0 +1,722 @@
+﻿<process name="Coremoran - Dynamic LINQ - SelectMany (Tests)" version="1.0" bpversion="6.10.1.35171" narrative="" byrefcollection="true" preferredid="5cdbbb85-8b31-4440-a11f-7055ee7fc0f1">
+  <view>
+    <camerax>-135</camerax>
+    <cameray>21</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="bccb090f-6b88-4ec3-910b-d11ca695617c" type="Normal" published="False">
+    <name>Append Result</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="1096a7c0-44b6-48b6-870a-3c82264c00e5" type="Normal" published="False">
+    <name>Simple Test</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>2</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="83572300-331c-44a8-acc8-01212a3af5a1" type="Normal" published="False">
+    <name>Complex With Param Test</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>44</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="1da06b4f-0740-4d47-8ceb-21871a3a1e1b" type="Normal" published="False">
+    <name>Empty Test</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>2</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="1dd7f9e2-556b-4cb2-9fc6-13cbe8e08f9b" name="Start" type="Start">
+    <display x="15" y="-105" />
+    <onsuccess>8b28632b-5ddb-4cc4-b176-4724483fa212</onsuccess>
+  </stage>
+  <stage stageid="0c03f92b-39eb-4c52-9198-efd9535964a8" name="End" type="End">
+    <display x="15" y="75" />
+    <outputs>
+      <output type="collection" name="TestResult" stage="TestResult" />
+    </outputs>
+  </stage>
+  <stage stageid="ac32b0cc-0eb2-43a6-b8c6-434f7c7468c2" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="fe945529-bf67-41fd-85be-faca7080b5d1" name="Append Result" type="SubSheetInfo">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="19f31bc6-f56e-4be1-9aea-6253b19129d0" name="Start" type="Start">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <display x="-15" y="-135" />
+    <inputs>
+      <input type="text" name="TestName" stage="TestName" />
+      <input type="flag" name="Success?" stage="Success?" />
+      <input type="text" name="ErrorMessage" stage="Error" />
+    </inputs>
+    <onsuccess>28a010e9-5a55-4294-8723-fdb751ddb023</onsuccess>
+  </stage>
+  <stage stageid="af10aa7c-5e2a-4679-86b4-be9ab4289e4b" name="End" type="End">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <display x="-15" y="45" />
+  </stage>
+  <stage stageid="28a010e9-5a55-4294-8723-fdb751ddb023" name="Collections::Add Row" type="Action">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-15" y="-90" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;TestResult&quot;" />
+    </inputs>
+    <onsuccess>fae2ae11-4b68-4ea7-8b9d-7ed2f6e46b18</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Add Row" />
+  </stage>
+  <stage stageid="44499d41-9c8b-472a-a036-f61464107c2d" name="Fill TestName, Success" type="MultipleCalculation">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-75" y="0" />
+    <onsuccess>3354ae35-6a37-4a27-b66d-bcdf0b435fe1</onsuccess>
+    <steps>
+      <calculation expression="[TestName]" stage="TestResult.Test" />
+      <calculation expression="[Success?]" stage="TestResult.Success?" />
+    </steps>
+  </stage>
+  <stage stageid="4a191c64-d2ce-4016-a311-c716aab32748" name="Fill TestName, Success, Error" type="MultipleCalculation">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="45" y="0" />
+    <onsuccess>722e6c47-7cb3-47a0-bed2-db1de4369ac8</onsuccess>
+    <steps>
+      <calculation expression="[TestName]" stage="TestResult.Test" />
+      <calculation expression="[Success?]" stage="TestResult.Success?" />
+      <calculation expression="[Error]" stage="TestResult.Error message" />
+    </steps>
+  </stage>
+  <stage stageid="fae2ae11-4b68-4ea7-8b9d-7ed2f6e46b18" name="Failed?" type="Decision">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <display x="-15" y="-45" />
+    <decision expression="[Success?]=False" />
+    <ontrue>a861a01a-9feb-4adc-86e7-82199124a814</ontrue>
+    <onfalse>89f8854d-111b-4829-9e57-e12866406f97</onfalse>
+  </stage>
+  <stage stageid="89f8854d-111b-4829-9e57-e12866406f97" name="Anchor3" type="Anchor">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-75" y="-45" w="10" h="10" />
+    <onsuccess>44499d41-9c8b-472a-a036-f61464107c2d</onsuccess>
+  </stage>
+  <stage stageid="a861a01a-9feb-4adc-86e7-82199124a814" name="Anchor4" type="Anchor">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="45" y="-45" w="10" h="10" />
+    <onsuccess>4a191c64-d2ce-4016-a311-c716aab32748</onsuccess>
+  </stage>
+  <stage stageid="722e6c47-7cb3-47a0-bed2-db1de4369ac8" name="Anchor5" type="Anchor">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="45" y="45" w="10" h="10" />
+    <onsuccess>af10aa7c-5e2a-4679-86b4-be9ab4289e4b</onsuccess>
+  </stage>
+  <stage stageid="3354ae35-6a37-4a27-b66d-bcdf0b435fe1" name="Anchor6" type="Anchor">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-75" y="45" w="10" h="10" />
+    <onsuccess>af10aa7c-5e2a-4679-86b4-be9ab4289e4b</onsuccess>
+  </stage>
+  <stage stageid="ab5a087f-0588-4d1e-a00a-c940210534fe" name="TestName" type="Data">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <display x="150" y="-120" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e6d97922-293a-46a3-be95-426686559b4c" name="Success?" type="Data">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <display x="150" y="-30" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="da5f62bf-5624-4c72-8bae-799e00bea795" name="Error" type="Data">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <display x="150" y="-75" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c96c8922-a062-49e6-9716-fb3fdb189933" name="Input" type="Block">
+    <subsheetid>bccb090f-6b88-4ec3-910b-d11ca695617c</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="105" y="-150" w="90" h="150" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="bc9ddb47-2f0f-4842-8ed0-153a8cca1ed8" name="TestResult" type="Collection">
+    <display x="-195" y="-15" w="120" h="60" />
+    <datatype>collection</datatype>
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Test" type="text" description="Shows the name of the test." />
+      <field name="Success?" type="flag" description="Shows if the test succeeded or failed." />
+      <field name="Error message" type="text" description="If Success = False: Shows error message" />
+    </collectioninfo>
+  </stage>
+  <stage stageid="36bd8ffe-e908-4dd1-8ed3-44363379aa07" name="Simple Test" type="SubSheetInfo">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="f67ee56d-b0e5-4841-92b5-7a575e0aae6c" name="Start" type="Start">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <display x="15" y="-105" />
+    <onsuccess>219d2b2f-d01c-4083-9b37-d3c96b74fdd5</onsuccess>
+  </stage>
+  <stage stageid="dbb804d4-d169-409b-a082-a8729d42ed5f" name="End" type="End">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <display x="15" y="165" />
+  </stage>
+  <stage stageid="388270b9-3f27-497a-8582-e58cea91f5ba" name="Anchor1" type="Anchor">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="120" y="165" w="10" h="10" />
+    <onsuccess>dbb804d4-d169-409b-a082-a8729d42ed5f</onsuccess>
+  </stage>
+  <stage stageid="6810177e-cd5c-4327-aea0-6a754ebd61c7" name="Recover1" type="Recover">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <loginhibit />
+    <display x="120" y="30" />
+    <onsuccess>13dc8e6a-715c-4533-876a-bbcef464f1ba</onsuccess>
+  </stage>
+  <stage stageid="3ad57ea0-fcf4-418b-b7ff-caaccadc35aa" name="Resume1" type="Resume">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <loginhibit />
+    <display x="120" y="120" />
+    <onsuccess>388270b9-3f27-497a-8582-e58cea91f5ba</onsuccess>
+  </stage>
+  <stage stageid="13dc8e6a-715c-4533-876a-bbcef464f1ba" name="Append Result" type="SubSheet">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="120" y="75" />
+    <inputs>
+      <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
+      <input type="flag" name="Success?" friendlyname="Success?" expr="False" />
+      <input type="text" name="ErrorMessage" friendlyname="ErrorMessage" expr="ExceptionDetail()" />
+    </inputs>
+    <onsuccess>3ad57ea0-fcf4-418b-b7ff-caaccadc35aa</onsuccess>
+    <processid>bccb090f-6b88-4ec3-910b-d11ca695617c</processid>
+  </stage>
+  <stage stageid="e5d26c27-898a-45e4-8fe6-9ca63688af92" name="Append Result" type="SubSheet">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="120" />
+    <inputs>
+      <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
+      <input type="flag" name="Success?" friendlyname="Success?" expr="True" />
+      <input type="text" name="ErrorMessage" friendlyname="ErrorMessage" expr="" />
+    </inputs>
+    <onsuccess>dbb804d4-d169-409b-a082-a8729d42ed5f</onsuccess>
+    <processid>bccb090f-6b88-4ec3-910b-d11ca695617c</processid>
+  </stage>
+  <stage stageid="082403d7-53fb-428f-9446-5e7d0f730c47" name="Test Name" type="Data">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-195" y="-30" w="90" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">Simple Test</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8b28632b-5ddb-4cc4-b176-4724483fa212" name="Simple Test" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <onsuccess>47eccd0f-bbd3-467e-878c-6f39dff9948b</onsuccess>
+    <processid>1096a7c0-44b6-48b6-870a-3c82264c00e5</processid>
+  </stage>
+  <stage stageid="a4a2602f-33ce-4db6-9d5b-34bd74243839" name="Source" type="Collection">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <display x="-195" y="15" w="90" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c126aef7-2cc4-431c-bed6-b7cd1dcf9256" name="JsonSource" type="Data">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-90" y="15" w="90" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">[{"SubCollection": [1,2]},{"SubCollection": [3,4]}</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3178cab0-1ea3-42b5-b697-97006552d8fb" name="Expected" type="Collection">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <display x="-195" y="60" w="90" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="__JSON_unnamed_Value" type="number" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="__JSON_unnamed_Value" type="number" value="1" />
+      </row>
+      <row>
+        <field name="__JSON_unnamed_Value" type="number" value="2" />
+      </row>
+      <row>
+        <field name="__JSON_unnamed_Value" type="number" value="3" />
+      </row>
+      <row>
+        <field name="__JSON_unnamed_Value" type="number" value="4" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="55374cc9-dc06-468e-85e9-69cf78ad806f" name="Actual" type="Collection">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <display x="-195" y="105" w="90" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="51bb8495-b21d-48de-b468-68543ff653be" name="Expected Count" type="Data">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-90" y="60" w="90" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>4</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="473d2e42-9832-4bd3-9bd6-6e39056c54a8" name="Actual Count" type="Data">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-90" y="105" w="90" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="624aa709-2e80-41e5-81a2-00cecac3b339" name="Dynamic LINQ::SelectMany" type="Action">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="collection" name="Source" friendlyname="Source" expr="[Source]" />
+      <input type="text" name="Selector" friendlyname="Selector" expr="&quot;SubCollection.Select($)&quot;" />
+      <input type="collection" name="Parameter" friendlyname="Parameter" expr="" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Result" friendlyname="Result" stage="Actual" />
+      <output type="number" name="Count" friendlyname="Count" stage="Actual Count" />
+    </outputs>
+    <onsuccess>7174c2c1-954c-4bfa-9706-808bc62680f9</onsuccess>
+    <resource object="Coremoran - Dynamic LINQ" action="SelectMany" />
+  </stage>
+  <stage stageid="7174c2c1-954c-4bfa-9706-808bc62680f9" name="Coremoran - Unit - Assertions::AreEqual (Number)" type="Action">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="30" />
+    <inputs>
+      <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
+      <input type="number" name="Expected" friendlyname="Expected" expr="[Expected Count]" />
+      <input type="number" name="Actual" friendlyname="Actual" expr="[Actual Count]" />
+      <input type="text" name="Message" friendlyname="Message" expr="&quot;Row count differs.&quot;" />
+    </inputs>
+    <onsuccess>ebee12b5-e358-4590-a566-e4cab4219db9</onsuccess>
+    <resource object="Coremoran - Unit - Assertions" action="AreEqual (Number)" />
+  </stage>
+  <stage stageid="ebee12b5-e358-4590-a566-e4cab4219db9" name="Coremoran - Unit - Assertions::AreEqual (Collection)" type="Action">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
+      <input type="collection" name="Expected" friendlyname="Expected" expr="[Expected]" />
+      <input type="collection" name="Actual" friendlyname="Actual" expr="[Actual]" />
+      <input type="text" name="Message" friendlyname="Message" expr="&quot;Collections differ.&quot;" />
+    </inputs>
+    <onsuccess>e5d26c27-898a-45e4-8fe6-9ca63688af92</onsuccess>
+    <resource object="Coremoran - Unit - Assertions" action="AreEqual (Collection)" />
+  </stage>
+  <stage stageid="d385ca09-877f-4c8b-ba39-0e26932a86d9" name="Empty Test" type="SubSheetInfo">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="fc1c8d99-846a-4deb-a4cd-53cb8b6e902b" name="Start" type="Start">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <display x="15" y="-105" />
+    <onsuccess>78315ef4-75e3-4443-91cd-85e473033514</onsuccess>
+  </stage>
+  <stage stageid="ab1e7b3d-38c5-41a9-a9a1-04d0222b9684" name="End" type="End">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <display x="15" y="120" />
+  </stage>
+  <stage stageid="cd48c170-ec26-4b25-970b-51dc9b1cca22" name="Anchor1" type="Anchor">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="120" y="120" w="10" h="10" />
+    <onsuccess>ab1e7b3d-38c5-41a9-a9a1-04d0222b9684</onsuccess>
+  </stage>
+  <stage stageid="8ea08597-50b5-447e-8cc1-a35bd2f643ca" name="Recover1" type="Recover">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <loginhibit />
+    <display x="120" y="-15" />
+    <onsuccess>89ac7eee-1b51-4bb3-b3be-e1a7bbf98b8d</onsuccess>
+  </stage>
+  <stage stageid="87692a9a-8564-4644-97b3-644162d51a1f" name="Resume1" type="Resume">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <loginhibit />
+    <display x="120" y="75" />
+    <onsuccess>cd48c170-ec26-4b25-970b-51dc9b1cca22</onsuccess>
+  </stage>
+  <stage stageid="89ac7eee-1b51-4bb3-b3be-e1a7bbf98b8d" name="Append Result" type="SubSheet">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="120" y="30" />
+    <inputs>
+      <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
+      <input type="flag" name="Success?" friendlyname="Success?" expr="False" />
+      <input type="text" name="ErrorMessage" friendlyname="ErrorMessage" expr="ExceptionDetail()" />
+    </inputs>
+    <onsuccess>87692a9a-8564-4644-97b3-644162d51a1f</onsuccess>
+    <processid>bccb090f-6b88-4ec3-910b-d11ca695617c</processid>
+  </stage>
+  <stage stageid="7d46e3f4-c3b6-443f-bb81-29c1281e8c21" name="Append Result" type="SubSheet">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
+      <input type="flag" name="Success?" friendlyname="Success?" expr="True" />
+      <input type="text" name="ErrorMessage" friendlyname="ErrorMessage" expr="" />
+    </inputs>
+    <onsuccess>ab1e7b3d-38c5-41a9-a9a1-04d0222b9684</onsuccess>
+    <processid>bccb090f-6b88-4ec3-910b-d11ca695617c</processid>
+  </stage>
+  <stage stageid="558b6d01-8a98-4506-b57b-8e4e625ad505" name="Test Name" type="Data">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-195" y="-30" w="90" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">Empty Test</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="cccdab4e-1349-4523-95f4-e9b8c0de2487" name="Source" type="Collection">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <display x="-195" y="15" w="90" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1f1db5e5-2078-4c32-a3d4-5c35938a688b" name="Expected" type="Collection">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <display x="-195" y="60" w="90" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="ead563c0-b685-451f-862e-6196899eab7a" name="Actual" type="Collection">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <display x="-195" y="105" w="90" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6b6a646a-ccc9-4016-89a9-4db254241993" name="Expected Count" type="Data">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-90" y="60" w="90" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="45447035-6140-464f-9534-ae15e0769707" name="Actual Count" type="Data">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-90" y="105" w="90" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="78315ef4-75e3-4443-91cd-85e473033514" name="Dynamic LINQ::SelectMany" type="Action">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <inputs>
+      <input type="collection" name="Source" friendlyname="Source" expr="[Source]" />
+      <input type="text" name="Selector" friendlyname="Selector" expr="&quot;NotNeeded&quot;" />
+      <input type="collection" name="Parameter" friendlyname="Parameter" expr="" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Result" friendlyname="Result" stage="Actual" />
+      <output type="number" name="Count" friendlyname="Count" stage="Actual Count" />
+    </outputs>
+    <onsuccess>ef6e885d-d8d3-4711-8d25-df0316d5792e</onsuccess>
+    <resource object="Coremoran - Dynamic LINQ" action="SelectMany" />
+  </stage>
+  <stage stageid="cac897d1-63dc-4a05-bf4f-9cb05633e2bf" name="Complex With Param Test" type="SubSheetInfo">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="14347169-1d01-4637-9794-754f03ce7514" name="Start" type="Start">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <display x="15" y="-105" />
+    <onsuccess>7a7b4532-c522-4853-a960-ac59f073cca3</onsuccess>
+  </stage>
+  <stage stageid="3feb8d4f-c0dc-421d-90d7-ab1ef4493585" name="End" type="End">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <display x="15" y="165" />
+  </stage>
+  <stage stageid="db47e723-c1d9-42c1-976c-4cc7d57ed200" name="Anchor1" type="Anchor">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="120" y="165" w="10" h="10" />
+    <onsuccess>3feb8d4f-c0dc-421d-90d7-ab1ef4493585</onsuccess>
+  </stage>
+  <stage stageid="0771adaa-836a-401a-9fcd-49e5c32143d0" name="Recover1" type="Recover">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <loginhibit />
+    <display x="120" y="30" />
+    <onsuccess>087890a2-ee74-462a-b132-32c86a633037</onsuccess>
+  </stage>
+  <stage stageid="08f1211c-3e8e-4cf8-a564-ce868dbd22f9" name="Resume1" type="Resume">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <loginhibit />
+    <display x="120" y="120" />
+    <onsuccess>db47e723-c1d9-42c1-976c-4cc7d57ed200</onsuccess>
+  </stage>
+  <stage stageid="087890a2-ee74-462a-b132-32c86a633037" name="Append Result" type="SubSheet">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="120" y="75" />
+    <inputs>
+      <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
+      <input type="flag" name="Success?" friendlyname="Success?" expr="False" />
+      <input type="text" name="ErrorMessage" friendlyname="ErrorMessage" expr="ExceptionDetail()" />
+    </inputs>
+    <onsuccess>08f1211c-3e8e-4cf8-a564-ce868dbd22f9</onsuccess>
+    <processid>bccb090f-6b88-4ec3-910b-d11ca695617c</processid>
+  </stage>
+  <stage stageid="c9147dfd-3c99-4ddd-84b1-a791617fef5a" name="Append Result" type="SubSheet">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="120" />
+    <inputs>
+      <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
+      <input type="flag" name="Success?" friendlyname="Success?" expr="True" />
+      <input type="text" name="ErrorMessage" friendlyname="ErrorMessage" expr="" />
+    </inputs>
+    <onsuccess>3feb8d4f-c0dc-421d-90d7-ab1ef4493585</onsuccess>
+    <processid>bccb090f-6b88-4ec3-910b-d11ca695617c</processid>
+  </stage>
+  <stage stageid="589dd239-1f89-4c4d-981d-d6c940293f08" name="Test Name" type="Data">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-195" y="-30" w="90" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">Complex With Param Test</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f2f3b002-57f7-4083-9eaf-8c326e255370" name="Source" type="Collection">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <display x="-195" y="15" w="90" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a8031f35-9bea-4d53-a112-9295e1b25952" name="JsonSource" type="Data">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-90" y="15" w="90" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">[{"Text":"A","SubCollection": [1,2]},{"Text":"B","SubCollection": [3,4]}</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="7a7b4532-c522-4853-a960-ac59f073cca3" name="Coremoran - Utility - Json::Json2Collection" type="Action">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <inputs>
+      <input type="text" name="json" friendlyname="json" narrative="json string to be deserialized" expr="[JsonSource]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" friendlyname="result" narrative="the deserialized collection" stage="Source" />
+    </outputs>
+    <onsuccess>74926e24-c9a9-4cfc-9103-b444411924be</onsuccess>
+    <resource object="Coremoran - Utility - Json" action="Json2Collection" />
+  </stage>
+  <stage stageid="d5b2fcfb-6821-49c8-ae03-f351f6deade1" name="Expected" type="Collection">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <display x="-195" y="60" w="90" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="__JSON_unnamed_Value" type="text" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="__JSON_unnamed_Value" type="text" value="AX1" />
+      </row>
+      <row>
+        <field name="__JSON_unnamed_Value" type="text" value="AX2" />
+      </row>
+      <row>
+        <field name="__JSON_unnamed_Value" type="text" value="BX3" />
+      </row>
+      <row>
+        <field name="__JSON_unnamed_Value" type="text" value="BX4" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="ea7073ca-2d7a-4b34-a0f1-354bee84c86e" name="Actual" type="Collection">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <display x="-195" y="105" w="90" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="67b71e84-0de8-4c6a-94dc-dd8272513621" name="Expected Count" type="Data">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-90" y="60" w="90" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>4</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="bfae087b-c1d3-4915-a789-443a37b1f4ce" name="Actual Count" type="Data">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-90" y="105" w="90" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="74926e24-c9a9-4cfc-9103-b444411924be" name="Coremoran - Dynamic LINQ::SelectMany" type="Action">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="collection" name="Parameter" friendlyname="Parameter" expr="[Parameter]" />
+      <input type="collection" name="Source" friendlyname="Source" expr="[Source]" />
+      <input type="text" name="Selector" friendlyname="Selector" expr="&quot;SubCollection.Select(parent.Text+${TextParam}.ToString()+decimal(it).ToString())&quot;" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Result" friendlyname="Result" stage="Actual" />
+      <output type="number" name="Count" friendlyname="Count" stage="Actual Count" />
+    </outputs>
+    <onsuccess>2cd4165e-13b8-48b4-ade5-7b92590d1e70</onsuccess>
+    <resource object="Coremoran - Dynamic LINQ" action="SelectMany" />
+  </stage>
+  <stage stageid="2cd4165e-13b8-48b4-ade5-7b92590d1e70" name="Coremoran - Unit - Assertions::AreEqual (Number)" type="Action">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="30" />
+    <inputs>
+      <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
+      <input type="number" name="Expected" friendlyname="Expected" expr="[Expected Count]" />
+      <input type="number" name="Actual" friendlyname="Actual" expr="[Actual Count]" />
+      <input type="text" name="Message" friendlyname="Message" expr="&quot;Row count differs.&quot;" />
+    </inputs>
+    <onsuccess>135e2514-3e6b-4b9a-834e-285e44d53de9</onsuccess>
+    <resource object="Coremoran - Unit - Assertions" action="AreEqual (Number)" />
+  </stage>
+  <stage stageid="135e2514-3e6b-4b9a-834e-285e44d53de9" name="Coremoran - Unit - Assertions::AreEqual (Collection)" type="Action">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
+      <input type="collection" name="Expected" friendlyname="Expected" expr="[Expected]" />
+      <input type="collection" name="Actual" friendlyname="Actual" expr="[Actual]" />
+      <input type="text" name="Message" friendlyname="Message" expr="&quot;Collections differ.&quot;" />
+    </inputs>
+    <onsuccess>c9147dfd-3c99-4ddd-84b1-a791617fef5a</onsuccess>
+    <resource object="Coremoran - Unit - Assertions" action="AreEqual (Collection)" />
+  </stage>
+  <stage stageid="17e7265e-aaf8-4743-826f-2a4ee3d2271b" name="Parameter" type="Collection">
+    <subsheetid>83572300-331c-44a8-acc8-01212a3af5a1</subsheetid>
+    <display x="-90" y="-30" w="90" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <singlerow />
+      <field name="TextParam" type="text" />
+    </collectioninfo>
+    <initialvalue>
+      <singlerow />
+      <row>
+        <field name="TextParam" type="text" value="X" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="47eccd0f-bbd3-467e-878c-6f39dff9948b" name="Complex With Param Test" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <onsuccess>cfde4e30-b252-433b-8ab6-bc2fa4dfcbef</onsuccess>
+    <processid>83572300-331c-44a8-acc8-01212a3af5a1</processid>
+  </stage>
+  <stage stageid="cfde4e30-b252-433b-8ab6-bc2fa4dfcbef" name="Empty Test" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="30" />
+    <onsuccess>0c03f92b-39eb-4c52-9198-efd9535964a8</onsuccess>
+    <processid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</processid>
+  </stage>
+  <stage stageid="219d2b2f-d01c-4083-9b37-d3c96b74fdd5" name="Coremoran - Utility - Json::Json2Collection" type="Action">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <inputs>
+      <input type="text" name="json" friendlyname="json" narrative="json string to be deserialized" expr="[JsonSource]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" friendlyname="result" narrative="the deserialized collection" stage="Source" />
+    </outputs>
+    <onsuccess>624aa709-2e80-41e5-81a2-00cecac3b339</onsuccess>
+    <resource object="Coremoran - Utility - Json" action="Json2Collection" />
+  </stage>
+  <stage stageid="ef6e885d-d8d3-4711-8d25-df0316d5792e" name="Coremoran - Unit - Assertions::AreEqual (Number)" type="Action">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <inputs>
+      <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
+      <input type="number" name="Expected" friendlyname="Expected" expr="[Expected Count]" />
+      <input type="number" name="Actual" friendlyname="Actual" expr="[Actual Count]" />
+      <input type="text" name="Message" friendlyname="Message" expr="&quot;Row count differs.&quot;" />
+    </inputs>
+    <onsuccess>6bb696c8-0583-4cf8-8779-fd004be9cf91</onsuccess>
+    <resource object="Coremoran - Unit - Assertions" action="AreEqual (Number)" />
+  </stage>
+  <stage stageid="6bb696c8-0583-4cf8-8779-fd004be9cf91" name="Coremoran - Unit - Assertions::AreEqual (Collection)" type="Action">
+    <subsheetid>1da06b4f-0740-4d47-8ceb-21871a3a1e1b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="30" />
+    <inputs>
+      <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
+      <input type="collection" name="Expected" friendlyname="Expected" expr="[Expected]" />
+      <input type="collection" name="Actual" friendlyname="Actual" expr="[Actual]" />
+      <input type="text" name="Message" friendlyname="Message" expr="&quot;Collections differ.&quot;" />
+    </inputs>
+    <onsuccess>7d46e3f4-c3b6-443f-bb81-29c1281e8c21</onsuccess>
+    <resource object="Coremoran - Unit - Assertions" action="AreEqual (Collection)" />
+  </stage>
+</process>
