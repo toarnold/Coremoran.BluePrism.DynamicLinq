@@ -1,4 +1,4 @@
-# Coremoran - Dynamic LINQ
+# Coremoran - Blue Prism - Dynamic LINQ
 - [License](LICENSE)
 
 This library performs LINQ queries onto [BluePrism](https://www.blueprism.com/) collections.
