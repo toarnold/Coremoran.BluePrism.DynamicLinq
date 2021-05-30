@@ -887,7 +887,7 @@ result.Columns[0].ColumnName = "Min";]]></code>
     <display x="15" y="75" />
     <outputs>
       <output type="collection" name="Result" stage="Result" />
-      <output type="flag" name="Success" stage="Success" />
+      <output type="flag" name="Default" stage="Default" />
     </outputs>
   </stage>
   <stage stageid="bdce960d-0cf9-4407-b3fc-5b3378dc7f0a" name="Source" type="Collection">
@@ -923,7 +923,7 @@ result.Columns[0].ColumnName = "Min";]]></code>
     </inputs>
     <outputs>
       <output type="collection" name="result" stage="Result" />
-      <output type="flag" name="success" stage="Success" />
+      <output type="flag" name="isDefault" stage="Default" />
     </outputs>
     <onsuccess>fd3d2acc-0080-49b4-b602-db46539df9b8</onsuccess>
     <code><![CDATA[if (string.IsNullOrEmpty(predicate))
@@ -934,7 +934,7 @@ else
 {
 	result = InvokeLinqMethod("FirstOrDefault", predicate, source, parameter);
 }
-success = result.Rows.Count > 0;]]></code>
+isDefault = result.Rows.Count == 0;]]></code>
   </stage>
   <stage stageid="32dc4c6f-f8ca-4df9-a6bf-b3ab583cd343" name="Count&gt;0?" type="Decision">
     <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
@@ -984,11 +984,11 @@ success = result.Rows.Count > 0;]]></code>
     <private />
     <alwaysinit />
   </stage>
-  <stage stageid="af35ed73-8031-4c4b-9bb6-0fbf7df45e7c" name="Success" type="Data">
+  <stage stageid="af35ed73-8031-4c4b-9bb6-0fbf7df45e7c" name="Default" type="Data">
     <subsheetid>bdde55ea-423f-4958-96f7-add9f306b34e</subsheetid>
     <display x="-195" y="225" w="120" h="30" />
     <datatype>flag</datatype>
-    <initialvalue>False</initialvalue>
+    <initialvalue>True</initialvalue>
     <private />
     <alwaysinit />
   </stage>
@@ -1014,7 +1014,7 @@ success = result.Rows.Count > 0;]]></code>
     <display x="15" y="75" />
     <outputs>
       <output type="collection" name="Result" stage="Result" />
-      <output type="flag" name="Success" stage="Success" />
+      <output type="flag" name="Default" stage="Default" />
     </outputs>
   </stage>
   <stage stageid="fc1b2de9-5f7d-4259-8118-4800ae19c7ee" name="LastOrDefault" type="Code">
@@ -1028,7 +1028,7 @@ success = result.Rows.Count > 0;]]></code>
     </inputs>
     <outputs>
       <output type="collection" name="result" stage="Result" />
-      <output type="flag" name="success" stage="Success" />
+      <output type="flag" name="isDefault" stage="Default" />
     </outputs>
     <onsuccess>a6a47c5d-47ce-4cc1-8521-48d6fc15607b</onsuccess>
     <code><![CDATA[if (string.IsNullOrEmpty(predicate))
@@ -1039,7 +1039,7 @@ else
 {
 	result = InvokeLinqMethod("LastOrDefault", predicate, source, parameter);
 }
-success = result.Rows.Count > 0;]]></code>
+isDefault = result.Rows.Count == 0;]]></code>
   </stage>
   <stage stageid="ea4815dd-a2c1-4caa-892c-13f55d36f2c5" name="Count&gt;0?" type="Decision">
     <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
@@ -1097,7 +1097,7 @@ success = result.Rows.Count > 0;]]></code>
     <display x="15" y="75" />
     <outputs>
       <output type="collection" name="Result" stage="Result" />
-      <output type="flag" name="Success" stage="Success" />
+      <output type="flag" name="Default" stage="Default" />
     </outputs>
   </stage>
   <stage stageid="fc11aa93-91ac-4bd3-837d-1ea7adf7df66" name="SingleOrDefault" type="Code">
@@ -1111,7 +1111,7 @@ success = result.Rows.Count > 0;]]></code>
     </inputs>
     <outputs>
       <output type="collection" name="result" stage="Result" />
-      <output type="flag" name="success" stage="Success" />
+      <output type="flag" name="isDefault" stage="Default" />
     </outputs>
     <onsuccess>af606b5e-8b12-42dd-a8e8-40b27a551146</onsuccess>
     <code><![CDATA[try
@@ -1129,7 +1129,7 @@ catch (InvalidOperationException)
 {
 	throw new Exception("Sequence contains more than one matching element");
 }
-success = result.Rows.Count > 0;]]></code>
+isDefault = result.Rows.Count == 0;]]></code>
   </stage>
   <stage stageid="594cbcbc-58df-4640-98a3-2a14528df0fe" name="Count&gt;0?" type="Decision">
     <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
@@ -2680,11 +2680,11 @@ any = (bool)result.Rows[0][0];]]></code>
     <private />
     <alwaysinit />
   </stage>
-  <stage stageid="85194216-9e36-4645-9f13-844140a35352" name="Success" type="Data">
+  <stage stageid="85194216-9e36-4645-9f13-844140a35352" name="Default" type="Data">
     <subsheetid>c0054b9a-64ad-49ca-84d3-158c1d4510dd</subsheetid>
     <display x="-195" y="225" w="120" h="30" />
     <datatype>flag</datatype>
-    <initialvalue>False</initialvalue>
+    <initialvalue>True</initialvalue>
     <private />
     <alwaysinit />
   </stage>
@@ -2743,11 +2743,11 @@ any = (bool)result.Rows[0][0];]]></code>
     <private />
     <alwaysinit />
   </stage>
-  <stage stageid="0bef3dd3-68f5-4353-b329-aa3ad93c9f74" name="Success" type="Data">
+  <stage stageid="0bef3dd3-68f5-4353-b329-aa3ad93c9f74" name="Default" type="Data">
     <subsheetid>9f4ae203-e962-4ef3-8d90-e24bf8a614df</subsheetid>
     <display x="-195" y="225" w="120" h="30" />
     <datatype>flag</datatype>
-    <initialvalue>False</initialvalue>
+    <initialvalue>True</initialvalue>
     <private />
     <alwaysinit />
   </stage>

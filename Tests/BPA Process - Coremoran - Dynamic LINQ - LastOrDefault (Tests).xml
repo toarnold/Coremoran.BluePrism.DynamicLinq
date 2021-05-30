@@ -339,13 +339,13 @@
     <loginhibit onsuccess="true" />
     <display x="15" y="-60" />
     <inputs>
-      <input type="collection" name="Source" friendlyname="Source" expr="[Source]" />
-      <input type="text" name="Predicate" friendlyname="Predicate" expr="&quot;#{Nr} &gt;1&quot;" />
+      <input type="collection" name="Source" friendlyname="Source" narrative="The collection to return the last element of." expr="[Source]" />
+      <input type="text" name="Predicate" friendlyname="Predicate" narrative="A function to test each element for a condition." expr="&quot;#{Nr} &gt;1&quot;" />
       <input type="collection" name="Parameter" friendlyname="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." expr="" />
     </inputs>
     <outputs>
       <output type="collection" name="Result" friendlyname="Result" stage="Actual" />
-      <output type="flag" name="Success" friendlyname="Success" stage="Success" />
+      <output type="flag" name="Default" friendlyname="Default" stage="Default" />
     </outputs>
     <onsuccess>22d82791-0a46-4a76-98ef-66ce28f6004d</onsuccess>
     <resource object="Coremoran - Dynamic LINQ" action="LastOrDefault" />
@@ -356,9 +356,9 @@
     <display x="15" y="-15" />
     <inputs>
       <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
-      <input type="flag" name="Expected" friendlyname="Expected" expr="True" />
-      <input type="flag" name="Actual" friendlyname="Actual" expr="[Success]" />
-      <input type="text" name="Message" friendlyname="Message" expr="&quot;Success expected.&quot;" />
+      <input type="flag" name="Expected" friendlyname="Expected" expr="False" />
+      <input type="flag" name="Actual" friendlyname="Actual" expr="[Default]" />
+      <input type="text" name="Message" friendlyname="Message" expr="&quot;Result expected.&quot;" />
     </inputs>
     <onsuccess>f7dc1bf5-0d09-4dca-9709-ef443b76d93c</onsuccess>
     <resource object="Coremoran - Unit - Assertions" action="AreEqual (Flag)" />
@@ -512,13 +512,13 @@
     <loginhibit onsuccess="true" />
     <display x="15" y="-60" />
     <inputs>
-      <input type="collection" name="Source" friendlyname="Source" expr="[Source]" />
-      <input type="text" name="Predicate" friendlyname="Predicate" expr="&quot;#{Nr} &gt; ${NumParam}&quot;" />
+      <input type="collection" name="Source" friendlyname="Source" narrative="The collection to return the last element of." expr="[Source]" />
+      <input type="text" name="Predicate" friendlyname="Predicate" narrative="A function to test each element for a condition." expr="&quot;#{Nr} &gt; ${NumParam}&quot;" />
       <input type="collection" name="Parameter" friendlyname="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." expr="[Parameter]" />
     </inputs>
     <outputs>
       <output type="collection" name="Result" friendlyname="Result" stage="Actual" />
-      <output type="flag" name="Success" friendlyname="Success" stage="Success" />
+      <output type="flag" name="Default" friendlyname="Default" stage="Default" />
     </outputs>
     <onsuccess>80fd9a8d-4759-4351-a553-2d5766ad2889</onsuccess>
     <resource object="Coremoran - Dynamic LINQ" action="LastOrDefault" />
@@ -647,13 +647,13 @@
     <loginhibit onsuccess="true" />
     <display x="15" y="-60" />
     <inputs>
-      <input type="collection" name="Source" friendlyname="Source" expr="[Source]" />
-      <input type="text" name="Predicate" friendlyname="Predicate" expr="&quot;#{Nr} &gt; ${NumParam}&quot;" />
+      <input type="collection" name="Source" friendlyname="Source" narrative="The collection to return the last element of." expr="[Source]" />
+      <input type="text" name="Predicate" friendlyname="Predicate" narrative="A function to test each element for a condition." expr="&quot;#{Nr} &gt; ${NumParam}&quot;" />
       <input type="collection" name="Parameter" friendlyname="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." expr="[Parameter]" />
     </inputs>
     <outputs>
       <output type="collection" name="Result" friendlyname="Result" stage="Actual" />
-      <output type="flag" name="Success" friendlyname="Success" stage="Success" />
+      <output type="flag" name="Default" friendlyname="Default" stage="Default" />
     </outputs>
     <onsuccess>41fb1264-1a3e-435b-a810-f2c183d5422a</onsuccess>
     <resource object="Coremoran - Dynamic LINQ" action="LastOrDefault" />
@@ -778,13 +778,13 @@
     <loginhibit onsuccess="true" />
     <display x="15" y="-60" />
     <inputs>
-      <input type="collection" name="Source" friendlyname="Source" expr="[Source]" />
-      <input type="text" name="Predicate" friendlyname="Predicate" expr="&quot;#{Nr} &gt; ${NumParam}&quot;" />
+      <input type="collection" name="Source" friendlyname="Source" narrative="The collection to return the last element of." expr="[Source]" />
+      <input type="text" name="Predicate" friendlyname="Predicate" narrative="A function to test each element for a condition." expr="&quot;#{Nr} &gt; ${NumParam}&quot;" />
       <input type="collection" name="Parameter" friendlyname="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." expr="[Parameter]" />
     </inputs>
     <outputs>
       <output type="collection" name="Result" friendlyname="Result" stage="Actual" />
-      <output type="flag" name="Success" friendlyname="Success" stage="Success" />
+      <output type="flag" name="Default" friendlyname="Default" stage="Default" />
     </outputs>
     <onsuccess>18945928-864d-4444-880f-ab462cba10b1</onsuccess>
     <resource object="Coremoran - Dynamic LINQ" action="LastOrDefault" />
@@ -836,14 +836,6 @@
     <display x="15" y="120" />
     <onsuccess>0c03f92b-39eb-4c52-9198-efd9535964a8</onsuccess>
     <processid>65aa8bbb-23db-4e76-8b56-48872398a454</processid>
-  </stage>
-  <stage stageid="fe31869a-1f3c-4866-a40b-c13ae500022b" name="Success" type="Data">
-    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
-    <display x="-105" y="15" />
-    <datatype>flag</datatype>
-    <initialvalue />
-    <private />
-    <alwaysinit />
   </stage>
   <stage stageid="4fb28a6b-54ce-418a-a862-5303f341d1f5" name="No Predicate Test" type="SubSheetInfo">
     <subsheetid>d604dcec-c774-4b66-8396-2f54f355964e</subsheetid>
@@ -991,13 +983,13 @@
     <loginhibit onsuccess="true" />
     <display x="15" y="-60" />
     <inputs>
-      <input type="collection" name="Source" friendlyname="Source" expr="[Source]" />
-      <input type="text" name="Predicate" friendlyname="Predicate" expr="" />
+      <input type="collection" name="Source" friendlyname="Source" narrative="The collection to return the last element of." expr="[Source]" />
+      <input type="text" name="Predicate" friendlyname="Predicate" narrative="A function to test each element for a condition." expr="" />
       <input type="collection" name="Parameter" friendlyname="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." expr="" />
     </inputs>
     <outputs>
       <output type="collection" name="Result" friendlyname="Result" stage="Actual" />
-      <output type="flag" name="Success" friendlyname="Success" stage="Success" />
+      <output type="flag" name="Default" friendlyname="Default" stage="Default" />
     </outputs>
     <onsuccess>0c6a7df6-ba4e-461b-8314-d89ec0ef5931</onsuccess>
     <resource object="Coremoran - Dynamic LINQ" action="LastOrDefault" />
@@ -1008,9 +1000,9 @@
     <display x="15" y="-15" />
     <inputs>
       <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
-      <input type="flag" name="Expected" friendlyname="Expected" expr="True" />
-      <input type="flag" name="Actual" friendlyname="Actual" expr="[Success]" />
-      <input type="text" name="Message" friendlyname="Message" expr="&quot;Success expected.&quot;" />
+      <input type="flag" name="Expected" friendlyname="Expected" expr="False" />
+      <input type="flag" name="Actual" friendlyname="Actual" expr="[Default]" />
+      <input type="text" name="Message" friendlyname="Message" expr="&quot;Result expected.&quot;" />
     </inputs>
     <onsuccess>36359796-a9cf-4077-9093-c7766725e971</onsuccess>
     <resource object="Coremoran - Unit - Assertions" action="AreEqual (Flag)" />
@@ -1028,34 +1020,18 @@
     <onsuccess>98d8e2e8-54fe-4b3d-8afd-a32ba27cfe8c</onsuccess>
     <resource object="Coremoran - Unit - Assertions" action="AreEqual (Collection)" />
   </stage>
-  <stage stageid="b24b2cc3-5c59-4cd3-ab07-bc303c5ec59e" name="Success" type="Data">
-    <subsheetid>d604dcec-c774-4b66-8396-2f54f355964e</subsheetid>
-    <display x="-105" y="15" />
-    <datatype>flag</datatype>
-    <initialvalue />
-    <private />
-    <alwaysinit />
-  </stage>
   <stage stageid="80fd9a8d-4759-4351-a553-2d5766ad2889" name="Coremoran - Unit - Assertions::AreEqual (Flag)" type="Action">
     <subsheetid>a7b3713f-13a4-4c4c-b19b-56cefe08c48a</subsheetid>
     <loginhibit onsuccess="true" />
     <display x="15" y="-15" />
     <inputs>
       <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
-      <input type="flag" name="Expected" friendlyname="Expected" expr="False" />
-      <input type="flag" name="Actual" friendlyname="Actual" expr="[Success]" />
-      <input type="text" name="Message" friendlyname="Message" expr="&quot;No success expected.&quot;" />
+      <input type="flag" name="Expected" friendlyname="Expected" expr="True" />
+      <input type="flag" name="Actual" friendlyname="Actual" expr="[Default]" />
+      <input type="text" name="Message" friendlyname="Message" expr="&quot;Default expected.&quot;" />
     </inputs>
     <onsuccess>a5c83127-1abc-4a6a-9926-9a4bf20e4aef</onsuccess>
     <resource object="Coremoran - Unit - Assertions" action="AreEqual (Flag)" />
-  </stage>
-  <stage stageid="cd42bb4b-0c66-458d-a2eb-6d8298bf089d" name="Success" type="Data">
-    <subsheetid>a7b3713f-13a4-4c4c-b19b-56cefe08c48a</subsheetid>
-    <display x="-105" y="15" />
-    <datatype>flag</datatype>
-    <initialvalue />
-    <private />
-    <alwaysinit />
   </stage>
   <stage stageid="41fb1264-1a3e-435b-a810-f2c183d5422a" name="Coremoran - Unit - Assertions::AreEqual (Flag)" type="Action">
     <subsheetid>ceb5ed44-c582-4a1a-a56c-c0200106c50f</subsheetid>
@@ -1063,20 +1039,12 @@
     <display x="15" y="-15" />
     <inputs>
       <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
-      <input type="flag" name="Expected" friendlyname="Expected" expr="False" />
-      <input type="flag" name="Actual" friendlyname="Actual" expr="[Success]" />
-      <input type="text" name="Message" friendlyname="Message" expr="&quot;No success expected.&quot;" />
+      <input type="flag" name="Expected" friendlyname="Expected" expr="True" />
+      <input type="flag" name="Actual" friendlyname="Actual" expr="[Default]" />
+      <input type="text" name="Message" friendlyname="Message" expr="&quot;Default expected.&quot;" />
     </inputs>
     <onsuccess>a73ba63c-71ae-49e9-8b7b-57de3109bdbc</onsuccess>
     <resource object="Coremoran - Unit - Assertions" action="AreEqual (Flag)" />
-  </stage>
-  <stage stageid="af34c59e-eba7-41c9-aa0a-2d5fdbfcbedf" name="Success" type="Data">
-    <subsheetid>ceb5ed44-c582-4a1a-a56c-c0200106c50f</subsheetid>
-    <display x="-105" y="15" />
-    <datatype>flag</datatype>
-    <initialvalue />
-    <private />
-    <alwaysinit />
   </stage>
   <stage stageid="18945928-864d-4444-880f-ab462cba10b1" name="Coremoran - Unit - Assertions::AreEqual (Flag)" type="Action">
     <subsheetid>65aa8bbb-23db-4e76-8b56-48872398a454</subsheetid>
@@ -1084,25 +1052,57 @@
     <display x="15" y="-15" />
     <inputs>
       <input type="text" name="TestName" friendlyname="TestName" expr="[Test Name]" />
-      <input type="flag" name="Expected" friendlyname="Expected" expr="False" />
-      <input type="flag" name="Actual" friendlyname="Actual" expr="[Success]" />
-      <input type="text" name="Message" friendlyname="Message" expr="&quot;No success expected.&quot;" />
+      <input type="flag" name="Expected" friendlyname="Expected" expr="True" />
+      <input type="flag" name="Actual" friendlyname="Actual" expr="[Default]" />
+      <input type="text" name="Message" friendlyname="Message" expr="&quot;Default expected.&quot;" />
     </inputs>
     <onsuccess>319dd8ca-8293-4f6a-91c7-db1a1d5a5ec0</onsuccess>
     <resource object="Coremoran - Unit - Assertions" action="AreEqual (Flag)" />
-  </stage>
-  <stage stageid="240a5b37-a59b-4eb5-b857-7d03b168964f" name="Success" type="Data">
-    <subsheetid>65aa8bbb-23db-4e76-8b56-48872398a454</subsheetid>
-    <display x="-105" y="15" />
-    <datatype>flag</datatype>
-    <initialvalue />
-    <private />
-    <alwaysinit />
   </stage>
   <stage stageid="f2646569-9b84-4705-9a2b-0cc334f0a2f6" name="No Predicate Test" type="SubSheet">
     <loginhibit onsuccess="true" />
     <display x="15" y="-15" />
     <onsuccess>d6b717f9-f62b-4c19-9cfa-e6a3dcfe7bd7</onsuccess>
     <processid>d604dcec-c774-4b66-8396-2f54f355964e</processid>
+  </stage>
+  <stage stageid="51defef5-11cd-496c-b3a6-3e663285dabf" name="Default" type="Data">
+    <subsheetid>1096a7c0-44b6-48b6-870a-3c82264c00e5</subsheetid>
+    <display x="-90" y="15" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="fb541e18-d341-4c09-a37d-eeae05f5e1b5" name="Default" type="Data">
+    <subsheetid>d604dcec-c774-4b66-8396-2f54f355964e</subsheetid>
+    <display x="-105" y="15" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="83ebcfeb-1cba-4294-a138-6730fe3eed50" name="Default" type="Data">
+    <subsheetid>a7b3713f-13a4-4c4c-b19b-56cefe08c48a</subsheetid>
+    <display x="-105" y="15" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1246814f-8fde-4542-9305-6fe2c1793a2c" name="Default" type="Data">
+    <subsheetid>ceb5ed44-c582-4a1a-a56c-c0200106c50f</subsheetid>
+    <display x="-105" y="15" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="0b380402-4166-4083-a9a8-5f0c89790625" name="Default" type="Data">
+    <subsheetid>65aa8bbb-23db-4e76-8b56-48872398a454</subsheetid>
+    <display x="-105" y="15" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
   </stage>
 </process>
