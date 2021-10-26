@@ -1,7 +1,7 @@
 ﻿<process name="Coremoran - Dynamic LINQ (Testsuite)" version="1.0" bpversion="6.10.1.35171" narrative="" byrefcollection="true" preferredid="176ff886-76ef-42aa-aa6c-b7d1dfded80a" published="true">
   <view>
     <camerax>15</camerax>
-    <cameray>8</cameray>
+    <cameray>63</cameray>
     <zoom version="2">1.25</zoom>
   </view>
   <preconditions />
@@ -593,15 +593,14 @@
     <onsuccess>8b2bbab7-e7da-478a-b2c0-3770cbf27627</onsuccess>
   </stage>
   <stage stageid="94a68511-58d6-48a0-afb9-335bf2e5ba6c" name="End" type="End">
-    <display x="15" y="1470" />
+    <display x="15" y="1770" />
   </stage>
   <stage stageid="237994fc-b9f9-43cd-8a0e-581dc24d8082" name="Filter Errors For Log" type="Action">
-    <loginhibit onsuccess="true" />
-    <display x="15" y="1380" />
+    <display x="15" y="1680" />
     <inputs>
-      <input type="collection" name="Source" friendlyname="Source" expr="[TestResult]" />
-      <input type="text" name="Predicate" friendlyname="Predicate" expr="&quot;!#{Success?}&quot;" />
-      <input type="collection" name="Parameter" friendlyname="Parameter" expr="" />
+      <input type="collection" name="Source" friendlyname="Source" narrative="A collection to filter." expr="[TestResult]" />
+      <input type="text" name="Predicate" friendlyname="Predicate" narrative="An expression string to test each element for a condition." expr="&quot;!#{Success?}&quot;" />
+      <input type="collection" name="Parameter" friendlyname="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." expr="" />
     </inputs>
     <outputs>
       <output type="collection" name="Result" friendlyname="Result" stage="Errors" />
@@ -611,20 +610,20 @@
     <resource object="Coremoran - Dynamic LINQ" action="Where" />
   </stage>
   <stage stageid="2b5de6a6-14f8-4608-a9d9-f379ad9b0181" name="Count" type="Data">
-    <display x="90" y="1380" />
+    <display x="90" y="1680" />
     <datatype>number</datatype>
     <initialvalue />
     <private />
     <alwaysinit />
   </stage>
   <stage stageid="704e414f-8d05-45bf-a658-903a0a7b6c9c" name="Errors" type="Collection">
-    <display x="-60" y="1380" />
+    <display x="-60" y="1680" />
     <datatype>collection</datatype>
     <private />
     <alwaysinit />
   </stage>
   <stage stageid="46e6320b-47da-4816-b88c-296bbb6ced2c" name="No Errors?" type="Decision">
-    <display x="15" y="1425" />
+    <display x="15" y="1725" />
     <breakpoint type="0">
       <condition>
       </condition>
@@ -634,7 +633,7 @@
     <onfalse>1a339601-5834-4fea-9848-226b428a72a9</onfalse>
   </stage>
   <stage stageid="1a339601-5834-4fea-9848-226b428a72a9" name="Unit Exception" type="Exception">
-    <display x="135" y="1425" />
+    <display x="135" y="1725" />
     <exception localized="yes" type="UnitException" detail="&quot;Errors found. Please check Log.&quot;" />
   </stage>
   <stage stageid="08b54b6b-05b7-4498-b89e-14b1198b7374" name="SelectMany" type="Process">
@@ -833,11 +832,156 @@
   <stage stageid="23125b48-6d65-4915-bb24-6591d341786b" name="Anchor1" type="Anchor">
     <loginhibit onsuccess="true" />
     <display x="15" y="1350" w="10" h="10" />
-    <onsuccess>237994fc-b9f9-43cd-8a0e-581dc24d8082</onsuccess>
+    <onsuccess>b482fc96-6adf-499c-b9d1-c0965cd63f77</onsuccess>
   </stage>
   <stage stageid="e9b039b2-2bce-4cd8-bebd-b69e06b334d2" name="Anchor2" type="Anchor">
     <loginhibit onsuccess="true" />
     <display x="105" y="1350" w="10" h="10" />
     <onsuccess>23125b48-6d65-4915-bb24-6591d341786b</onsuccess>
+  </stage>
+  <stage stageid="b482fc96-6adf-499c-b9d1-c0965cd63f77" name="Concat" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1380" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>8b44721d-79aa-4316-a48b-90f8ead702a5</onsuccess>
+    <processid>7df25d38-8db5-4551-b032-d260a8471c42</processid>
+  </stage>
+  <stage stageid="8b44721d-79aa-4316-a48b-90f8ead702a5" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1380" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Concat&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>11d469cc-85a6-4904-a0d6-042d9aa1bb88</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="35423335-d27c-469c-a631-a84eadefdeb2" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1410" w="10" h="10" />
+    <onsuccess>b50e1eb7-379c-4997-8831-3d77163d3f2d</onsuccess>
+  </stage>
+  <stage stageid="11d469cc-85a6-4904-a0d6-042d9aa1bb88" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1410" w="10" h="10" />
+    <onsuccess>35423335-d27c-469c-a631-a84eadefdeb2</onsuccess>
+  </stage>
+  <stage stageid="b50e1eb7-379c-4997-8831-3d77163d3f2d" name="Union" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1440" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>23692cc8-8cf9-4708-99dd-61eb9d0b8f5a</onsuccess>
+    <processid>9e1720e3-f835-420c-950b-8600ac22f13c</processid>
+  </stage>
+  <stage stageid="23692cc8-8cf9-4708-99dd-61eb9d0b8f5a" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1440" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Union&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>e05bdc12-9e74-4686-a670-626d4aed361a</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="e082832d-aefe-4a91-a022-c929d6b567d0" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1470" w="10" h="10" />
+    <onsuccess>5d3c7471-0283-4b84-98e1-ab03d0b15e4b</onsuccess>
+  </stage>
+  <stage stageid="e05bdc12-9e74-4686-a670-626d4aed361a" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1470" w="10" h="10" />
+    <onsuccess>e082832d-aefe-4a91-a022-c929d6b567d0</onsuccess>
+  </stage>
+  <stage stageid="5d3c7471-0283-4b84-98e1-ab03d0b15e4b" name="Distinct" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1500" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>88c3e538-dcd3-4073-af72-bf3b84e4b9d5</onsuccess>
+    <processid>b91ba02d-0ece-46db-9450-81fe18c06380</processid>
+  </stage>
+  <stage stageid="88c3e538-dcd3-4073-af72-bf3b84e4b9d5" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1500" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Distinct&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>0203283b-ef2e-4e87-8c2c-2c8a02afcc52</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="fe8afa19-e1ea-4e6a-b31d-bd40f45921fc" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1530" w="10" h="10" />
+    <onsuccess>4f2043a5-d1c7-4db0-a636-060ab0a48787</onsuccess>
+  </stage>
+  <stage stageid="0203283b-ef2e-4e87-8c2c-2c8a02afcc52" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1530" w="10" h="10" />
+    <onsuccess>fe8afa19-e1ea-4e6a-b31d-bd40f45921fc</onsuccess>
+  </stage>
+  <stage stageid="4f2043a5-d1c7-4db0-a636-060ab0a48787" name="Except" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1560" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>58e95bf4-c455-436a-a0b2-0c2b8a545ed3</onsuccess>
+    <processid>093f69a6-87a0-4a6f-b2d7-77859a94309f</processid>
+  </stage>
+  <stage stageid="58e95bf4-c455-436a-a0b2-0c2b8a545ed3" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1560" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Except&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>d4aeaae6-9278-4559-9445-23e8fcf4ee00</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="c813596f-9bcd-4d7d-ab5a-b17f8a082051" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1590" w="10" h="10" />
+    <onsuccess>16c3ad22-4f33-4709-b0f2-1aab8196e98f</onsuccess>
+  </stage>
+  <stage stageid="d4aeaae6-9278-4559-9445-23e8fcf4ee00" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1590" w="10" h="10" />
+    <onsuccess>c813596f-9bcd-4d7d-ab5a-b17f8a082051</onsuccess>
+  </stage>
+  <stage stageid="16c3ad22-4f33-4709-b0f2-1aab8196e98f" name="Intersect" type="Process">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1620" />
+    <outputs>
+      <output type="collection" name="TestResult" friendlyname="TestResult" stage="TempResult" />
+    </outputs>
+    <onsuccess>aa1d0933-4477-4bab-ab5c-75a825b013e1</onsuccess>
+    <processid>f7266c76-ba6e-47d2-807b-3790503fbb6c</processid>
+  </stage>
+  <stage stageid="aa1d0933-4477-4bab-ab5c-75a825b013e1" name="Append Partial Result" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1620" />
+    <inputs>
+      <input type="text" name="Method" friendlyname="Method" expr="&quot;Intersect&quot;" />
+      <input type="collection" name="TempResult" friendlyname="TempResult" expr="[TempResult]" />
+    </inputs>
+    <onsuccess>24b1f8ac-363b-472c-a1a4-76800bfad6ba</onsuccess>
+    <processid>01312027-d1b9-4331-bf78-fc9edeeb6188</processid>
+  </stage>
+  <stage stageid="dc1b467d-b863-425f-9170-aaaace72337b" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="1650" w="10" h="10" />
+    <onsuccess>237994fc-b9f9-43cd-8a0e-581dc24d8082</onsuccess>
+  </stage>
+  <stage stageid="24b1f8ac-363b-472c-a1a4-76800bfad6ba" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="1650" w="10" h="10" />
+    <onsuccess>dc1b467d-b863-425f-9170-aaaace72337b</onsuccess>
   </stage>
 </process>

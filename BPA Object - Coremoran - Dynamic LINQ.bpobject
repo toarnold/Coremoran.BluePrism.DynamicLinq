@@ -1,4 +1,4 @@
-﻿<process name="Coremoran - Dynamic LINQ" version="1.0" bpversion="6.10.1.35171" narrative="Wrapper for Dynamic LINQ: https://dynamic-linq.net/&#xD;&#xA;Project site: https://github.com/zzzprojects/System.Linq.Dynamic.Core" byrefcollection="true" type="object" runmode="Exclusive" preferredid="8229e34a-e436-4ff3-8f51-beb0f6fbcc6e">
+﻿<process name="Coremoran - Dynamic LINQ" version="1.0" bpversion="6.10.2.42081" narrative="Wrapper for Dynamic LINQ: https://dynamic-linq.net/&#xD;&#xA;Project site: https://github.com/zzzprojects/System.Linq.Dynamic.Core" byrefcollection="true" type="object" runmode="Background" preferredid="8229e34a-e436-4ff3-8f51-beb0f6fbcc6e">
   <appdef>
     <element name="Application Root">
       <id>2b9748a3-2ee9-47ca-9118-bf0f407c0497</id>
@@ -28,6 +28,14 @@
     <view>
       <camerax>0</camerax>
       <cameray>-21</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="97f18a15-8e76-43cc-bfe6-bc9352545924" type="Normal" published="True">
+    <name>Version</name>
+    <view>
+      <camerax>32</camerax>
+      <cameray>0</cameray>
       <zoom version="2">1.25</zoom>
     </view>
   </subsheet>
@@ -219,7 +227,47 @@
     <name>Join</name>
     <view>
       <camerax>0</camerax>
+      <cameray>86</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="98d7f7d4-c0f5-4d2e-b40b-f9a526979909" type="Normal" published="True">
+    <name>Concat</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="77828297-5bcc-45ae-baf7-073664b2d4e8" type="Normal" published="True">
+    <name>Union</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="95f7af7c-e3d3-47e7-ba51-83c5928ca1e7" type="Normal" published="True">
+    <name>Except</name>
+    <view>
+      <camerax>98</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="6dc73f8f-2ad1-4827-b19f-b21db2a9a057" type="Normal" published="True">
+    <name>Intersect</name>
+    <view>
+      <camerax>114</camerax>
       <cameray>63</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="e71d22b4-31a9-4841-b449-23dfae82848c" type="Normal" published="True">
+    <name>Distinct</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
       <zoom version="2">1.25</zoom>
     </view>
   </subsheet>
@@ -285,8 +333,9 @@ string ExpandMacros(string predicate, DataTable source, DataTable parameter)
 	}
 	return Regex.Replace(predicate, @"\#([a-zA-Z_$][a-zA-Z_$0-9]*?)?{(.+?)}", match => {
 		var it = match.Groups[1].Success ? match.Groups[1].Value : "it";
-		return (source != null && source.Columns.Contains(match.Groups[2].Value)) ?
-			string.Format("{0}({2}[\"{1}\"])", source.Columns[match.Groups[2].Value].DataType.Name, match.Groups[2].Value, it)
+		var col = source?.Columns[match.Groups[2].Value];
+		return (col != null && col.DataType.Name != "DataTable") ?
+			string.Format("{0}({2}[\"{1}\"])", col.DataType.Name, match.Groups[2].Value, it)
 			: string.Format("{0}[\"{1}\"]", it, match.Groups[2].Value);
 	});
 }
@@ -2203,7 +2252,7 @@ count = result.Rows.Count;]]></code>
   <stage stageid="4ce7a61f-2451-49c3-b1ac-62c121353b82" name="End" type="End">
     <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
     <loginhibit />
-    <display x="15" y="210" />
+    <display x="15" y="255" />
     <outputs>
       <output type="collection" name="Result" stage="Result" />
       <output type="number" name="Count" stage="Count" />
@@ -2212,7 +2261,7 @@ count = result.Rows.Count;]]></code>
   <stage stageid="8d95a063-07df-4565-a69a-79686f7816df" name="Join" type="Code">
     <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
     <loginhibit />
-    <display x="15" y="165" />
+    <display x="15" y="210" />
     <inputs>
       <input type="collection" name="inner" expr="[Inner]" />
       <input type="collection" name="outer" expr="[Outer]" />
@@ -2285,51 +2334,30 @@ count = result.Rows.Count;]]></code>
   </stage>
   <stage stageid="6760a8de-207a-4fe0-837c-6218f86799d2" name="Result" type="Collection">
     <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
-    <display x="-195" y="210" w="120" h="30" />
+    <display x="-195" y="315" w="120" h="30" />
     <datatype>collection</datatype>
     <private />
     <alwaysinit />
   </stage>
   <stage stageid="d2a38019-9442-4e42-a992-ea844304427d" name="Count" type="Data">
     <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
-    <display x="-195" y="240" w="120" h="30" />
+    <display x="-195" y="345" w="120" h="30" />
     <datatype>number</datatype>
-    <initialvalue />
+    <initialvalue>0</initialvalue>
     <private />
     <alwaysinit />
-  </stage>
-  <stage stageid="92828da5-4bda-424f-be60-006a9827b1d6" name="Count&gt;0?" type="Decision">
-    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
-    <loginhibit />
-    <display x="15" y="120" />
-    <decision expression="[Count]&gt;0" />
-    <ontrue>8d95a063-07df-4565-a69a-79686f7816df</ontrue>
-    <onfalse>ad2581fe-42f6-4a2c-9aba-79f38b40316a</onfalse>
   </stage>
   <stage stageid="ad2581fe-42f6-4a2c-9aba-79f38b40316a" name="Anchor1" type="Anchor">
     <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
     <loginhibit />
-    <display x="75" y="120" w="10" h="10" />
+    <display x="75" y="165" w="10" h="10" />
     <onsuccess>0d28947b-ce1a-4c04-9477-3c6864761ab9</onsuccess>
   </stage>
   <stage stageid="0d28947b-ce1a-4c04-9477-3c6864761ab9" name="Anchor2" type="Anchor">
     <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
     <loginhibit />
-    <display x="75" y="210" w="10" h="10" />
+    <display x="75" y="255" w="10" h="10" />
     <onsuccess>4ce7a61f-2451-49c3-b1ac-62c121353b82</onsuccess>
-  </stage>
-  <stage stageid="3a8a6015-25bb-4590-bf01-ac81829c6202" name="Count Rows" type="Action">
-    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
-    <loginhibit onsuccess="true" />
-    <display x="15" y="75" />
-    <inputs>
-      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Outer&quot;" />
-    </inputs>
-    <outputs>
-      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
-    </outputs>
-    <onsuccess>92828da5-4bda-424f-be60-006a9827b1d6</onsuccess>
-    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
   </stage>
   <stage stageid="a636c863-4200-4d88-9fc9-7db6b35a1a4a" name="All" type="SubSheetInfo">
     <subsheetid>c126a62f-027a-4fbf-b07c-e3c02b37eba6</subsheetid>
@@ -3474,7 +3502,7 @@ count = result.Rows.Count;]]></code>
   <stage stageid="dcc602c7-eb30-457c-870c-c9ec94a99302" name="out" type="Block">
     <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
     <loginhibit />
-    <display x="-270" y="180" w="150" h="90" />
+    <display x="-270" y="285" w="150" h="90" />
     <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
   </stage>
   <stage stageid="a69c24e3-e498-4955-b716-91d6c603fb7a" name="Test outer key selector" type="Decision">
@@ -3508,7 +3536,7 @@ count = result.Rows.Count;]]></code>
     <loginhibit />
     <display x="15" y="30" />
     <decision expression="Len(Trim([ResultSelector]))&gt;0" />
-    <ontrue>3a8a6015-25bb-4590-bf01-ac81829c6202</ontrue>
+    <ontrue>b9b73f28-6be8-4a1e-9573-615eaa129ff5</ontrue>
     <onfalse>817bac9c-728b-4ce9-b8ed-3908535ab2a8</onfalse>
   </stage>
   <stage stageid="817bac9c-728b-4ce9-b8ed-3908535ab2a8" name="No selector" type="Exception">
@@ -3792,5 +3820,506 @@ count = result.Rows.Count;]]></code>
     <subsheetid>0bdc2cc5-3989-4d47-b421-3fae468089d3</subsheetid>
     <display x="120" y="-60" />
     <exception localized="yes" type="Business Exception" detail="&quot;Predicate empty&quot;" />
+  </stage>
+  <stage stageid="593e2e85-de3e-47b9-8c3a-cc7d746b8a8b" name="Version" type="SubSheetInfo">
+    <subsheetid>97f18a15-8e76-43cc-bfe6-bc9352545924</subsheetid>
+    <narrative>Gets the current VBO version and the needed minimal "Dynamic LINQ" version</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="adc4457c-de86-445c-913c-8b84d245bffb" name="Start" type="Start">
+    <subsheetid>97f18a15-8e76-43cc-bfe6-bc9352545924</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>5fd88af6-5f7c-443b-ac24-992e37562297</onsuccess>
+  </stage>
+  <stage stageid="5fd88af6-5f7c-443b-ac24-992e37562297" name="End" type="End">
+    <subsheetid>97f18a15-8e76-43cc-bfe6-bc9352545924</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+    <outputs>
+      <output type="text" name="Version" stage="Version" />
+      <output type="text" name="MinimalLinqVersion" stage="MinimalLinqVersion" />
+    </outputs>
+  </stage>
+  <stage stageid="d4801cdc-bb2c-4678-a4de-2a0d3c8cc1d4" name="Version" type="Data">
+    <subsheetid>97f18a15-8e76-43cc-bfe6-bc9352545924</subsheetid>
+    <loginhibit />
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">1.1.0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="31f3fc86-ad69-4449-9704-c57852d9ad30" name="MinimalLinqVersion" type="Data">
+    <subsheetid>97f18a15-8e76-43cc-bfe6-bc9352545924</subsheetid>
+    <loginhibit />
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">1.2.10</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5377f251-5fff-48a6-a7ce-62801ab645e3" name="const" type="Block">
+    <subsheetid>97f18a15-8e76-43cc-bfe6-bc9352545924</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="54929539-4908-4ace-a990-a142d210d088" name="Concat" type="SubSheetInfo">
+    <subsheetid>98d7f7d4-c0f5-4d2e-b40b-f9a526979909</subsheetid>
+    <narrative>Concatenates two sequences.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="91d4369c-b598-4a65-b907-7da3fa4ddf07" name="Start" type="Start">
+    <subsheetid>98d7f7d4-c0f5-4d2e-b40b-f9a526979909</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source1" narrative="The first sequence to concatenate." stage="Source1" />
+      <input type="collection" name="Source2" narrative="The sequence to concatenate to the first sequence." stage="Source2" />
+    </inputs>
+    <onsuccess>d1c916ee-4404-455d-889a-1168556d150d</onsuccess>
+  </stage>
+  <stage stageid="df86072b-9a36-42ce-8908-d48696e96be2" name="Source1" type="Collection">
+    <subsheetid>98d7f7d4-c0f5-4d2e-b40b-f9a526979909</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="fd7c440a-e68f-4844-ace7-6f4b1f173303" name="Source2" type="Collection">
+    <subsheetid>98d7f7d4-c0f5-4d2e-b40b-f9a526979909</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="7815b594-a83e-4ba9-8756-302f8ae87bb9" name="in" type="Block">
+    <subsheetid>98d7f7d4-c0f5-4d2e-b40b-f9a526979909</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="c742ced4-0fb3-4f3e-9888-33e645c8947a" name="Result" type="Collection">
+    <subsheetid>98d7f7d4-c0f5-4d2e-b40b-f9a526979909</subsheetid>
+    <display x="-195" y="90" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="31813c36-5ba0-4ae6-81ae-a1aa99f3a675" name="Count" type="Data">
+    <subsheetid>98d7f7d4-c0f5-4d2e-b40b-f9a526979909</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="fb38eea2-3a16-416c-b459-991a6a14c4db" name="out" type="Block">
+    <subsheetid>98d7f7d4-c0f5-4d2e-b40b-f9a526979909</subsheetid>
+    <loginhibit />
+    <display x="-270" y="60" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="98fe0252-1f76-4835-9dd1-7e2f5ab459ec" name="End" type="End">
+    <subsheetid>98d7f7d4-c0f5-4d2e-b40b-f9a526979909</subsheetid>
+    <loginhibit />
+    <display x="15" y="15" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="cc85451f-74f1-4393-86e3-e717180b462b" name="Union" type="SubSheetInfo">
+    <subsheetid>77828297-5bcc-45ae-baf7-073664b2d4e8</subsheetid>
+    <narrative>Produces the set union of two sequences.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="698d51cb-0cc9-423e-83df-ff74c8f9e551" name="Start" type="Start">
+    <subsheetid>77828297-5bcc-45ae-baf7-073664b2d4e8</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source1" narrative="The first sequence to concatenate." stage="Source1" />
+      <input type="collection" name="Source2" narrative="The sequence to concatenate to the first sequence." stage="Source2" />
+    </inputs>
+    <onsuccess>1826cfac-5734-427c-a624-ba9744b810fb</onsuccess>
+  </stage>
+  <stage stageid="48966bc2-ad91-4af2-8fc9-5de1b1ca7dd9" name="Source1" type="Collection">
+    <subsheetid>77828297-5bcc-45ae-baf7-073664b2d4e8</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="844c542c-f20a-40d6-8669-d133d8a72915" name="Source2" type="Collection">
+    <subsheetid>77828297-5bcc-45ae-baf7-073664b2d4e8</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="61b16260-cbf9-414b-926c-df2d865b142c" name="in" type="Block">
+    <subsheetid>77828297-5bcc-45ae-baf7-073664b2d4e8</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="ecf90c69-9b97-4b4f-a957-78c8aa2bbc79" name="Result" type="Collection">
+    <subsheetid>77828297-5bcc-45ae-baf7-073664b2d4e8</subsheetid>
+    <display x="-195" y="90" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e039515b-7597-4522-935f-73a494f2d5ae" name="Count" type="Data">
+    <subsheetid>77828297-5bcc-45ae-baf7-073664b2d4e8</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1eac2f9d-6422-4ddf-b116-fc72f1290a36" name="out" type="Block">
+    <subsheetid>77828297-5bcc-45ae-baf7-073664b2d4e8</subsheetid>
+    <loginhibit />
+    <display x="-270" y="60" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="7414033b-d0eb-4ea5-9c36-d5185f5f0c2c" name="End" type="End">
+    <subsheetid>77828297-5bcc-45ae-baf7-073664b2d4e8</subsheetid>
+    <loginhibit />
+    <display x="15" y="15" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="1826cfac-5734-427c-a624-ba9744b810fb" name="Union" type="Code">
+    <subsheetid>77828297-5bcc-45ae-baf7-073664b2d4e8</subsheetid>
+    <loginhibit />
+    <display x="15" y="-45" />
+    <inputs>
+      <input type="collection" name="source1" expr="[Source1]" />
+      <input type="collection" name="source2" expr="[Source2]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>7414033b-d0eb-4ea5-9c36-d5185f5f0c2c</onsuccess>
+    <code><![CDATA[result = InvokeStaticMethod<DataTable>(assemblies["json"], "Coremoran.BluePrism.Json.BluePrismConverter", "ObjectToCollection", 
+	source1.AsEnumerable().Union(source2.AsEnumerable(), DataRowComparer.Default));
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="d1c916ee-4404-455d-889a-1168556d150d" name="Concat" type="Code">
+    <subsheetid>98d7f7d4-c0f5-4d2e-b40b-f9a526979909</subsheetid>
+    <loginhibit />
+    <display x="15" y="-45" />
+    <inputs>
+      <input type="collection" name="source1" expr="[Source1]" />
+      <input type="collection" name="source2" expr="[Source2]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>98fe0252-1f76-4835-9dd1-7e2f5ab459ec</onsuccess>
+    <code><![CDATA[result = InvokeStaticMethod<DataTable>(assemblies["json"], "Coremoran.BluePrism.Json.BluePrismConverter", "ObjectToCollection", 
+	source1.AsEnumerable().Concat(source2.AsEnumerable()));
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="9beca77e-280d-43c0-9ffc-781f4c260ced" name="Distinct" type="SubSheetInfo">
+    <subsheetid>e71d22b4-31a9-4841-b449-23dfae82848c</subsheetid>
+    <narrative>Returns distinct elements from a sequence.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="d43489fd-6037-4c65-a0ed-040d579ace59" name="Start" type="Start">
+    <subsheetid>e71d22b4-31a9-4841-b449-23dfae82848c</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source" narrative="The first sequence to concatenate." stage="Source" />
+    </inputs>
+    <onsuccess>d75bde37-6dc2-4982-a4b3-32d7188d130d</onsuccess>
+  </stage>
+  <stage stageid="4038535e-5de9-4d88-ab13-50ee0d0a82d6" name="Source" type="Collection">
+    <subsheetid>e71d22b4-31a9-4841-b449-23dfae82848c</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a1a4f737-c9b5-4365-a187-95d3b266149e" name="in" type="Block">
+    <subsheetid>e71d22b4-31a9-4841-b449-23dfae82848c</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="e60b620c-ba2d-45ce-9b37-2c26a16f66f8" name="Result" type="Collection">
+    <subsheetid>e71d22b4-31a9-4841-b449-23dfae82848c</subsheetid>
+    <display x="-195" y="60" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="115abe1f-92c1-4e3e-a562-7dfc1b9ab768" name="Count" type="Data">
+    <subsheetid>e71d22b4-31a9-4841-b449-23dfae82848c</subsheetid>
+    <display x="-195" y="90" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="4e261a46-34a0-4670-8cb3-900487ba215b" name="out" type="Block">
+    <subsheetid>e71d22b4-31a9-4841-b449-23dfae82848c</subsheetid>
+    <loginhibit />
+    <display x="-270" y="30" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="3566e2a3-7999-44b1-86f6-25f08c1a3d49" name="End" type="End">
+    <subsheetid>e71d22b4-31a9-4841-b449-23dfae82848c</subsheetid>
+    <loginhibit />
+    <display x="15" y="15" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="d75bde37-6dc2-4982-a4b3-32d7188d130d" name="Distinct" type="Code">
+    <subsheetid>e71d22b4-31a9-4841-b449-23dfae82848c</subsheetid>
+    <loginhibit />
+    <display x="15" y="-45" />
+    <inputs>
+      <input type="collection" name="source" expr="[Source]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>3566e2a3-7999-44b1-86f6-25f08c1a3d49</onsuccess>
+    <code><![CDATA[result = InvokeStaticMethod<DataTable>(assemblies["json"], "Coremoran.BluePrism.Json.BluePrismConverter", "ObjectToCollection", 
+	source.AsEnumerable().Distinct(DataRowComparer.Default));
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="cff2dc6f-6c89-447f-8221-8b364bd6fe64" name="Except" type="SubSheetInfo">
+    <subsheetid>95f7af7c-e3d3-47e7-ba51-83c5928ca1e7</subsheetid>
+    <narrative>Produces the set difference of two sequences.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="32b914ac-d35c-4f8a-9af6-5718a19f12ee" name="Start" type="Start">
+    <subsheetid>95f7af7c-e3d3-47e7-ba51-83c5928ca1e7</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source1" narrative="The first sequence to concatenate." stage="Source1" />
+      <input type="collection" name="Source2" narrative="The sequence to concatenate to the first sequence." stage="Source2" />
+    </inputs>
+    <onsuccess>d5ed7dda-536f-4f76-902e-8a5291ea4929</onsuccess>
+  </stage>
+  <stage stageid="4150035a-6337-448c-bb0e-080a7e15bf6b" name="Source1" type="Collection">
+    <subsheetid>95f7af7c-e3d3-47e7-ba51-83c5928ca1e7</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d1720a0b-79c0-47d2-aa3f-65df2a868daf" name="Source2" type="Collection">
+    <subsheetid>95f7af7c-e3d3-47e7-ba51-83c5928ca1e7</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b796d30e-bdca-477a-955b-f39cd071e8ff" name="in" type="Block">
+    <subsheetid>95f7af7c-e3d3-47e7-ba51-83c5928ca1e7</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="ff2a8061-5391-4baf-9a8b-231b0a189933" name="Result" type="Collection">
+    <subsheetid>95f7af7c-e3d3-47e7-ba51-83c5928ca1e7</subsheetid>
+    <display x="-195" y="90" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="4e857b39-2e38-4812-a64a-e69ab12a8737" name="Count" type="Data">
+    <subsheetid>95f7af7c-e3d3-47e7-ba51-83c5928ca1e7</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c397a227-0c5f-4f75-acda-d0c3bba3eedc" name="out" type="Block">
+    <subsheetid>95f7af7c-e3d3-47e7-ba51-83c5928ca1e7</subsheetid>
+    <loginhibit />
+    <display x="-270" y="60" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="17bd2f54-e227-4315-a58a-a5d6caa39471" name="End" type="End">
+    <subsheetid>95f7af7c-e3d3-47e7-ba51-83c5928ca1e7</subsheetid>
+    <loginhibit />
+    <display x="15" y="15" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="d5ed7dda-536f-4f76-902e-8a5291ea4929" name="Except" type="Code">
+    <subsheetid>95f7af7c-e3d3-47e7-ba51-83c5928ca1e7</subsheetid>
+    <loginhibit />
+    <display x="15" y="-45" />
+    <inputs>
+      <input type="collection" name="source1" expr="[Source1]" />
+      <input type="collection" name="source2" expr="[Source2]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>17bd2f54-e227-4315-a58a-a5d6caa39471</onsuccess>
+    <code><![CDATA[result = InvokeStaticMethod<DataTable>(assemblies["json"], "Coremoran.BluePrism.Json.BluePrismConverter", "ObjectToCollection", 
+	source1.AsEnumerable().Except(source2.AsEnumerable(), DataRowComparer.Default));
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="9dea864b-3905-44ce-8eaa-a0e2032f296c" name="Intersect" type="SubSheetInfo">
+    <subsheetid>6dc73f8f-2ad1-4827-b19f-b21db2a9a057</subsheetid>
+    <narrative>Produces the set intersection of two sequences.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="fe76160d-577e-4596-b6c9-e5a8bc37f35f" name="Start" type="Start">
+    <subsheetid>6dc73f8f-2ad1-4827-b19f-b21db2a9a057</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Source1" narrative="The first sequence to concatenate." stage="Source1" />
+      <input type="collection" name="Source2" narrative="The sequence to concatenate to the first sequence." stage="Source2" />
+    </inputs>
+    <onsuccess>1deb9fb5-65a3-4b62-a7e3-36142902c9ed</onsuccess>
+  </stage>
+  <stage stageid="967a7f4f-26cc-4592-880c-86c6ca6ff210" name="Source1" type="Collection">
+    <subsheetid>6dc73f8f-2ad1-4827-b19f-b21db2a9a057</subsheetid>
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="22a18174-eb83-4b75-87e5-656db010b1e6" name="Source2" type="Collection">
+    <subsheetid>6dc73f8f-2ad1-4827-b19f-b21db2a9a057</subsheetid>
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6fc8d085-2525-4b7d-8de3-9ef9e2a05954" name="in" type="Block">
+    <subsheetid>6dc73f8f-2ad1-4827-b19f-b21db2a9a057</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="547bbcb7-e5cf-4650-b626-839f53bbc910" name="Result" type="Collection">
+    <subsheetid>6dc73f8f-2ad1-4827-b19f-b21db2a9a057</subsheetid>
+    <display x="-195" y="90" w="120" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="dd08f762-1002-4e84-90b8-f653590c025f" name="Count" type="Data">
+    <subsheetid>6dc73f8f-2ad1-4827-b19f-b21db2a9a057</subsheetid>
+    <display x="-195" y="120" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1390c30f-d96e-4109-870e-5c1f3d113b07" name="out" type="Block">
+    <subsheetid>6dc73f8f-2ad1-4827-b19f-b21db2a9a057</subsheetid>
+    <loginhibit />
+    <display x="-270" y="60" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="c9b498cc-9d60-4e18-8e8a-4c33ff267555" name="End" type="End">
+    <subsheetid>6dc73f8f-2ad1-4827-b19f-b21db2a9a057</subsheetid>
+    <loginhibit />
+    <display x="15" y="15" />
+    <outputs>
+      <output type="collection" name="Result" stage="Result" />
+      <output type="number" name="Count" stage="Count" />
+    </outputs>
+  </stage>
+  <stage stageid="1deb9fb5-65a3-4b62-a7e3-36142902c9ed" name="Intersect" type="Code">
+    <subsheetid>6dc73f8f-2ad1-4827-b19f-b21db2a9a057</subsheetid>
+    <loginhibit />
+    <display x="15" y="-45" />
+    <inputs>
+      <input type="collection" name="source1" expr="[Source1]" />
+      <input type="collection" name="source2" expr="[Source2]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="result" stage="Result" />
+      <output type="number" name="count" stage="Count" />
+    </outputs>
+    <onsuccess>c9b498cc-9d60-4e18-8e8a-4c33ff267555</onsuccess>
+    <code><![CDATA[result = InvokeStaticMethod<DataTable>(assemblies["json"], "Coremoran.BluePrism.Json.BluePrismConverter", "ObjectToCollection", 
+	source1.AsEnumerable().Intersect(source2.AsEnumerable(), DataRowComparer.Default));
+count = result.Rows.Count;]]></code>
+  </stage>
+  <stage stageid="ef5da591-d98c-45c2-b314-005fbf88c58d" name="Outer &amp; Inner Count&gt;0?" type="Decision">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit />
+    <display x="15" y="165" />
+    <decision expression="[Outer Count] + [Inner Count] &gt; 0" />
+    <ontrue>8d95a063-07df-4565-a69a-79686f7816df</ontrue>
+    <onfalse>ad2581fe-42f6-4a2c-9aba-79f38b40316a</onfalse>
+  </stage>
+  <stage stageid="b9b73f28-6be8-4a1e-9573-615eaa129ff5" name="Count Outer Rows" type="Action">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="75" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Outer&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Outer Count" />
+    </outputs>
+    <onsuccess>eeb1c3d7-dcd0-4926-b1aa-369b0834ca60</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="6d719247-019d-40a8-bc2c-a5d42efbad03" name="Outer Count" type="Data">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <display x="-195" y="210" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="eeb1c3d7-dcd0-4926-b1aa-369b0834ca60" name="Count Inner Rows" type="Action">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="120" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Inner&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Inner Count" />
+    </outputs>
+    <onsuccess>ef5da591-d98c-45c2-b314-005fbf88c58d</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="5a6cb063-aa89-4219-818b-bdc5b4474f4c" name="Inner Count" type="Data">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <display x="-195" y="240" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="274d5a4c-1137-45f5-ada1-9d661a82a4ab" name="local" type="Block">
+    <subsheetid>cb74c955-f870-467f-9404-37f58d2b2b28</subsheetid>
+    <loginhibit />
+    <display x="-270" y="180" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
   </stage>
 </process>

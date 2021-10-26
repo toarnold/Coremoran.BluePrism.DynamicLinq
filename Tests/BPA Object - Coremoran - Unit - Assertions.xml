@@ -1,4 +1,4 @@
-﻿<process name="Coremoran - Unit - Assertions" version="1.0" bpversion="6.10.1.35171" narrative="" byrefcollection="true" type="object" runmode="Background" preferredid="ccc61f49-1f3f-4713-8fef-2155bc7c642c">
+﻿<process name="Coremoran - Unit - Assertions" version="1.0" bpversion="6.10.2.42081" narrative="" byrefcollection="true" type="object" runmode="Background" preferredid="ccc61f49-1f3f-4713-8fef-2155bc7c642c">
   <appdef>
     <element name="Application Root">
       <id>98a2b2be-74ae-4b95-a775-9901450c5125</id>
@@ -49,6 +49,14 @@
   </subsheet>
   <subsheet subsheetid="09ead2e4-5d0d-44f1-a48d-e32210091946" type="Normal" published="True">
     <name>AreEqual (Collection)</name>
+    <view>
+      <camerax>77</camerax>
+      <cameray>21</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="89ecb932-0df9-4a13-9547-b34ac5bf4072" type="Normal" published="True">
+    <name>AreEqual (Collection without row order)</name>
     <view>
       <camerax>77</camerax>
       <cameray>21</cameray>
@@ -135,16 +143,39 @@
       <reference>System.Data.dll</reference>
       <reference>System.Xml.dll</reference>
       <reference>Newtonsoft.Json.dll</reference>
+      <reference>System.Core.dll</reference>
+      <reference>System.Linq.dll</reference>
+      <reference>System.Data.DataSetExtensions.dll</reference>
     </references>
     <imports>
       <import>System</import>
-      <import>System.Drawing</import>
       <import>System.Data</import>
       <import>Newtonsoft.Json</import>
+      <import>System.Linq</import>
+      <import>System.Collections.Generic</import>
     </imports>
     <language>csharp</language>
     <globalcode><![CDATA[]]></globalcode>
-    <code><![CDATA[]]></code>
+    <code><![CDATA[/// <summary>
+/// Compares DataRow by column name and value.
+/// In contrast to System.Data.DataRowComparer (Txt='A',Nr=1) equals (Nr=1,Txt='A')
+/// </summary>
+public class DataRowValueComparer : IEqualityComparer<DataRow>
+{
+	private static readonly DataRowValueComparer _default = new DataRowValueComparer();
+	public static DataRowValueComparer Default => _default;
+
+	public bool Equals(DataRow x, DataRow y)
+	{
+		return x.Table.Columns.Count == y.Table.Columns.Count &&
+			x.Table.Columns.Cast<DataColumn>().All(c => y.Table.Columns.Contains(c.ColumnName) && y[c.ColumnName].Equals(x[c.ColumnName]));
+	}
+
+	public int GetHashCode(DataRow obj)
+	{
+		return obj.ItemArray.Aggregate(0, (hash, val) => hash ^ val.GetHashCode());
+	}
+}]]></code>
   </stage>
   <stage stageid="bdf7c0c5-266a-4224-a143-5d69c6148e1b" name="Clean Up" type="SubSheetInfo">
     <subsheetid>9356a25c-0e51-44f6-8aa8-6059f05b0373</subsheetid>
@@ -1294,6 +1325,151 @@ You will not be able to call this action from a business process, nor will it be
     <subsheetid>88778615-d027-4e14-8561-6d943613a26b</subsheetid>
     <display x="165" y="-105" />
     <datatype>timespan</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5cd00618-f712-4d6a-a84f-cae2b2a379f9" name="AreEqual (Collection without row order)" type="SubSheetInfo">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="ae0c3e71-45c3-4c9b-8767-23c0486067be" name="Start" type="Start">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <loginhibit />
+    <display x="-45" y="-135" />
+    <inputs>
+      <input type="text" name="TestName" stage="TestName" />
+      <input type="collection" name="Expected" stage="Expected" />
+      <input type="collection" name="Actual" stage="Actual" />
+      <input type="text" name="Message" stage="Message" />
+    </inputs>
+    <onsuccess>0b0c3395-694d-47f5-8733-3fa62474e20f</onsuccess>
+  </stage>
+  <stage stageid="7b0d02f3-1242-4150-815a-69148c030d6f" name="End" type="End">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <loginhibit />
+    <display x="-45" y="45" />
+  </stage>
+  <stage stageid="2069c870-b8a0-4193-a068-0317b495873c" name="Equal content?" type="Decision">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <loginhibit />
+    <display x="-45" y="0" />
+    <decision expression="[Equals]" />
+    <ontrue>7b0d02f3-1242-4150-815a-69148c030d6f</ontrue>
+    <onfalse>45539b87-3cb7-4279-8eb9-ecfe6b65685e</onfalse>
+  </stage>
+  <stage stageid="a4bcf8b2-966b-464b-8751-ad5bb4d1b51f" name="Throw" type="Exception">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <display x="135" y="90" />
+    <exception localized="yes" type="UnitException" detail="[Message]" />
+  </stage>
+  <stage stageid="1829f18f-1029-448c-a671-dc9be0fe04a0" name="FormatMessage" type="SubSheet">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <loginhibit />
+    <display x="45" y="90" />
+    <inputs>
+      <input type="text" name="TestName" friendlyname="TestName" expr="[TestName]" />
+      <input type="text" name="Expected" friendlyname="Expected" expr="[ExpectedJson]" />
+      <input type="text" name="Actual" friendlyname="Actual" expr="[ActualJson]" />
+      <input type="text" name="Message" friendlyname="Message" expr="[Message]" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Message" friendlyname="Message" stage="Message" />
+    </outputs>
+    <onsuccess>a4bcf8b2-966b-464b-8751-ad5bb4d1b51f</onsuccess>
+    <processid>31655c95-69b5-48b5-8816-5b0bcbb5dad5</processid>
+  </stage>
+  <stage stageid="61c8170c-29de-4180-b61e-886e46163e08" name="TestName" type="Data">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <display x="30" y="-135" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1b72a004-e0ad-4d73-811f-c7fdbb95a407" name="Expected" type="Collection">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <display x="105" y="-90" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3a8c0470-48cc-4990-bce3-ac064470ce83" name="Actual" type="Collection">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <display x="30" y="-90" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c37dff4e-6dd5-4db7-9f53-66fae2e14249" name="Message" type="Data">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <display x="105" y="-135" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="cf95f157-9370-409f-9271-5831a0f15b93" name="Equals" type="Data">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <display x="45" y="-45" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="0b0c3395-694d-47f5-8733-3fa62474e20f" name="compare" type="Code">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <loginhibit />
+    <display x="-45" y="-45" />
+    <inputs>
+      <input type="collection" name="actual" expr="[Actual]" />
+      <input type="collection" name="expected" expr="[Expected]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="equals" stage="Equals" />
+    </outputs>
+    <onsuccess>2069c870-b8a0-4193-a068-0317b495873c</onsuccess>
+    <code><![CDATA[equals=expected.AsEnumerable().Except(actual.AsEnumerable(), DataRowValueComparer.Default).Count() + 
+	actual.AsEnumerable().Except(expected.AsEnumerable(), DataRowValueComparer.Default).Count() == 0;]]></code>
+  </stage>
+  <stage stageid="45539b87-3cb7-4279-8eb9-ecfe6b65685e" name="Coremoran - Utility - Json::Collection2Json" type="Action">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="45" y="0" />
+    <inputs>
+      <input type="collection" name="data" friendlyname="data" narrative="Collection to be serialized" expr="[Actual]" />
+    </inputs>
+    <outputs>
+      <output type="text" name="result" friendlyname="result" narrative="The serialized collection as string" stage="ActualJson" />
+    </outputs>
+    <onsuccess>1f12a352-c232-4a8d-85d4-69835958cd1e</onsuccess>
+    <resource object="Coremoran - Utility - Json" action="Collection2Json" />
+  </stage>
+  <stage stageid="1f12a352-c232-4a8d-85d4-69835958cd1e" name="Coremoran - Utility - Json::Collection2Json" type="Action">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="45" y="45" />
+    <inputs>
+      <input type="collection" name="data" friendlyname="data" narrative="Collection to be serialized" expr="[Expected]" />
+    </inputs>
+    <outputs>
+      <output type="text" name="result" friendlyname="result" narrative="The serialized collection as string" stage="ExpectedJson" />
+    </outputs>
+    <onsuccess>1829f18f-1029-448c-a671-dc9be0fe04a0</onsuccess>
+    <resource object="Coremoran - Utility - Json" action="Collection2Json" />
+  </stage>
+  <stage stageid="7bfb0409-c155-4895-983e-62fafbae15d7" name="ActualJson" type="Data">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <display x="120" y="0" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="24992215-8d56-4d9a-a653-1bed98b0fb37" name="ExpectedJson" type="Data">
+    <subsheetid>89ecb932-0df9-4a13-9547-b34ac5bf4072</subsheetid>
+    <display x="120" y="45" />
+    <datatype>text</datatype>
     <initialvalue />
     <private />
     <alwaysinit />

@@ -1,7 +1,7 @@
 # Coremoran - Blue Prism - Dynamic LINQ
 - [License](LICENSE)
 
-This library performs LINQ queries onto [BluePrism](https://www.blueprism.com/) collections.
+This library performs LINQ queries on [BluePrism](https://www.blueprism.com/) collections.
 This is a wrapper to enable access to the functionality of [Dynamic LINQ](https://dynamic-linq.net/). This library enables access to LINQ expressions wrapping lambdas into strings.
 
 There is no deferred execution. Usually an expression takes a BluePrism collections and results in a collection.
@@ -41,6 +41,6 @@ The result should look like
 
 ## Solutions
 
-To address the variable name and data type challenge exists a macro ```#{column name}```. This macro adds a type cast if possible, so you can use ```#{column name} > 1``` instead of e.g. ```Decimal(it["colum name"]) > 1```.
+To address the variable name and data type challenge exists a macro ```#{column name}```. This macro adds a type cast if possible, so you can use ```#{column name} > 1``` instead of e.g. ```Decimal(it["column name"]) > 1```.
 
 All parameters have to be a column in a single row collection. Referencing a parameter by name can be done by ```${parameter name}```. So it is possible to write the following expression: ```#{column name}  > ${parameter name}```.
