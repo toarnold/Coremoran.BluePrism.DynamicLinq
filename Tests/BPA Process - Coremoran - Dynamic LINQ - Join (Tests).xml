@@ -1,4 +1,4 @@
-﻿<process name="Coremoran - Dynamic LINQ - Join (Tests)" version="1.0" bpversion="6.10.2.42081" narrative="" byrefcollection="true" preferredid="17c3bbc4-b624-4f0a-b333-f7e8511e522e">
+﻿<process name="Coremoran - Dynamic LINQ - Join (Tests)" version="1.0" bpversion="6.10.3.47902" narrative="" byrefcollection="true" preferredid="17c3bbc4-b624-4f0a-b333-f7e8511e522e">
   <view>
     <camerax>-135</camerax>
     <cameray>105</cameray>
@@ -1155,7 +1155,7 @@
   <stage stageid="babd1257-7a83-4e21-afda-acfdab55c3f8" name="Start" type="Start">
     <subsheetid>4fc95a73-193c-4719-9b1c-99bc0d155c4c</subsheetid>
     <display x="15" y="-105" />
-    <onsuccess>f315b76f-effb-4675-8aba-5240dbe865cd</onsuccess>
+    <onsuccess>2950a542-a42e-42e0-a423-7aaf28f435b0</onsuccess>
   </stage>
   <stage stageid="8c5d6250-9694-48d1-a3c0-8d1555cd54a0" name="End" type="End">
     <subsheetid>4fc95a73-193c-4719-9b1c-99bc0d155c4c</subsheetid>
@@ -1308,28 +1308,29 @@
     <onsuccess>850b42b0-e60c-4a41-9469-b07e71e0e2ad</onsuccess>
     <resource object="Coremoran - Unit - Assertions" action="AreEqual (Collection)" />
   </stage>
-  <stage stageid="f315b76f-effb-4675-8aba-5240dbe865cd" name="Coremoran - Utility - Joins::Inner Join" type="Action">
+  <stage stageid="551d33b5-e5cd-415a-a481-94d41d85196d" name="Inner Empty Test" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="30" />
+    <onsuccess>0c3a76d6-c3df-4004-9f7d-7978b7a19837</onsuccess>
+    <processid>4fc95a73-193c-4719-9b1c-99bc0d155c4c</processid>
+  </stage>
+  <stage stageid="2950a542-a42e-42e0-a423-7aaf28f435b0" name="Coremoran - Dynamic LINQ::Join" type="Action">
     <subsheetid>4fc95a73-193c-4719-9b1c-99bc0d155c4c</subsheetid>
     <loginhibit onsuccess="true" />
     <display x="15" y="-60" />
     <inputs>
-      <input type="collection" name="OuterCollection" friendlyname="OuterCollection" expr="[Outer]" />
-      <input type="collection" name="InnerCollection" friendlyname="InnerCollection" expr="[Inner]" />
-      <input type="text" name="OuterKeySelector" friendlyname="OuterKeySelector" expr="&quot;Number&quot;" />
-      <input type="text" name="InnerKeySelector" friendlyname="InnerKeySelector" expr="&quot;Nr&quot;" />
-      <input type="text" name="ResultSelector" friendlyname="ResultSelector" expr="&quot;inner.Text as O, outer.Value as NewValue&quot;" />
+      <input type="collection" name="Parameter" friendlyname="Parameter" expr="" />
+      <input type="collection" name="Outer" friendlyname="Outer" expr="[Outer]" />
+      <input type="collection" name="Inner" friendlyname="Inner" expr="[Inner]" />
+      <input type="text" name="OuterKeySelector" friendlyname="OuterKeySelector" expr="&quot;Nr&quot;" />
+      <input type="text" name="InnerKeySelector" friendlyname="InnerKeySelector" expr="&quot;Number&quot;" />
+      <input type="text" name="ResultSelector" friendlyname="ResultSelector" expr="&quot;new (outer.Text as O, inner.Value as NewValue)&quot;" />
     </inputs>
     <outputs>
       <output type="collection" name="Result" friendlyname="Result" stage="Actual" />
       <output type="number" name="Count" friendlyname="Count" stage="Actual Count" />
     </outputs>
     <onsuccess>a63b73f7-0139-4a56-be55-1d8d4f77f7df</onsuccess>
-    <resource object="Coremoran - Utility - Joins" action="Inner Join" />
-  </stage>
-  <stage stageid="551d33b5-e5cd-415a-a481-94d41d85196d" name="Inner Empty Test" type="SubSheet">
-    <loginhibit onsuccess="true" />
-    <display x="15" y="30" />
-    <onsuccess>0c3a76d6-c3df-4004-9f7d-7978b7a19837</onsuccess>
-    <processid>4fc95a73-193c-4719-9b1c-99bc0d155c4c</processid>
+    <resource object="Coremoran - Dynamic LINQ" action="Join" />
   </stage>
 </process>

@@ -1,4 +1,4 @@
-﻿<process name="Coremoran - Unit - Assertions" version="1.0" bpversion="6.10.2.42081" narrative="" byrefcollection="true" type="object" runmode="Background" preferredid="ccc61f49-1f3f-4713-8fef-2155bc7c642c">
+﻿<process name="Coremoran - Unit - Assertions" version="1.0" bpversion="6.10.3.47902" narrative="" byrefcollection="true" type="object" runmode="Background" preferredid="ccc61f49-1f3f-4713-8fef-2155bc7c642c">
   <appdef>
     <element name="Application Root">
       <id>98a2b2be-74ae-4b95-a775-9901450c5125</id>
@@ -28,6 +28,14 @@
     <view>
       <camerax>0</camerax>
       <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="20d18b5d-42c5-4e1e-b2f1-9aa9043c40bc" type="Normal" published="True">
+    <name>Version</name>
+    <view>
+      <camerax>32</camerax>
+      <cameray>-21</cameray>
       <zoom version="2">1.25</zoom>
     </view>
   </subsheet>
@@ -1473,5 +1481,39 @@ You will not be able to call this action from a business process, nor will it be
     <initialvalue />
     <private />
     <alwaysinit />
+  </stage>
+  <stage stageid="93fe85a7-d93e-431c-9c3f-5ae175439f4e" name="Version" type="SubSheetInfo">
+    <subsheetid>20d18b5d-42c5-4e1e-b2f1-9aa9043c40bc</subsheetid>
+    <narrative>Gets the current VBO version.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="d4dea3d6-8a25-4e1e-bef7-a66bd4c56d24" name="Start" type="Start">
+    <subsheetid>20d18b5d-42c5-4e1e-b2f1-9aa9043c40bc</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>edf6931b-60d3-4671-bedf-30c709d8d380</onsuccess>
+  </stage>
+  <stage stageid="edf6931b-60d3-4671-bedf-30c709d8d380" name="End" type="End">
+    <subsheetid>20d18b5d-42c5-4e1e-b2f1-9aa9043c40bc</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+    <outputs>
+      <output type="text" name="Version" stage="Version" />
+    </outputs>
+  </stage>
+  <stage stageid="dbfce2ec-7132-46e5-a928-d8838a41ac77" name="Version" type="Data">
+    <subsheetid>20d18b5d-42c5-4e1e-b2f1-9aa9043c40bc</subsheetid>
+    <loginhibit />
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">1.1.0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="880ad68b-3cab-436a-8cd1-490f9d6cbec2" name="const" type="Block">
+    <subsheetid>20d18b5d-42c5-4e1e-b2f1-9aa9043c40bc</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="60" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
   </stage>
 </process>
