@@ -1,3 +1,9 @@
+V1.2.0 (05/28/2023) Bugfix release
+- Bugfix: Fix nuget download bug
+- Updates
+    - Support Dymamic LINQ 1.3.2
+    - SelectMany Bugfix : https://github.com/zzzprojects/System.Linq.Dynamic.Core/issues/511
+
 V1.1.0 (10/26/2021) Feature release
 - Updates
     - Update to Dynamic LINQ 1.2.13

@@ -1,4 +1,4 @@
-﻿<process name="Coremoran - Dynamic LINQ - SelectMany (Tests)" version="1.0" bpversion="6.10.1.35171" narrative="" byrefcollection="true" preferredid="5cdbbb85-8b31-4440-a11f-7055ee7fc0f1">
+﻿<process name="Coremoran - Dynamic LINQ - SelectMany (Tests)" version="1.0" bpversion="7.1.2.3518" narrative="" byrefcollection="true" preferredid="5cdbbb85-8b31-4440-a11f-7055ee7fc0f1">
   <view>
     <camerax>-135</camerax>
     <cameray>21</cameray>
@@ -311,9 +311,9 @@
     <loginhibit onsuccess="true" />
     <display x="15" y="-15" />
     <inputs>
-      <input type="collection" name="Source" friendlyname="Source" expr="[Source]" />
-      <input type="text" name="Selector" friendlyname="Selector" expr="&quot;SubCollection.Select($)&quot;" />
-      <input type="collection" name="Parameter" friendlyname="Parameter" expr="" />
+      <input type="collection" name="Source" friendlyname="Source" narrative="A collection of values to project." expr="[Source]" />
+      <input type="text" name="Selector" friendlyname="Selector" narrative="A projection string expression to apply to each element." expr="&quot;SubCollection&quot;" />
+      <input type="collection" name="Parameter" friendlyname="Parameter" narrative="A collection that contains zero or more objects to insert into the predicate as parameters. Similar to the way String.Format formats strings." expr="" />
     </inputs>
     <outputs>
       <output type="collection" name="Result" friendlyname="Result" stage="Actual" />

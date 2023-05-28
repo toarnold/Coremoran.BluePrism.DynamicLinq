@@ -1,4 +1,4 @@
-﻿<process name="Coremoran - Dynamic LINQ" version="1.0" bpversion="6.10.2.42081" narrative="Wrapper for Dynamic LINQ: https://dynamic-linq.net/&#xD;&#xA;Project site: https://github.com/zzzprojects/System.Linq.Dynamic.Core" byrefcollection="true" type="object" runmode="Background" preferredid="8229e34a-e436-4ff3-8f51-beb0f6fbcc6e">
+﻿<process name="Coremoran - Dynamic LINQ" version="1.0" bpversion="7.1.2.3518" narrative="Wrapper for Dynamic LINQ: https://dynamic-linq.net/&#xD;&#xA;Project site: https://github.com/zzzprojects/System.Linq.Dynamic.Core" byrefcollection="true" type="object" runmode="Background" preferredid="8229e34a-e436-4ff3-8f51-beb0f6fbcc6e">
   <appdef>
     <element name="Application Root">
       <id>2b9748a3-2ee9-47ca-9118-bf0f407c0497</id>
@@ -17,6 +17,14 @@
   <endpoint narrative="" />
   <subsheet subsheetid="1d53ca84-b648-49cb-a15a-e72c7b78d279" type="CleanUp" published="True">
     <name>Clean Up</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="e2acd367-c21d-4b4d-a233-d87887865d43" type="Normal" published="False">
+    <name>Ensure Nuget</name>
     <view>
       <camerax>0</camerax>
       <cameray>0</cameray>
@@ -274,7 +282,7 @@
   <stage stageid="f3f7771d-cf2f-4dce-bf0f-98eba6596b12" name="Start" type="Start">
     <loginhibit />
     <display x="15" y="-105" />
-    <onsuccess>3dea8917-eb5c-4438-b6e4-2e01b6aec034</onsuccess>
+    <onsuccess>d9e636de-f0d3-42c8-a2c2-02effb4f63be</onsuccess>
   </stage>
   <stage stageid="610cc155-f48c-4962-9b6d-bafcff2f89e1" name="End" type="End">
     <loginhibit />
@@ -317,7 +325,7 @@ IQueryable Table2Queryable(DataTable table)
 object[] BuildParameterArray(DataTable parameter)
 {
 	if (parameter == null || parameter.Rows.Count == 0)
-		return null;
+		return Array.Empty<object>();
 	return parameter.Rows[0].ItemArray.Select(item => item.GetType() == typeof(DataTable)?Table2Queryable((DataTable)item): item).ToArray();
 }
 
@@ -3666,7 +3674,7 @@ count = result.Rows.Count;]]></code>
   </stage>
   <stage stageid="3dea8917-eb5c-4438-b6e4-2e01b6aec034" name="Load Linq" type="SubSheet">
     <loginhibit />
-    <display x="15" y="-45" />
+    <display x="15" y="-15" />
     <inputs>
       <input type="text" name="LocalKey" friendlyname="LocalKey" expr="&quot;linq&quot;" />
       <input type="text" name="PackageInfoCsv" friendlyname="PackageInfoCsv" expr="[Nuget: SystemLinqDynamicCore]" />
@@ -3676,7 +3684,7 @@ count = result.Rows.Count;]]></code>
   </stage>
   <stage stageid="3b09afa6-e29c-4af1-9cd0-9b9c2b341543" name="Load Json" type="SubSheet">
     <loginhibit />
-    <display x="15" y="15" />
+    <display x="15" y="30" />
     <inputs>
       <input type="text" name="LocalKey" friendlyname="LocalKey" expr="&quot;json&quot;" />
       <input type="text" name="PackageInfoCsv" friendlyname="PackageInfoCsv" expr="[Nuget: CoremoranBluePrismJson]" />
@@ -3846,7 +3854,7 @@ count = result.Rows.Count;]]></code>
     <loginhibit />
     <display x="-195" y="-15" w="120" h="30" />
     <datatype>text</datatype>
-    <initialvalue xml:space="preserve">1.1.0</initialvalue>
+    <initialvalue xml:space="preserve">1.1.2</initialvalue>
     <private />
     <alwaysinit />
   </stage>
@@ -3855,7 +3863,7 @@ count = result.Rows.Count;]]></code>
     <loginhibit />
     <display x="-195" y="15" w="120" h="30" />
     <datatype>text</datatype>
-    <initialvalue xml:space="preserve">1.2.10</initialvalue>
+    <initialvalue xml:space="preserve">1.2.19</initialvalue>
     <private />
     <alwaysinit />
   </stage>
@@ -4321,5 +4329,70 @@ count = result.Rows.Count;]]></code>
     <loginhibit />
     <display x="-270" y="180" w="150" h="90" />
     <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="3e9a7798-d662-47c2-9575-818adc27ea63" name="Ensure Nuget" type="SubSheetInfo">
+    <subsheetid>e2acd367-c21d-4b4d-a233-d87887865d43</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="4ce9cd08-1cec-446a-8d4b-0d44e6efc2eb" name="Start" type="Start">
+    <subsheetid>e2acd367-c21d-4b4d-a233-d87887865d43</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>b4010fac-d0df-4a79-9b47-1e20c4a94a6e</onsuccess>
+  </stage>
+  <stage stageid="4d36b4a5-1642-4d40-8e90-5fe036e49100" name="End" type="End">
+    <subsheetid>e2acd367-c21d-4b4d-a233-d87887865d43</subsheetid>
+    <loginhibit />
+    <display x="15" y="45" />
+  </stage>
+  <stage stageid="b4010fac-d0df-4a79-9b47-1e20c4a94a6e" name="Test &amp; Download NuGet" type="Code">
+    <subsheetid>e2acd367-c21d-4b4d-a233-d87887865d43</subsheetid>
+    <loginhibit />
+    <display x="15" y="-30" />
+    <inputs>
+      <input type="text" name="Url" expr="[NuGetLatest]" />
+      <input type="text" name="Path" expr="[BluePrismAddOnDirectory]&amp;&quot;\nuget.Exe&quot;" />
+    </inputs>
+    <onsuccess>4d36b4a5-1642-4d40-8e90-5fe036e49100</onsuccess>
+    <code><![CDATA[if (!File.Exists(Path))
+{
+	using (var wc = new System.Net.WebClient())
+	{
+		wc.UseDefaultCredentials = true;	
+		wc.DownloadFile(Url, Path);
+	}
+}]]></code>
+  </stage>
+  <stage stageid="2e5e7e10-0152-4df8-9d44-d4a86768ea7e" name="BluePrismAddOnDirectory" type="Data">
+    <subsheetid>e2acd367-c21d-4b4d-a233-d87887865d43</subsheetid>
+    <loginhibit />
+    <display x="-195" y="-15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <exposure>Environment</exposure>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b8108baa-23f6-4521-8196-0df4ca6f7c88" name="Environment" type="Block">
+    <subsheetid>e2acd367-c21d-4b4d-a233-d87887865d43</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="cd7aef97-469e-4010-8468-bbb6d374bc66" name="NuGetLatest" type="Data">
+    <subsheetid>e2acd367-c21d-4b4d-a233-d87887865d43</subsheetid>
+    <loginhibit />
+    <display x="-195" y="15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <exposure>Environment</exposure>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d9e636de-f0d3-42c8-a2c2-02effb4f63be" name="Ensure Nuget" type="SubSheet">
+    <loginhibit />
+    <display x="15" y="-60" />
+    <onsuccess>3dea8917-eb5c-4438-b6e4-2e01b6aec034</onsuccess>
+    <processid>e2acd367-c21d-4b4d-a233-d87887865d43</processid>
   </stage>
 </process>

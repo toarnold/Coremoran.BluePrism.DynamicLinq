@@ -1,4 +1,4 @@
 REM Be careful this can override your updated environment variables
 "%ProgramFiles%\Blue Prism Limited\Blue Prism Automate\AutomateC.exe" /user %1 %2 /setev "BluePrismAddOnDirectory" "text" "D:\BluePrismAddOns" "Path to your external assembly directory"
 "%ProgramFiles%\Blue Prism Limited\Blue Prism Automate\AutomateC.exe" /user %1 %2 /setev "Nuget: CoremoranBluePrismJson" "text" "Coremoran.BluePrism.Json,1.0.0,Coremoran.BluePrism.Json.1.0.0\lib\netstandard2.0\Coremoran.BluePrism.Json.dll" "CSV <Nuget-Package,Version,Internal path>"
-"%ProgramFiles%\Blue Prism Limited\Blue Prism Automate\AutomateC.exe" /user %1 %2 /setev "Nuget: SystemLinqDynamicCore" "text" "System.Linq.Dynamic.Core,1.2.13,System.Linq.Dynamic.Core.1.2.13\lib\netstandard2.0\System.Linq.Dynamic.Core.dll" "CSV <Nuget-Package,Version,Internal path>"
+"%ProgramFiles%\Blue Prism Limited\Blue Prism Automate\AutomateC.exe" /user %1 %2 /setev "Nuget: SystemLinqDynamicCore" "text" "System.Linq.Dynamic.Core,1.3.2,System.Linq.Dynamic.Core.1.3.2\lib\netstandard2.0\System.Linq.Dynamic.Core.dll" "CSV <Nuget-Package,Version,Internal path>"
